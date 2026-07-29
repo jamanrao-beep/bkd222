@@ -4,7 +4,7 @@ import {
   Phone, Mail, MapPin, 
   ChevronRight, ChevronLeft, 
   ArrowRight, Lock, Eye, CheckSquare, 
-  Building2, Tag, LineChart, FileCheck
+  Building2, Tag, LineChart, FileCheck, Clock
 } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
