@@ -64,8 +64,7 @@ export default function Home() {
             <Link href="/" className="text-brand-gold border-b-2 border-brand-gold pb-1">Home</Link>
             <Link href="/about" className="hover:text-brand-gold transition-colors">About Us</Link>
             <Link href="/projects" className="hover:text-brand-gold transition-colors">Projects</Link>
-            <Link href="/services" className="hover:text-brand-gold transition-colors">Services</Link>
-            <Link href="/gallery" className="hover:text-brand-gold transition-colors">Gallery</Link>
+
             <Link href="/blogs" className="hover:text-brand-gold transition-colors">Blogs</Link>
             <Link href="/partners" className="hover:text-brand-gold transition-colors">Our Partners</Link>
             <Link href="/contact" className="hover:text-brand-gold transition-colors">Contact</Link>

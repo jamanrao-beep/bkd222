@@ -108,8 +108,7 @@ export default function Projects() {
             <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
             <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>
             <Link href="/projects" className="text-brand-gold border-b-2 border-brand-gold pb-1">Projects</Link>
-            <Link href="/services" className="text-white hover:text-brand-gold transition-colors">Services</Link>
-            <Link href="/gallery" className="text-white hover:text-brand-gold transition-colors">Gallery</Link>
+
             <Link href="/blogs" className="text-white hover:text-brand-gold transition-colors">Blogs</Link>
             <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>
           </div>
