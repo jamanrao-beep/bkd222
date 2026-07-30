@@ -55,7 +55,7 @@ export default function Contact() {
         <nav className="relative z-10 flex justify-between items-center px-8 py-5">
           <Link href="/">
             <Image 
-              src="/bkd-white-logo.png" 
+              src="/BKD.png" 
               alt="Badri Kedar Developers" 
               width={160} 
               height={60} 
