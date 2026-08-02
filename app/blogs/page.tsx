@@ -101,7 +101,7 @@ export default function Blogs() {
         <nav className="relative z-10 flex justify-between items-center px-8 py-5">
           <Link href="/">
             <Image 
-              src="/BKD LOGO Official.png" 
+              src="/BKD_Logo.png" 
               alt="Badri Kedar Developers" 
               width={160} 
               height={60} 
@@ -261,7 +261,7 @@ export default function Blogs() {
         <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <Image 
-              src="/BKD LOGO Official.png" 
+              src="/BKD_Logo.png" 
               alt="Badri Kedar Developers" 
               width={180} 
               height={70} 
