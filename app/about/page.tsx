@@ -215,26 +215,7 @@ export default function About() {
               </div>
             </div>
 
-            {/* Leader 2 */}
-            <div className="border border-brand-gold/30 rounded-xl overflow-hidden flex flex-col sm:flex-row bg-[#16181d] group">
-              <div className="relative w-full sm:w-2/5 h-64 sm:h-auto shrink-0">
-                <Image 
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80" 
-                  alt="Monu Singh" 
-                  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-8 flex flex-col justify-center">
-                <h3 className="font-serif text-2xl font-bold text-brand-gold mb-1">MONU SINGH</h3>
-                <p className="text-sm text-gray-400 mb-4">Director</p>
-                <p className="text-sm text-gray-300 leading-relaxed mb-6">
-                  Monu Singh brings innovation, strategic thinking, and a customer-first approach to every project. His leadership ensures timely delivery, superior construction standards, and long-term value for our clients.
-                </p>
-                <div style={{ fontFamily: "'Caveat', 'Dancing Script', cursive" }} className="text-brand-gold text-4xl opacity-80 mt-2">Monu Singh</div>
-              </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -253,7 +234,7 @@ export default function About() {
         <div className="relative z-10 max-w-7xl mx-auto flex">
           <div className="max-w-2xl text-white">
             <p className="text-brand-gold font-bold tracking-widest text-xs uppercase mb-3">OUR CONSTRUCTION PARTNER</p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Building Excellence Together</h2>
+            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Kailash Constructions Company</h2>
             <p className="text-gray-300 leading-relaxed mb-12">
               We are proud to be associated with Kailash Construction Company, a trusted name in the construction industry with over 10 years of experience. Known for their quality workmanship, innovative techniques, and on-time project delivery, they play a vital role in turning our vision into reality.
             </p>
@@ -384,40 +365,19 @@ export default function About() {
             </div>
           </div>
 
-          {/* Testimonial (Right) */}
+          {/* Testimonial (Right) replaced with GMB */}
           <div className="py-24 px-8 lg:px-16 flex flex-col justify-center items-center bg-white relative">
-            <h2 className="font-serif text-3xl font-bold text-gray-900 mb-12 uppercase tracking-wide">WHAT OUR CLIENTS SAY</h2>
-            
-            <div className="bg-white p-10 md:p-14 rounded-2xl shadow-2xl border border-gray-100 max-w-lg w-full relative">
-              <Quote className="absolute top-8 left-8 text-brand-gold/10 w-24 h-24" />
-              <Quote className="absolute bottom-8 right-8 text-brand-gold/10 w-24 h-24 rotate-180" />
-              
-              <div className="flex justify-center gap-1 text-brand-gold mb-8 relative z-10">
-                <Star size={24} fill="currentColor" />
-                <Star size={24} fill="currentColor" />
-                <Star size={24} fill="currentColor" />
-                <Star size={24} fill="currentColor" />
-                <Star size={24} fill="currentColor" />
+            <h2 className="font-serif text-3xl font-bold text-gray-900 mb-8 uppercase tracking-wide text-center">CHECK OUR GOOGLE REVIEWS</h2>
+            <Link href="https://share.google/ftjiKC7wvTx2g4uvT" target="_blank" rel="noopener noreferrer" className="bg-white p-10 md:p-14 rounded-2xl shadow-2xl border border-gray-100 max-w-lg w-full relative group hover:border-brand-gold transition-colors flex flex-col items-center text-center">
+              <div className="w-20 h-20 bg-brand-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Star size={40} className="text-brand-gold" fill="currentColor" />
               </div>
-              <p className="text-gray-600 text-center text-lg leading-relaxed mb-10 relative z-10 font-medium">
-                Badri Kedar Developers provided us with a seamless experience. Their professionalism, transparency, and quality construction exceeded our expectations.
-              </p>
-              <div className="flex items-center justify-center gap-4 relative z-10">
-                <Image src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=150&q=80" alt="Rohit Sharma" width={60} height={60} className="rounded-full object-cover shadow-md" />
-                <div className="text-left">
-                  <h4 className="font-bold text-gray-900">Rohit Sharma</h4>
-                  <p className="text-sm text-gray-500">Happy Customer</p>
-                </div>
-              </div>
-              
-              {/* Slider Arrows */}
-              <button className="absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-brand-gold text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg z-20">
-                <ChevronLeft size={24} />
-              </button>
-              <button className="absolute -right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-brand-gold text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg z-20">
-                <ChevronRight size={24} />
-              </button>
-            </div>
+              <h3 className="font-bold text-gray-900 text-xl mb-4">See what our clients say on Google</h3>
+              <p className="text-gray-500 mb-8">We pride ourselves on delivering excellent service and quality. Click here to read our Google My Business reviews.</p>
+              <span className="inline-flex items-center gap-2 bg-brand-gold text-white px-8 py-4 font-semibold hover:bg-brand-gold-hover transition-all rounded shadow-lg">
+                View on Google
+              </span>
+            </Link>
           </div>
         </div>
       </section>
@@ -447,7 +407,7 @@ export default function About() {
           <div>
             <h3 className="font-bold text-lg mb-6 text-brand-gold">Quick Links</h3>
             <ul className="space-y-3">
-              {['Home', 'About Us', 'Projects', 'Services', 'Gallery', 'Blogs', 'Contact Us'].map((link) => (
+              {['Home', 'About Us', 'Projects', 'Blogs', 'Contact Us'].map((link) => (
                 <li key={link}>
                   <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
                     <ChevronRight size={12} className="text-brand-gold" /> {link}

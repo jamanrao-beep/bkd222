@@ -167,49 +167,13 @@ export default function Home() {
           </p>
         </div>
         
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            { 
-              title: "Green Valley Homes", location: "Dehradun, Uttarakhand", tag: "Premium Living",
-              img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
-            },
-            { 
-              title: "Kedar Heights", location: "Dehradun, Uttarakhand", tag: "Luxury Apartments",
-              img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80"
-            },
-            { 
-              title: "IT Park Square", location: "Dehradun, Uttarakhand", tag: "Commercial Spaces",
-              img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
-            },
-            { 
-              title: "Sunrise Residency", location: "Dehradun, Uttarakhand", tag: "Premium Residences",
-              img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80"
-            }
-          ].map((project, i) => (
-            <div key={i} className="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow group">
-              <div className="relative h-64 overflow-hidden">
-                <Image 
-                  src={project.img}
-                  alt={project.title}
-                  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4 bg-brand-gold text-white text-xs font-semibold px-3 py-1 rounded">
-                  {project.tag}
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="font-serif text-xl font-bold mb-2">{project.title}</h3>
-                <div className="flex items-center gap-2 text-gray-500 text-sm mb-6">
-                  <MapPin size={14} className="text-brand-gold" />
-                  <span>{project.location}</span>
-                </div>
-                <Link href="/projects" className="flex items-center justify-between text-brand-gold font-semibold text-sm hover:text-brand-gold-hover transition-colors border border-brand-gold/30 rounded py-3 px-4">
-                  View Details <ChevronRight size={16} />
-                </Link>
-              </div>
+        <div className="max-w-7xl mx-auto flex justify-center">
+          <Link href="/projects" className="block relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
+            <Image src="/project.png" alt="Our Projects" width={1200} height={800} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                <span className="bg-brand-gold text-white px-8 py-4 rounded font-bold text-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0">Explore All Projects</span>
             </div>
-          ))}
+          </Link>
         </div>
       </section>
 
@@ -248,8 +212,7 @@ export default function Home() {
           <div>
             <p className="text-brand-gold font-bold tracking-widest text-xs uppercase mb-4">Our Story</p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              A Legacy Built on Trust,<br/>
-              Quality & <span className="text-brand-gold">Commitment</span>
+              Together We Build Opportunities Not Just Structure
             </h2>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Established in the heart of Dev Bhumi, Uttarakhand, Badri Kedar Developers was founded with a simple yet powerful vision - to create thoughtfully planned developments that combine modern infrastructure with the natural beauty of the region.
@@ -289,29 +252,10 @@ export default function Home() {
               </div>
             </div>
 
-            <Link href="/about" className="inline-flex items-center gap-2 border border-brand-gold text-brand-gold px-8 py-4 font-semibold hover:bg-brand-gold hover:text-white transition-all">
-              Know More About Us <ChevronRight size={18} />
-            </Link>
+            
           </div>
 
-          <div className="relative h-[600px] rounded-2xl overflow-hidden group">
-            <Image 
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" 
-              alt="Our Story" 
-              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors" />
-            <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white rounded-full flex items-center justify-center pl-2 hover:scale-110 transition-transform">
-              <Play className="text-brand-gold w-8 h-8" fill="currentColor" />
-            </button>
-
-            <div className="absolute bottom-8 right-8 bg-brand-gold text-white p-8 rounded-xl shadow-2xl">
-              <h3 className="text-4xl font-bold mb-1">20+</h3>
-              <p className="text-sm font-medium">Years of<br/>Excellence</p>
-            </div>
           </div>
-        </div>
       </section>
 
       {/* CTA Section */}
@@ -366,7 +310,7 @@ export default function Home() {
           <div>
             <h3 className="font-bold text-lg mb-6 text-brand-gold">Quick Links</h3>
             <ul className="space-y-3">
-              {['Home', 'About Us', 'Projects', 'Services', 'Gallery', 'Blogs', 'Our Partners', 'Contact Us'].map((link) => (
+              {['Home', 'About Us', 'Projects', 'Blogs', 'Our Partners', 'Contact Us'].map((link) => (
                 <li key={link}>
                   <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Projects' ? '/projects' : link === 'Blogs' ? '/blogs' : link === 'Contact Us' ? '/contact' : link === 'Our Partners' ? '/partners' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
                     <ChevronRight size={12} className="text-brand-gold" /> {link}

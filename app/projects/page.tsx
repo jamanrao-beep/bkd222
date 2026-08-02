@@ -168,7 +168,7 @@ export default function Projects() {
             <div key={i} className="bg-white rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col group hover:shadow-lg transition-all duration-300">
               <div className="relative h-56 overflow-hidden">
                 <Image 
-                  src={project.img}
+                  src="/project.png"
                   alt={project.title}
                   fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -318,7 +318,7 @@ export default function Projects() {
           <div>
             <h3 className="font-bold text-lg mb-6 text-brand-gold font-serif">Quick Links</h3>
             <ul className="space-y-3">
-              {['Home', 'About Us', 'Projects', 'Services', 'Gallery', 'Blogs', 'Contact Us'].map((link) => (
+              {['Home', 'About Us', 'Projects', 'Blogs', 'Contact Us'].map((link) => (
                 <li key={link}>
                   <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Projects' ? '/projects' : link === 'Contact Us' ? '/contact' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
                     <ChevronRight size={12} className="text-brand-gold" /> {link}

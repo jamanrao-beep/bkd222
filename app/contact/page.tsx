@@ -352,7 +352,7 @@ export default function Contact() {
           <div>
             <h3 className="font-bold text-lg mb-6 text-brand-gold font-serif">Quick Links</h3>
             <ul className="space-y-3">
-              {['Home', 'About Us', 'Projects', 'Services', 'Gallery', 'Blogs', 'Contact Us'].map((link) => (
+              {['Home', 'About Us', 'Projects', 'Blogs', 'Contact Us'].map((link) => (
                 <li key={link}>
                   <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Contact Us' ? '/contact' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
                     <ChevronRight size={12} className="text-brand-gold" /> {link}
