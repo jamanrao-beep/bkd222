@@ -13,42 +13,22 @@ export default function Projects() {
     {
       title: "Godrej Properties", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Ongoing",
-      img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80"
+      img: "/Proj1.png"
     },
     {
       title: "Green Valley Homes", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Completed",
-      img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80"
+      img: "/Proj2.png"
     },
     {
       title: "Kedar Heights", location: "Dehradun, Uttarakhand",
       type: "Commercial", status: "Ongoing",
-      img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80"
+      img: "/Proj3.png"
     },
     {
       title: "Sunrise Residency", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Completed",
-      img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "Himalaya Business Center", location: "Dehradun, Uttarakhand",
-      type: "Commercial", status: "Ongoing",
-      img: "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "River View Apartments", location: "Dehradun, Uttarakhand",
-      type: "Residential", status: "Ongoing",
-      img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "Shivalik Enclave", location: "Dehradun, Uttarakhand",
-      type: "Residential", status: "Completed",
-      img: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "IT Park Square", location: "Dehradun, Uttarakhand",
-      type: "Commercial", status: "Ongoing",
-      img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
+      img: "/Proj4.png"
     }
   ];
 
@@ -165,10 +145,10 @@ export default function Projects() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {projects.map((project, i) => (
-            <div key={i} className="bg-white rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col group hover:shadow-lg transition-all duration-300">
+            <Link href={`/projects/${i+1}`} key={i} className="bg-white rounded-xl overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 flex flex-col group hover:shadow-lg transition-all duration-300">
               <div className="relative h-56 overflow-hidden">
                 <Image 
-                  src="/project.png"
+                  src={project.img}
                   alt={project.title}
                   fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -190,12 +170,12 @@ export default function Projects() {
                 </div>
                 <div className="mt-auto">
                   <div className="w-full h-px bg-gray-100 mb-4" />
-                  <Link href="/projects" className="flex items-center justify-between text-brand-gold font-semibold text-sm hover:text-brand-gold-hover transition-colors px-4 py-3 border border-brand-gold/30 rounded group-hover:border-brand-gold">
+                  <div className="flex items-center justify-between text-brand-gold font-semibold text-sm hover:text-brand-gold-hover transition-colors px-4 py-3 border border-brand-gold/30 rounded group-hover:border-brand-gold">
                     View Details <ChevronRight size={16} />
-                  </Link>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -320,7 +300,7 @@ export default function Projects() {
             <ul className="space-y-3">
               {['Home', 'About Us', 'Projects', 'Blogs', 'Contact Us'].map((link) => (
                 <li key={link}>
-                  <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Projects' ? '/projects' : link === 'Contact Us' ? '/contact' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
+                  <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Projects' ? '/projects' : link === 'Blogs' ? '/blogs' : link === 'Contact Us' ? '/contact' : link === 'Our Partners' ? '/partners' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
                     <ChevronRight size={12} className="text-brand-gold" /> {link}
                   </Link>
                 </li>
@@ -350,13 +330,13 @@ export default function Projects() {
             <h3 className="font-bold text-lg mb-6 text-brand-gold font-serif">Featured Projects</h3>
             <div className="grid grid-cols-2 gap-3">
               {[
-                "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=300&q=80",
-                "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=300&q=80",
-                "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=300&q=80",
-                "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=300&q=80"
+                "/Proj1.png",
+                "/Proj2.png",
+                "/Proj3.png",
+                "/Proj4.png"
               ].map((img, i) => (
-                <Link href="/projects" key={i} className="block relative h-20 rounded-lg overflow-hidden group">
-                  <Image src={img} alt="Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                <Link href={`/projects/${i+1}`} key={i} className="block relative h-20 rounded overflow-hidden group">
+                  <Image src={img} alt="Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform" />
                 </Link>
               ))}
             </div>

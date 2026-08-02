@@ -82,7 +82,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
             <ul className="space-y-3">
               {['Home', 'About Us', 'Projects', 'Blogs', 'Contact Us'].map((link) => (
                 <li key={link}>
-                  <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
+                  <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Projects' ? '/projects' : link === 'Blogs' ? '/blogs' : link === 'Contact Us' ? '/contact' : link === 'Our Partners' ? '/partners' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
                     <ChevronRight size={12} className="text-brand-gold" /> {link}
                   </Link>
                 </li>

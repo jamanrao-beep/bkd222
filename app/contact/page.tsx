@@ -354,7 +354,7 @@ export default function Contact() {
             <ul className="space-y-3">
               {['Home', 'About Us', 'Projects', 'Blogs', 'Contact Us'].map((link) => (
                 <li key={link}>
-                  <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Contact Us' ? '/contact' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
+                  <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Projects' ? '/projects' : link === 'Blogs' ? '/blogs' : link === 'Contact Us' ? '/contact' : link === 'Our Partners' ? '/partners' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
                     <ChevronRight size={12} className="text-brand-gold" /> {link}
                   </Link>
                 </li>
@@ -384,13 +384,13 @@ export default function Contact() {
             <h3 className="font-bold text-lg mb-6 text-brand-gold font-serif">Our Projects</h3>
             <div className="grid grid-cols-2 gap-3">
               {[
-                "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=300&q=80",
-                "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=300&q=80",
-                "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=300&q=80",
-                "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=300&q=80"
+                "/Proj1.png",
+                "/Proj2.png",
+                "/Proj3.png",
+                "/Proj4.png"
               ].map((img, i) => (
-                <Link href="/projects" key={i} className="block relative h-20 rounded-lg overflow-hidden group">
-                  <Image src={img} alt="Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform duration-500" />
+                <Link href={`/projects/${i+1}`} key={i} className="block relative h-20 rounded overflow-hidden group">
+                  <Image src={img} alt="Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform" />
                 </Link>
               ))}
             </div>
