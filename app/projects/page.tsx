@@ -13,22 +13,22 @@ export default function Projects() {
     {
       title: "Fun Valley Township", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Ongoing",
-      img: "/Proj1.png"
+      img: "/fun_valley_township.png"
     },
     {
       title: "480 sq yard", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Ongoing",
-      img: "/Proj2.png"
+      img: "/480_sqyard_plot.png"
     },
     {
       title: "530 sq yard", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Ongoing",
-      img: "/Proj3.png"
+      img: "/530_sqyard_plot.png"
     },
     {
       title: "181 sq yard", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Ongoing",
-      img: "/Proj4.png"
+      img: "/181_sqyard_plot.png"
     }
   ];
 
@@ -128,19 +128,6 @@ export default function Projects() {
 
       {/* Projects Section */}
       <section className="py-20 px-8 max-w-[1400px] mx-auto w-full">
-        {/* Filters */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-12">
-          <div className="flex flex-wrap items-center gap-3">
-            <button className="bg-brand-gold text-white px-6 py-2.5 rounded text-sm font-semibold shadow-md">All Properties</button>
-            <button className="bg-white text-gray-600 border border-gray-200 px-6 py-2.5 rounded text-sm font-medium hover:border-brand-gold hover:text-brand-gold transition-colors">Residential</button>
-            <button className="bg-white text-gray-600 border border-gray-200 px-6 py-2.5 rounded text-sm font-medium hover:border-brand-gold hover:text-brand-gold transition-colors">Commercial</button>
-            <button className="bg-white text-gray-600 border border-gray-200 px-6 py-2.5 rounded text-sm font-medium hover:border-brand-gold hover:text-brand-gold transition-colors">Ongoing Projects</button>
-            <button className="bg-white text-gray-600 border border-gray-200 px-6 py-2.5 rounded text-sm font-medium hover:border-brand-gold hover:text-brand-gold transition-colors">Completed Projects</button>
-          </div>
-          <button className="bg-[#1a1c23] text-white px-6 py-2.5 rounded text-sm font-semibold flex items-center gap-2 shadow-md hover:bg-black transition-colors">
-            <Settings2 size={16} /> Filters
-          </button>
-        </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
