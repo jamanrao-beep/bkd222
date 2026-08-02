@@ -422,7 +422,7 @@ export default function About() {
             <ul className="space-y-4">
               <li className="flex gap-3 text-sm text-gray-400">
                 <MapPin size={18} className="text-brand-gold shrink-0" />
-                <span>1st Floor, IT Park, Shop No. 18, Doon Square, Dehradun, Uttarakhand 248013</span>
+                <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
               </li>
               <li className="flex gap-3 text-sm text-gray-400 items-center">
                 <Mail size={18} className="text-brand-gold shrink-0" />

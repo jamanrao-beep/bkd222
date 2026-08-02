@@ -15,7 +15,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
-            src="/home.jpeg" 
+            src="/project.png" 
             alt="Premium Building" 
             fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
             className="object-cover"
@@ -153,7 +153,7 @@ export default function Home() {
         </div>
         
         {/* WhatsApp Floating Button */}
-        <Link href='#' className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform">
+        <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%2 Media0in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform">
           <MessageCircle size={28} />
         </Link>
       </section>
@@ -325,7 +325,7 @@ export default function Home() {
             <ul className="space-y-4">
               <li className="flex gap-3 text-sm text-gray-400">
                 <MapPin size={18} className="text-brand-gold shrink-0" />
-                <span>1st Floor, IT Park, Shop No. 18, Doon Square, Dehradun, Uttarakhand 248013</span>
+                <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
               </li>
               <li className="flex gap-3 text-sm text-gray-400 items-center">
                 <Mail size={18} className="text-brand-gold shrink-0" />

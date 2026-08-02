@@ -95,7 +95,7 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
             <ul className="space-y-4">
               <li className="flex gap-3 text-sm text-gray-400">
                 <MapPin size={18} className="text-brand-gold shrink-0" />
-                <span>1st Floor, IT Park, Shop No. 18, Doon Square, Dehradun, Uttarakhand 248013</span>
+                <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
               </li>
               <li className="flex gap-3 text-sm text-gray-400 items-center">
                 <Mail size={18} className="text-brand-gold shrink-0" />
@@ -125,13 +125,8 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
           </div>
         </div>
 
-        <div className="max-w-[1600px] mx-auto pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+        <div className="max-w-[1600px] mx-auto pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-center text-xs text-gray-500">
           <p>© 2024 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
-          <div className="flex items-center gap-6">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <div className="w-px h-3 bg-gray-600" />
-            <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
-          </div>
         </div>
       </footer>
     </main>
