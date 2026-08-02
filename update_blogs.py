@@ -1,4 +1,28 @@
-import Image from "next/image";
+import re
+
+with open('assets/Darago_Blog_Topics.txt', 'r', encoding='utf-8') as f:
+    text = f.read()
+
+# Parse the text into 10 articles
+import re
+sections = re.split(r'\n\d+\.\s', '\n' + text)
+articles = []
+for sec in sections[1:]: # Skip the first header part
+    lines = [line.strip() for line in sec.strip().split('\n') if line.strip()]
+    if not lines: continue
+    title = lines[0]
+    # The rest is the excerpt/content
+    excerpt = " ".join(lines[1:])
+    # Shorten excerpt to ~120 chars for the card
+    if len(excerpt) > 120:
+        excerpt = excerpt[:117] + "..."
+    articles.append({
+        'title': title,
+        'excerpt': excerpt
+    })
+
+# Now let's generate the TSX content
+tsx_content = """import Image from "next/image";
 import Link from "next/link";
 import { 
   Phone, Mail, MapPin, 
@@ -9,67 +33,32 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa"
 
 export default function Blogs() {
   const articles = [
-    {
-      title: "Why Investing in Dehradun Plots is Better Than Buying Flats in 2026",
-      excerpt: "Buying an apartment might feel like the easier choice, but in 2026, Dehradun plots are proving to be the smarter inve...",
-      date: "May 24, 2025",
-      img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "Top 10 Emerging Areas to Buy Land in Dehradun",
-      excerpt: "Dehradun's real estate map is shifting fast, and savvy investors are already looking beyond the city centre toward em...",
-      date: "May 21, 2025",
-      img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "Complete Guide to Buying Residential Plots in Uttarakhand",
-      excerpt: "Buying a residential plot in Uttarakhand can be a rewarding investment, but the process comes with its own set of leg...",
-      date: "May 18, 2025",
-      img: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "Gated Township vs Open Plot: Which is Better?",
-      excerpt: "Choosing between a plot inside a gated township and a standalone open plot is one of the most common dilemmas for lan...",
-      date: "May 15, 2025",
-      img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "15 Things You Must Check Before Buying Land in Dehradun",
-      excerpt: "Buying land is a significant decision, and Dehradun's growing market makes due diligence more important than ever. Be...",
-      date: "May 10, 2025",
-      img: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "Why Laltappar–Majrigrant is Becoming Dehradun's Next Investment Hub",
-      excerpt: "Among Dehradun's emerging real estate pockets, Laltappar–Majrigrant is quickly building a reputation as the city's ne...",
-      date: "May 07, 2025",
-      img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "Farmhouse Land vs Residential Plots: Which Gives Better Returns?",
-      excerpt: "Both farmhouse land and residential plots have carved out strong demand in Dehradun's real estate market, but they se...",
-      date: "May 05, 2025",
-      img: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "How to Finance Your Plot Purchase in Dehradun",
-      excerpt: "Financing a plot purchase works differently from financing a ready home, and understanding your options can make the ...",
-      date: "May 02, 2025",
-      img: "https://images.unsplash.com/photo-1450101499163-c8848c66cb85?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "Future Development Projects That Will Increase Land Prices in Dehradun",
-      excerpt: "Dehradun's land prices are being shaped by a wave of infrastructure and development projects that are steadily transf...",
-      date: "Apr 29, 2025",
-      img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "Why Land is the Safest Long-Term Investment in Uttarakhand",
-      excerpt: "When it comes to building long-term wealth, land continues to stand out as one of the most reliable investment option...",
-      date: "Apr 25, 2025",
-      img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80"
-    },
-  ];
+"""
+# Add the 10 articles
+dates = ["May 24, 2025", "May 21, 2025", "May 18, 2025", "May 15, 2025", "May 10, 2025", "May 07, 2025", "May 05, 2025", "May 02, 2025", "Apr 29, 2025", "Apr 25, 2025"]
+images = [
+    "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1450101499163-c8848c66cb85?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80",
+]
+
+for i, art in enumerate(articles[:10]):
+    tsx_content += f"""    {{
+      title: "{art['title']}",
+      excerpt: "{art['excerpt']}",
+      date: "{dates[i]}",
+      img: "{images[i]}"
+    }},
+"""
+
+tsx_content += """  ];
 
   const categories = [
     { name: "Investment Tips", count: "10" },
@@ -338,3 +327,9 @@ export default function Blogs() {
     </main>
   );
 }
+"""
+
+with open('app/blogs/page.tsx', 'w', encoding='utf-8') as f:
+    f.write(tsx_content)
+
+print("Updated app/blogs/page.tsx")

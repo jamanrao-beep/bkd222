@@ -86,10 +86,10 @@ export default function Projects() {
           </div>
           <div className="flex items-center gap-4">
             <span className="font-semibold text-white">Follow Us:</span>
-            <Link href="https://facebook.com" className="hover:text-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
-            <Link href="https://instagram.com" className="hover:text-brand-gold transition-colors"><FaInstagram size={14} /></Link>
-            <Link href="https://youtube.com" className="hover:text-brand-gold transition-colors"><FaYoutube size={14} /></Link>
-            <Link href="https://whatsapp.com" className="hover:text-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
+            <Link href="https://www.facebook.com/badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
+            <Link href="https://www.instagram.com/badrikedardevelopers?igsh=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaInstagram size={14} /></Link>
+            <Link href="https://youtube.com/@badrikedardevelopers?si=Sgf_tHWd8wQ4JJnx" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaYoutube size={14} /></Link>
+            <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%20in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
           </div>
         </div>
 
@@ -298,7 +298,7 @@ export default function Projects() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>
             <Image 
-              src="/bkd-white-logo.png" 
+              src="/BKD LOGO Official.png" 
               alt="Badri Kedar Developers" 
               width={180} 
               height={70} 
@@ -308,10 +308,10 @@ export default function Projects() {
               Building more than just properties - we build trust, value, and lasting relationships. Your future, our commitment.
             </p>
             <div className="flex items-center gap-3">
-              <Link href="https://facebook.com" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
-              <Link href="https://instagram.com" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaInstagram size={14} /></Link>
-              <Link href="https://youtube.com" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaYoutube size={14} /></Link>
-              <Link href="https://whatsapp.com" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
+              <Link href="https://www.facebook.com/badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
+              <Link href="https://www.instagram.com/badrikedardevelopers?igsh=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaInstagram size={14} /></Link>
+              <Link href="https://youtube.com/@badrikedardevelopers?si=Sgf_tHWd8wQ4JJnx" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaYoutube size={14} /></Link>
+              <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%20in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
             </div>
           </div>
 
@@ -334,10 +334,6 @@ export default function Projects() {
               <li className="flex gap-3 text-sm text-gray-400">
                 <MapPin size={18} className="text-brand-gold shrink-0 mt-0.5" />
                 <span className="leading-relaxed">1st Floor, IT Park, Shop No. 18, Doon Square, Dehradun, Uttarakhand 248013</span>
-              </li>
-              <li className="flex gap-3 text-sm text-gray-400 items-center">
-                <Phone size={18} className="text-brand-gold shrink-0" />
-                <span>+91 92580 02814</span>
               </li>
               <li className="flex gap-3 text-sm text-gray-400 items-center">
                 <Mail size={18} className="text-brand-gold shrink-0" />
