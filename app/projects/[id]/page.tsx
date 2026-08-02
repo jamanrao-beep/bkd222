@@ -43,15 +43,43 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
           <ArrowLeft size={20} /> Back to Projects
         </Link>
         
-        <div className="bg-white rounded-2xl p-4 shadow-xl border border-gray-100">
+        <div className="bg-white rounded-2xl p-4 md:p-8 shadow-xl border border-gray-100 mb-12">
           <Image 
             src={projectImage}
             alt={`Project ${projectId}`}
             width={1200}
             height={1600}
-            className="w-full h-auto rounded-xl"
+            className="w-full h-auto rounded-xl mb-8"
             priority
           />
+          <div className="px-2">
+            <h1 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
+              {projectId === 1 ? "Fun Valley Township" : 
+               projectId === 2 ? "480 sq yard" : 
+               projectId === 3 ? "530 sq yard" : "181 sq yard"}
+            </h1>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Welcome to this premium property offering unparalleled luxury, comfort, and state-of-the-art amenities. Designed with meticulous attention to detail, this space perfectly balances modern aesthetics with functional living. Surrounded by lush greenery and offering excellent connectivity, it presents an exceptional opportunity for both homeowners and investors seeking lasting value in Dehradun.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 border-y border-gray-100">
+              <div>
+                <p className="text-sm text-gray-500 mb-1">Status</p>
+                <p className="font-semibold text-gray-900">Ready to Move</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-500 mb-1">Property Type</p>
+                <p className="font-semibold text-gray-900">Residential</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-500 mb-1">Location</p>
+                <p className="font-semibold text-gray-900">Dehradun, UK</p>
+              </div>
+              <div>
+                <p className="text-sm text-gray-500 mb-1">Contact</p>
+                <p className="font-semibold text-brand-gold">Get in touch</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

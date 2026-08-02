@@ -11,23 +11,23 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa"
 export default function Projects() {
   const projects = [
     {
-      title: "Godrej Properties", location: "Dehradun, Uttarakhand",
+      title: "Fun Valley Township", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Ongoing",
       img: "/Proj1.png"
     },
     {
-      title: "Green Valley Homes", location: "Dehradun, Uttarakhand",
-      type: "Residential", status: "Completed",
+      title: "480 sq yard", location: "Dehradun, Uttarakhand",
+      type: "Residential", status: "Ongoing",
       img: "/Proj2.png"
     },
     {
-      title: "Kedar Heights", location: "Dehradun, Uttarakhand",
-      type: "Commercial", status: "Ongoing",
+      title: "530 sq yard", location: "Dehradun, Uttarakhand",
+      type: "Residential", status: "Ongoing",
       img: "/Proj3.png"
     },
     {
-      title: "Sunrise Residency", location: "Dehradun, Uttarakhand",
-      type: "Residential", status: "Completed",
+      title: "181 sq yard", location: "Dehradun, Uttarakhand",
+      type: "Residential", status: "Ongoing",
       img: "/Proj4.png"
     }
   ];
