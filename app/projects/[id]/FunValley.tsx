@@ -4,7 +4,7 @@ import {
   Map, Users, Navigation, TreePine, Home, 
   Lightbulb, Zap, Gamepad2, Store, FileText, 
   HandCoins, TrendingUp, Leaf, HardHat, MapPin,
-  ArrowLeft
+  ArrowLeft, Building2
 } from "lucide-react";
 
 export default function FunValley() {

@@ -9,8 +9,9 @@ import Plot480 from "./Plot480";
 import Plot530 from "./Plot530";
 import Plot620 from "./Plot620";
 
-export default function ProjectDetail({ params }: { params: { id: string } }) {
-  const projectId = parseInt(params.id);
+export default async function ProjectDetail({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const projectId = parseInt(resolvedParams.id);
   
   // We have Proj1 to Proj4
   if (isNaN(projectId) || projectId < 1 || projectId > 4) {
