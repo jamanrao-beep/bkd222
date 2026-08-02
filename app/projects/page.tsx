@@ -26,7 +26,7 @@ export default function Projects() {
       img: "/530_sqyard_plot.png"
     },
     {
-      title: "181 sq yard", location: "Dehradun, Uttarakhand",
+      title: "620 sq yard", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Ongoing",
       img: "/181_sqyard_plot.png"
     }

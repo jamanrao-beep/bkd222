@@ -6,6 +6,7 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa"
 import { MapPin, Mail, Clock } from "lucide-react";
 import FunValley from "./FunValley";
 import Plot530 from "./Plot530";
+import Plot620 from "./Plot620";
 
 export default function ProjectDetail({ params }: { params: { id: string } }) {
   const projectId = parseInt(params.id);
@@ -21,6 +22,10 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
 
   if (projectId === 3) {
     return <Plot530 />;
+  }
+
+  if (projectId === 4) {
+    return <Plot620 />;
   }
 
   const projectImage = `/Proj${projectId}.png`;
