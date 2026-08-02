@@ -4,6 +4,8 @@ import { ChevronRight, ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { MapPin, Mail, Clock } from "lucide-react";
+import FunValley from "./FunValley";
+import Plot530 from "./Plot530";
 
 export default function ProjectDetail({ params }: { params: { id: string } }) {
   const projectId = parseInt(params.id);
@@ -11,6 +13,14 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
   // We have Proj1 to Proj4
   if (isNaN(projectId) || projectId < 1 || projectId > 4) {
     notFound();
+  }
+
+  if (projectId === 1) {
+    return <FunValley />;
+  }
+
+  if (projectId === 3) {
+    return <Plot530 />;
   }
 
   const projectImage = `/Proj${projectId}.png`;
