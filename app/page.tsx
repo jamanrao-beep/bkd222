@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  Phone, Mail, MapPin, 
-  ChevronRight, ChevronLeft, Building2, Map, ShieldCheck, 
-  Clock, Users, Award, Play, MessageCircle 
+import {
+  Phone, Mail, MapPin,
+  ChevronRight, ChevronLeft, Building2, Map, ShieldCheck,
+  Clock, Users, Award, Play, MessageCircle
 } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
@@ -14,10 +14,10 @@ export default function Home() {
       <section className="relative w-full h-[90vh] min-h-[700px] flex flex-col">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/home.jpeg" 
-            alt="Premium Building" 
-            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+          <Image
+            src="/home.jpeg"
+            alt="Premium Building"
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
             priority
           />
@@ -52,11 +52,11 @@ export default function Home() {
         {/* Navigation */}
         <nav className="relative z-10 flex justify-between items-center px-8 py-4">
           <Link href="/">
-            <Image 
-              src="/BKD_Logo.png" 
-              alt="Badri Kedar Developers" 
-              width={160} 
-              height={60} 
+            <Image
+              src="/BKD_Logo.png"
+              alt="Badri Kedar Developers"
+              width={160}
+              height={60}
               className="object-contain"
             />
           </Link>
@@ -69,8 +69,8 @@ export default function Home() {
             <Link href="/partners" className="hover:text-brand-gold transition-colors">Our Partners</Link>
             <Link href="/contact" className="hover:text-brand-gold transition-colors">Contact</Link>
           </div>
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             className="hidden md:flex items-center gap-2 bg-brand-gold text-white px-6 py-3 text-sm font-semibold hover:bg-brand-gold-hover transition-all"
           >
             Get Consultation <ChevronRight size={16} />
@@ -84,26 +84,13 @@ export default function Home() {
               Building More Than Just Properties
             </p>
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-              Building Trust.<br/>
+              Building Trust.<br />
               <span className="text-brand-gold">Creating Communities.</span>
             </h1>
             <p className="text-lg text-gray-200 mb-8 max-w-xl leading-relaxed">
               Crafting premium real estate spaces that inspire trust, elevate lifestyles and create lasting value.
             </p>
-            <div className="flex flex-wrap items-center gap-4">
-              <Link 
-                href="/projects" 
-                className="flex items-center gap-2 bg-brand-gold text-white px-8 py-4 font-semibold hover:bg-brand-gold-hover transition-all"
-              >
-                Explore Projects <ChevronRight size={18} />
-              </Link>
-              <Link 
-                href="/contact" 
-                className="flex items-center gap-2 border border-white/30 px-8 py-4 font-semibold hover:bg-white hover:text-black transition-all"
-              >
-                Contact Us <Phone size={18} />
-              </Link>
-            </div>
+            <div></div>
           </div>
         </div>
 
@@ -151,7 +138,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
+
         {/* WhatsApp Floating Button */}
         <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%2 Media0in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform">
           <MessageCircle size={28} />
@@ -166,12 +153,12 @@ export default function Home() {
             Discover our handpicked residential and commercial projects designed for modern living and long-term value.
           </p>
         </div>
-        
+
         <div className="max-w-7xl mx-auto flex justify-center">
           <Link href="/projects" className="block relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
             <Image src="/project.png" alt="Our Projects" width={1200} height={800} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" />
             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-                <span className="bg-brand-gold text-white px-8 py-4 rounded font-bold text-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0">Explore All Projects</span>
+              <span className="bg-brand-gold text-white px-8 py-4 rounded font-bold text-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0">Explore All Projects</span>
             </div>
           </Link>
         </div>
@@ -252,22 +239,22 @@ export default function Home() {
               </div>
             </div>
 
-            
-          </div>
 
           </div>
+
+        </div>
       </section>
 
       {/* CTA Section */}
       <section className="relative py-20 px-8 bg-[#1a1a1a] border-t border-white/10">
         <div className="absolute inset-0 opacity-10">
-           <Image src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" alt="" />
+          <Image src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" alt="" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
           <div>
             <p className="text-brand-gold font-bold tracking-widest text-xs uppercase mb-3">Looking To Invest?</p>
             <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
-              Let&apos;s Build Something<br/>
+              Let&apos;s Build Something<br />
               Extraordinary <span className="text-brand-gold">Together</span>
             </h2>
             <p className="text-gray-400 max-w-xl">
@@ -289,11 +276,11 @@ export default function Home() {
       <footer className="bg-black pt-20 pb-8 px-8 border-t border-white/10">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>
-            <Image 
-              src="/BKD_Logo.png" 
-              alt="Badri Kedar Developers" 
-              width={180} 
-              height={70} 
+            <Image
+              src="/BKD_Logo.png"
+              alt="Badri Kedar Developers"
+              width={180}
+              height={70}
               className="object-contain mb-6"
             />
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
@@ -347,7 +334,7 @@ export default function Home() {
                 "/Proj3.png",
                 "/Proj4.png"
               ].map((img, i) => (
-                <Link href={`/projects/${i+1}`} key={i} className="block relative h-20 rounded overflow-hidden group">
+                <Link href={`/projects/${i + 1}`} key={i} className="block relative h-20 rounded overflow-hidden group">
                   <Image src={img} alt="Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform" />
                 </Link>
               ))}
