@@ -148,20 +148,17 @@ export default function Contact() {
             <h3 className="font-serif text-2xl font-bold text-gray-900 mb-6">
               Find Us On <span className="text-brand-gold">Map</span>
             </h3>
-            <div className="relative w-full h-[250px] rounded-xl overflow-hidden shadow-md border border-gray-100 bg-gray-200">
-              {/* Dummy Map Image */}
-              <Image 
-                src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" 
-                alt="Map Location" 
-                fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-                className="object-cover opacity-80"
-              />
-              {/* Map UI Overlay to simulate the look in the image */}
-              <div className="absolute inset-0 bg-white/40" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-                <MapPin size={32} className="text-red-600 fill-red-600" />
-                <span className="bg-white px-3 py-1 rounded shadow text-xs font-bold text-red-600 mt-1">Badri Kedar Developers</span>
-              </div>
+            <div className="relative w-full h-[300px] rounded-xl overflow-hidden shadow-md border border-gray-100 bg-gray-200">
+              <iframe
+                src="https://maps.google.com/maps?q=Bhagirath%20Enclave%2C%2052%2C%20Balbir%20Rd%2C%20Dalanwala%2C%20Dehradun%2C%20Uttarakhand%20248001&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0"
+              ></iframe>
             </div>
           </div>
 
