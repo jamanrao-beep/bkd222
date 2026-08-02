@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { MapPin, Mail, Clock } from "lucide-react";
 import FunValley from "./FunValley";
+import Plot480 from "./Plot480";
 import Plot530 from "./Plot530";
 import Plot620 from "./Plot620";
 
@@ -18,6 +19,10 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
 
   if (projectId === 1) {
     return <FunValley />;
+  }
+
+  if (projectId === 2) {
+    return <Plot480 />;
   }
 
   if (projectId === 3) {
