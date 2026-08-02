@@ -16,7 +16,7 @@ export default function Plot530() {
       {/* Navigation */}
       <nav className="relative z-20 flex justify-between items-center px-8 py-4 bg-black border-b border-white/10">
         <Link href="/">
-          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={160} height={60} className="object-contain" />
+          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={160} height={60} className="object-contain" style={{ width: "auto", height: "auto" }} />
         </Link>
         <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
           <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
@@ -42,7 +42,7 @@ export default function Plot530() {
              <Image 
                src="/530_sqyard_plot.png" 
                alt="530 Sq Yards Plot" 
-               fill 
+               fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
                className="object-cover object-top"
                priority
              />
@@ -318,7 +318,7 @@ export default function Plot530() {
             { img: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80", label: "COMMERCIAL PROJECT" },
           ].map((item, idx) => (
             <div key={idx} className="relative rounded-xl overflow-hidden shadow-lg h-64 group">
-              <Image src={item.img} fill alt={item.label} className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src={item.img} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt={item.label} className="object-cover group-hover:scale-105 transition-transform duration-500" />
               <div className="absolute bottom-0 inset-x-0 py-3 text-center text-white font-bold text-sm" style={{ backgroundColor: "rgba(85, 122, 70, 0.9)" }}>
                 {item.label}
               </div>
@@ -347,7 +347,7 @@ export default function Plot530() {
       {/* Footer */}
       <footer className="bg-black pt-16 pb-8 px-8 border-t border-white/10 text-white">
         <div className="max-w-[1600px] mx-auto flex justify-between items-center">
-          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={180} height={70} className="object-contain" />
+          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={180} height={70} className="object-contain" style={{ width: "auto", height: "auto" }} />
           <p className="text-gray-500 text-sm">© 2026 Badri Kedar Developers. All rights reserved.</p>
         </div>
       </footer>

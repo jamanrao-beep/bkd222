@@ -13,7 +13,7 @@ export default function FunValley() {
       {/* Navigation */}
       <nav className="relative z-20 flex justify-between items-center px-8 py-4 bg-black border-b border-white/10">
         <Link href="/">
-          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={160} height={60} className="object-contain" />
+          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={160} height={60} className="object-contain" style={{ width: "auto", height: "auto" }} />
         </Link>
         <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
           <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
@@ -40,7 +40,7 @@ export default function FunValley() {
              <Image 
                src="/fun_valley_township.png" 
                alt="Fun Valley Township" 
-               fill 
+               fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
                className="object-cover object-top"
                priority
              />
@@ -320,7 +320,7 @@ export default function FunValley() {
       <section className="relative w-full py-16 bg-[#0a1128] overflow-hidden">
         {/* Landscape Background */}
         <div className="absolute inset-0 z-0">
-           <Image src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000" fill className="object-cover opacity-30" alt="" />
+           <Image src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover opacity-30" alt="" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-12 text-center text-white">
           <div className="flex items-center justify-center gap-4 mb-16">
@@ -388,7 +388,7 @@ export default function FunValley() {
             </ul>
           </div>
           <div className="relative h-[300px] md:h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl">
-            <Image src="https://images.unsplash.com/photo-1494522855154-9297ac14b55f?auto=format&fit=crop&w=1200&q=80" fill className="object-cover" alt="Night Road" />
+            <Image src="https://images.unsplash.com/photo-1494522855154-9297ac14b55f?auto=format&fit=crop&w=1200&q=80" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" alt="Night Road" />
           </div>
         </div>
       </section>
@@ -396,7 +396,7 @@ export default function FunValley() {
       {/* Footer */}
       <footer className="bg-black pt-16 pb-8 px-8 border-t border-white/10 text-white">
         <div className="max-w-[1600px] mx-auto flex justify-between items-center">
-          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={180} height={70} className="object-contain" />
+          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={180} height={70} className="object-contain" style={{ width: "auto", height: "auto" }} />
           <p className="text-gray-500 text-sm">© 2026 Badri Kedar Developers. All rights reserved.</p>
         </div>
       </footer>

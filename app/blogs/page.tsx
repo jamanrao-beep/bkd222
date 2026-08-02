@@ -237,7 +237,7 @@ export default function Blogs() {
               {articles.slice(0, 4).map((article, i) => (
                 <div key={i} className="flex gap-3 group cursor-pointer">
                   <div className="relative w-16 h-12 rounded overflow-hidden shrink-0">
-                    <Image src={article.img} alt={article.title} fill className="object-cover group-hover:scale-110 transition-transform" />
+                    <Image src={article.img} alt={article.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform" />
                   </div>
                   <div className="flex flex-col justify-center">
                     <h4 className="font-bold text-gray-900 text-[11px] leading-tight mb-1 line-clamp-2 group-hover:text-brand-gold transition-colors">{article.title}</h4>
