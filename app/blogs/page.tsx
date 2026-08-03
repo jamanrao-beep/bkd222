@@ -55,7 +55,7 @@ export default function Blogs() {
       title: "How to Finance Your Plot Purchase in Dehradun",
       excerpt: "Financing a plot purchase works differently from financing a ready home, and understanding your options can make the ...",
       date: "May 02, 2025",
-      img: "https://images.unsplash.com/photo-1450101499163-c8848c66cb85?auto=format&fit=crop&w=600&q=80"
+      img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80"
     },
     {
       title: "Future Development Projects That Will Increase Land Prices in Dehradun",
@@ -179,14 +179,15 @@ export default function Blogs() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {articles.slice(0, 8).map((article, i) => (
-              <div key={i} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col group hover:shadow-md transition-all duration-300">
+            {articles.map((article, i) => (
+              <Link href={`/blogs/${i + 1}`} key={i} className="bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 flex flex-col group hover:shadow-md transition-all duration-300">
                 <div className="relative h-44 overflow-hidden">
                   <Image 
                     src={article.img}
                     alt={article.title}
                     fill sizes="(max-width: 768px) 100vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    priority={i < 4}
                   />
                   <div className="absolute top-3 left-3 bg-white/90 backdrop-blur text-gray-800 text-[10px] font-bold px-2 py-1 rounded flex items-center gap-1 shadow-sm">
                     <Calendar size={10} className="text-brand-gold" /> {article.date}
@@ -196,12 +197,12 @@ export default function Blogs() {
                   <h3 className="font-bold text-gray-900 text-sm mb-2 leading-snug line-clamp-2">{article.title}</h3>
                   <p className="text-gray-500 text-xs mb-4 leading-relaxed line-clamp-3">{article.excerpt}</p>
                   <div className="mt-auto">
-                    <Link href="#" className="inline-flex items-center gap-1.5 text-brand-gold font-bold text-xs hover:text-brand-gold-hover transition-colors group/link">
+                    <div className="inline-flex items-center gap-1.5 text-brand-gold font-bold text-xs hover:text-brand-gold-hover transition-colors group/link">
                       Read More <ArrowRight size={12} className="group-hover/link:translate-x-1 transition-transform" />
-                    </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
@@ -267,7 +268,7 @@ export default function Blogs() {
             <h3 className="font-bold text-gray-900 text-base mb-4">Popular Articles</h3>
             <div className="space-y-4 mb-6">
               {articles.slice(0, 4).map((article, i) => (
-                <div key={i} className="flex gap-3 group cursor-pointer">
+                <Link href={`/blogs/${i + 1}`} key={i} className="flex gap-3 group cursor-pointer">
                   <div className="relative w-16 h-12 rounded overflow-hidden shrink-0">
                     <Image src={article.img} alt={article.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform" />
                   </div>
@@ -277,7 +278,7 @@ export default function Blogs() {
                       <Calendar size={8} /> {article.date}
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
             <button className="w-full bg-brand-gold/10 text-brand-gold font-bold text-xs py-2.5 rounded hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center gap-1">
