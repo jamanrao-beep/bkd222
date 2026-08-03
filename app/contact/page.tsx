@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { 
-  Phone, Mail, MapPin, 
+  Phone, Mail, MapPin, ChevronDown,
   ChevronRight, ChevronLeft, Building2, ShieldCheck, 
   Clock, Users, Award, Target, Eye, Gem, 
   CheckCircle2, FileText, Leaf, Star, Quote,
@@ -62,14 +62,7 @@ export default function Contact() {
               className="object-contain"
              style={{ width: "auto", height: "auto" }} />
           </Link>
-          <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
-            <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
-            <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>
-            <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>
-
-            <Link href="/blogs" className="text-white hover:text-brand-gold transition-colors">Blogs</Link>
-            <Link href="/contact" className="text-brand-gold border-b-2 border-brand-gold pb-1">Contact</Link>
-          </div>
+                    <div className="hidden lg:flex items-center gap-8 text-sm font-medium">\n            <Link href="/" className="text-brand-gold border-b-2 border-brand-gold pb-1">Home</Link>\n            <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>\n            <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>\n            <Link href="/blogs" className="text-white hover:text-brand-gold transition-colors">Blogs</Link>\n            <Link href="/partners" className="text-white hover:text-brand-gold transition-colors">Our Partners</Link>\n            <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>\n          </div>
           <Link 
             href="/contact" 
             className="hidden md:flex items-center gap-2 bg-brand-gold text-white px-6 py-2.5 text-sm font-semibold hover:bg-brand-gold-hover transition-all rounded shadow-lg shadow-brand-gold/20"
@@ -203,6 +196,23 @@ export default function Contact() {
                   placeholder="Phone Number" 
                   className="w-full bg-[#111318] border border-white/10 text-white placeholder-gray-500 text-sm rounded-lg focus:ring-brand-gold focus:border-brand-gold block pl-12 p-4 transition-colors"
                 />
+              </div>
+
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                  <Users className="h-5 w-5 text-gray-500" />
+                </div>
+                <select 
+                  className="w-full bg-[#111318] border border-white/10 text-white text-sm rounded-lg focus:ring-brand-gold focus:border-brand-gold block pl-12 p-4 transition-colors appearance-none cursor-pointer"
+                  defaultValue=""
+                >
+                  <option value="" disabled className="text-gray-500">I am a...</option>
+                  <option value="buyer">Buyer</option>
+                  <option value="partner">Channel Partner / Real Estate Agent</option>
+                </select>
+                <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+                  <ChevronDown className="h-5 w-5 text-gray-500" />
+                </div>
               </div>
 
               <div className="relative">

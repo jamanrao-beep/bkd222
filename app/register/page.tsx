@@ -61,14 +61,7 @@ export default function Register() {
               className="object-contain"
              style={{ width: "auto", height: "auto" }} />
           </Link>
-          <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
-            <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
-            <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>
-            <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>
-
-            <Link href="/blogs" className="text-white hover:text-brand-gold transition-colors">Blogs</Link>
-            <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>
-          </div>
+                    <div className="hidden lg:flex items-center gap-8 text-sm font-medium">\n            <Link href="/" className="text-brand-gold border-b-2 border-brand-gold pb-1">Home</Link>\n            <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>\n            <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>\n            <Link href="/blogs" className="text-white hover:text-brand-gold transition-colors">Blogs</Link>\n            <Link href="/partners" className="text-white hover:text-brand-gold transition-colors">Our Partners</Link>\n            <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>\n          </div>
           <Link 
             href="/contact" 
             className="hidden md:flex items-center gap-2 bg-brand-gold text-white px-6 py-2.5 text-sm font-semibold hover:bg-brand-gold-hover transition-all rounded shadow-lg shadow-brand-gold/20"
@@ -165,6 +158,23 @@ export default function Register() {
                 />
                 <div className="absolute inset-y-0 right-0 pr-4 flex items-center cursor-pointer">
                   <Eye className="h-5 w-5 text-gray-400 hover:text-gray-600" strokeWidth={1.5} />
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                  <Users className="h-5 w-5 text-gray-400" strokeWidth={1.5} />
+                </div>
+                <select 
+                  className="w-full bg-white border border-gray-200 text-gray-900 text-sm rounded focus:ring-brand-gold focus:border-brand-gold block pl-12 p-3.5 transition-colors appearance-none cursor-pointer"
+                  defaultValue=""
+                >
+                  <option value="" disabled className="text-gray-500">I am a...</option>
+                  <option value="buyer">Buyer</option>
+                  <option value="partner">Channel Partner / Real Estate Agent</option>
+                </select>
+                <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+                  <ChevronDown className="h-5 w-5 text-gray-400" strokeWidth={1.5} />
                 </div>
               </div>
 
