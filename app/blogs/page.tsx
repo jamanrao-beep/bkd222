@@ -106,7 +106,7 @@ export default function Blogs() {
               width={160} 
               height={60} 
               className="object-contain"
-            />
+             style={{ width: "auto", height: "auto" }} />
           </Link>
           <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
             <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
@@ -266,7 +266,7 @@ export default function Blogs() {
               width={180} 
               height={70} 
               className="object-contain mb-6"
-            />
+             style={{ width: "auto", height: "auto" }} />
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Building more than just properties - we build trust, value, and lasting relationships. Your future, our commitment.
             </p>
@@ -327,7 +327,7 @@ export default function Blogs() {
         </div>
 
         <div className="max-w-[1600px] mx-auto pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-center text-xs text-gray-500">
-          <p>© 2024 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
+          <p>© 2026 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
         </div>
       </footer>
     </main>

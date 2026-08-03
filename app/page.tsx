@@ -58,7 +58,7 @@ export default function Home() {
               width={160}
               height={60}
               className="object-contain"
-            />
+              style={{ width: "auto", height: "auto" }} />
           </Link>
           <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
             <Link href="/" className="text-brand-gold border-b-2 border-brand-gold pb-1">Home</Link>
@@ -282,7 +282,7 @@ export default function Home() {
               width={180}
               height={70}
               className="object-contain mb-6"
-            />
+              style={{ width: "auto", height: "auto" }} />
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Building more than just properties - we build trust, value, and lasting relationships. Your future, our commitment.
             </p>
@@ -343,15 +343,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <p>© 2024 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
-          <div className="flex items-center gap-6">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <div className="w-px h-4 bg-gray-600" />
-            <Link href="/terms" className="hover:text-white transition-colors">Terms & Conditions</Link>
-            <button className="w-10 h-10 bg-brand-gold text-white flex items-center justify-center rounded ml-4 hover:bg-brand-gold-hover transition-colors">
-              <ChevronLeft size={20} className="rotate-90" />
-            </button>
-          </div>
+          <p>© 2026 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
         </div>
       </footer>
     </main>
