@@ -396,11 +396,7 @@ export default function Contact() {
 
         <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-gray-500">
           <p>© 2026 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
-          <div className="flex items-center gap-6">
-            <button className="w-10 h-10 bg-brand-gold text-white flex items-center justify-center rounded-lg ml-4 hover:bg-brand-gold-hover transition-colors shadow-lg shadow-brand-gold/20">
-              <ChevronLeft size={20} className="rotate-90" />
-            </button>
-          </div>
+          
         </div>
       </footer>
     </main>

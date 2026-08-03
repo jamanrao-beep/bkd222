@@ -39,7 +39,7 @@ export default function Projects() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
-            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000" 
+            src="/home.jpeg" 
             alt="Premium Building" 
             fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
             className="object-cover"
@@ -332,11 +332,7 @@ export default function Projects() {
 
         <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-gray-500">
           <p>© 2026 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
-          <div className="flex items-center gap-6">
-            <button className="w-10 h-10 bg-brand-gold text-white flex items-center justify-center rounded-lg ml-4 hover:bg-brand-gold-hover transition-colors shadow-lg shadow-brand-gold/20">
-              <ChevronLeft size={20} className="rotate-90" />
-            </button>
-          </div>
+          
         </div>
       </footer>
     </main>

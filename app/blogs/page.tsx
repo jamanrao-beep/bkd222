@@ -113,8 +113,15 @@ export default function Blogs() {
             <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>
             <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>
             <Link href="/blogs" className="text-brand-gold border-b-2 border-brand-gold pb-1">Blogs</Link>
+            <Link href="/partners" className="text-white hover:text-brand-gold transition-colors">Our Partners</Link>
             <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>
           </div>
+          <Link
+            href="/contact"
+            className="hidden md:flex items-center gap-2 bg-brand-gold text-white px-6 py-3 text-sm font-semibold hover:bg-brand-gold-hover transition-all"
+          >
+            Get Consultation <ChevronRight size={16} />
+          </Link>
         </nav>
 
         {/* Hero Content */}
