@@ -16,7 +16,7 @@ export default function FunValley() {
         <Link href="/">
           <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={160} height={60} className="object-contain" style={{ width: "auto", height: "auto" }} />
         </Link>
-                            <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
+                                      <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
             <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
             <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>
             <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>

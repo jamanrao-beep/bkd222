@@ -2,7 +2,7 @@ import os
 import re
 
 nav_links = [
-    {"href": "/", "label": "Home", "match": r"page\.tsx$"},
+    {"href": "/", "label": "Home", "match": r"^app[\\/]page\.tsx$"},
     {"href": "/about", "label": "About Us", "match": r"about[\\/]page\.tsx$"},
     {"href": "/projects", "label": "Projects", "match": r"projects[\\/]page\.tsx$"},
     {"href": "/blogs", "label": "Blogs", "match": r"blogs[\\/]page\.tsx$"},
@@ -12,8 +12,12 @@ nav_links = [
 
 def generate_nav(filepath):
     active_href = None
+    # normalize path
+    norm_path = filepath.replace("\\", "/")
+    # We shouldn't break, or we should check in reverse so that more specific matches first, or just fix the regex.
+    # The regex for Home now has ^app/page.tsx$ so it will only match the root page.tsx
     for link in nav_links:
-        if re.search(link["match"], filepath.replace("\\", "/")):
+        if re.search(link["match"].replace("\\\\", "/"), norm_path) or re.search(link["match"], norm_path):
             active_href = link["href"]
             break
             
@@ -24,7 +28,7 @@ def generate_nav(filepath):
             className = 'text-brand-gold border-b-2 border-brand-gold pb-1'
         else:
             className = 'hover:text-brand-gold transition-colors'
-            if filepath.replace("\\", "/") != "app/page.tsx":
+            if norm_path != "app/page.tsx":
                 className = 'text-white hover:text-brand-gold transition-colors'
         
         html += f'            <Link href="{link["href"]}" className="{className}">{link["label"]}</Link>\n'
@@ -34,10 +38,6 @@ def generate_nav(filepath):
 def update_file(filepath):
     with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
-
-    # The navbar block now is exactly on one line with literal \n because of previous error.
-    # We should match starting from <div className="hidden lg:flex items-center gap-8 text-sm font-medium"> 
-    # to </div>
     
     start_pattern = r'<div className="hidden lg:flex items-center gap-8 text-sm font-medium">'
     match_start = re.search(start_pattern, content)

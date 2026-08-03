@@ -60,7 +60,7 @@ export default function Home() {
               className="object-contain"
               style={{ width: "auto", height: "auto" }} />
           </Link>
-                              <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
+                                        <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
             <Link href="/" className="text-brand-gold border-b-2 border-brand-gold pb-1">Home</Link>
             <Link href="/about" className="hover:text-brand-gold transition-colors">About Us</Link>
             <Link href="/projects" className="hover:text-brand-gold transition-colors">Projects</Link>

@@ -61,12 +61,12 @@ export default function Partners() {
               className="object-contain"
              style={{ width: "auto", height: "auto" }} />
           </Link>
-                              <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
-            <Link href="/" className="text-brand-gold border-b-2 border-brand-gold pb-1">Home</Link>
+                                        <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
+            <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
             <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>
             <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>
             <Link href="/blogs" className="text-white hover:text-brand-gold transition-colors">Blogs</Link>
-            <Link href="/partners" className="text-white hover:text-brand-gold transition-colors">Our Partners</Link>
+            <Link href="/partners" className="text-brand-gold border-b-2 border-brand-gold pb-1">Our Partners</Link>
             <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>
           </div>
           <Link 
