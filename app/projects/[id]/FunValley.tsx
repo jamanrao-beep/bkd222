@@ -26,11 +26,7 @@ export default function FunValley() {
           </div>
       </nav>
 
-      <div className="px-8 py-4">
-        <Link href="/projects" className="inline-flex items-center gap-2 text-[#0a1128] font-bold hover:text-brand-gold transition-colors">
-          <ArrowLeft size={20} /> Back to Projects
-        </Link>
-      </div>
+      
 
       {/* Top Hero Section */}
       <section className="relative w-full min-h-[950px] lg:min-h-screen flex flex-col pt-12 pb-24 overflow-hidden">
@@ -452,10 +448,10 @@ export default function FunValley() {
             <h3 className="font-bold text-lg mb-6 text-brand-gold">Featured Projects</h3>
             <div className="grid grid-cols-2 gap-3">
               {[
-                "/Proj1.png",
-                "/Proj2.png",
-                "/Proj3.png",
-                "/Proj4.png"
+                "/fun_valley_township.png",
+                "/480_sqyard_plot.png",
+                "/530_sqyard_plot.png",
+                "/181_sqyard_plot.png"
               ].map((img, i) => (
                 <Link href={`/projects/${i + 1}`} key={i} className="block relative h-20 rounded overflow-hidden group">
                   <Image src={img} alt="Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform" />
