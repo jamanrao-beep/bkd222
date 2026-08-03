@@ -35,7 +35,7 @@ export default function Projects() {
   return (
     <main className="min-h-screen bg-[#fafafa] text-black selection:bg-brand-gold selection:text-white flex flex-col font-sans">
       {/* Header & Hero Section */}
-      <section className="relative w-full h-[50vh] min-h-[400px] flex flex-col">
+      <section className="relative w-full h-[90vh] min-h-[700px] flex flex-col">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
@@ -53,7 +53,7 @@ export default function Projects() {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <MapPin size={14} className="text-brand-gold" />
-              <span>1st Floor, IT Park, Shop No. 18, Doon Square, Dehradun</span>
+              <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
             </div>
             <div className="flex items-center gap-2">
               <Phone size={14} className="text-brand-gold" />
@@ -112,19 +112,6 @@ export default function Projects() {
         </div>
       </section>
 
-      {/* 3D Model Placeholder */}
-      <section className="w-full bg-[#111] py-20 flex items-center justify-center border-b border-white/10 relative overflow-hidden h-[50vh] min-h-[400px]">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000')] opacity-10 bg-cover bg-center"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center text-center px-4">
-          <div className="w-20 h-20 border-2 border-brand-gold border-dashed rounded-full flex items-center justify-center mb-6 animate-spin-slow">
-             <Building2 className="text-brand-gold w-10 h-10 animate-pulse" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-serif text-brand-gold font-bold mb-2">Model Comes Here</h2>
-          <p className="text-gray-400 text-sm max-w-md">
-            (Placeholder for full-screen size interactive 3D model or large immersive image)
-          </p>
-        </div>
-      </section>
 
       {/* Projects Section */}
       <section className="py-20 px-8 max-w-[1400px] mx-auto w-full">

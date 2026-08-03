@@ -84,7 +84,7 @@ export default function Blogs() {
   return (
     <main className="min-h-screen bg-[#f8f9fa] text-black selection:bg-brand-gold selection:text-white flex flex-col font-sans">
       {/* Header & Hero Section */}
-      <section className="relative w-full h-[45vh] min-h-[350px] flex flex-col">
+      <section className="relative w-full h-[55vh] min-h-[450px] flex flex-col">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
@@ -95,6 +95,31 @@ export default function Blogs() {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent" />
+        </div>
+
+        {/* Top Bar */}
+        <div className="relative z-10 hidden md:flex justify-between items-center px-8 py-2 text-xs text-gray-300 border-b border-white/10">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <MapPin size={14} className="text-brand-gold" />
+              <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone size={14} className="text-brand-gold" />
+              <span>+91 92580 02814</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Mail size={14} className="text-brand-gold" />
+              <span>info@badrikedardevelopers.com</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <span className="font-semibold text-white">Follow Us:</span>
+            <Link href="https://www.facebook.com/badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
+            <Link href="https://www.instagram.com/badrikedardevelopers?igsh=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaInstagram size={14} /></Link>
+            <Link href="https://youtube.com/@badrikedardevelopers?si=Sgf_tHWd8wQ4JJnx" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaYoutube size={14} /></Link>
+            <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%20in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
+          </div>
         </div>
 
         {/* Navigation */}

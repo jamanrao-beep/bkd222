@@ -31,7 +31,7 @@ export default function Contact() {
           <div className="flex items-center gap-6">
             <div className="flex items-center gap-2">
               <MapPin size={14} className="text-brand-gold" />
-              <span>1st Floor, IT Park, Shop No. 18, Doon Square, Dehradun</span>
+              <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
             </div>
             <div className="flex items-center gap-2">
               <Phone size={14} className="text-brand-gold" />
