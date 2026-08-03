@@ -62,7 +62,14 @@ export default function Contact() {
               className="object-contain"
              style={{ width: "auto", height: "auto" }} />
           </Link>
-                    <div className="hidden lg:flex items-center gap-8 text-sm font-medium">\n            <Link href="/" className="text-brand-gold border-b-2 border-brand-gold pb-1">Home</Link>\n            <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>\n            <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>\n            <Link href="/blogs" className="text-white hover:text-brand-gold transition-colors">Blogs</Link>\n            <Link href="/partners" className="text-white hover:text-brand-gold transition-colors">Our Partners</Link>\n            <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>\n          </div>
+                              <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
+            <Link href="/" className="text-brand-gold border-b-2 border-brand-gold pb-1">Home</Link>
+            <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>
+            <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>
+            <Link href="/blogs" className="text-white hover:text-brand-gold transition-colors">Blogs</Link>
+            <Link href="/partners" className="text-white hover:text-brand-gold transition-colors">Our Partners</Link>
+            <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>
+          </div>
           <Link 
             href="/contact" 
             className="hidden md:flex items-center gap-2 bg-brand-gold text-white px-6 py-2.5 text-sm font-semibold hover:bg-brand-gold-hover transition-all rounded shadow-lg shadow-brand-gold/20"

@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { 
   Map, Users, Navigation, TreePine, Home, 
   Lightbulb, Zap, Gamepad2, Store, FileText, 
   HandCoins, TrendingUp, Leaf, HardHat, MapPin,
-  ArrowLeft, Building2
+  ArrowLeft, Building2, ChevronRight, Clock, Mail
 } from "lucide-react";
 
 export default function FunValley() {
@@ -15,7 +16,14 @@ export default function FunValley() {
         <Link href="/">
           <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={160} height={60} className="object-contain" style={{ width: "auto", height: "auto" }} />
         </Link>
-                  <div className="hidden lg:flex items-center gap-8 text-sm font-medium">\n            <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>\n            <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>\n            <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>\n            <Link href="/blogs" className="text-white hover:text-brand-gold transition-colors">Blogs</Link>\n            <Link href="/partners" className="text-white hover:text-brand-gold transition-colors">Our Partners</Link>\n            <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>\n          </div>
+                            <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
+            <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
+            <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>
+            <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>
+            <Link href="/blogs" className="text-white hover:text-brand-gold transition-colors">Blogs</Link>
+            <Link href="/partners" className="text-white hover:text-brand-gold transition-colors">Our Partners</Link>
+            <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>
+          </div>
       </nav>
 
       <div className="px-8 py-4">
@@ -25,7 +33,7 @@ export default function FunValley() {
       </div>
 
       {/* Top Hero Section */}
-      <section className="relative w-full max-w-[1400px] mx-auto min-h-[800px] flex flex-col pt-12 pb-24 overflow-hidden">
+      <section className="relative w-full min-h-[950px] lg:min-h-screen flex flex-col pt-12 pb-24 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 bg-white">
            {/* We use a generic sky at the top and the township image below to match the infographic style */}
@@ -387,11 +395,78 @@ export default function FunValley() {
         </div>
       </section>
       
-      {/* Footer */}
-      <footer className="bg-black pt-16 pb-8 px-8 border-t border-white/10 text-white">
-        <div className="max-w-[1600px] mx-auto flex justify-between items-center">
-          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={180} height={70} className="object-contain" style={{ width: "auto", height: "auto" }} />
-          <p className="text-gray-500 text-sm">© 2026 Badri Kedar Developers. All rights reserved.</p>
+            {/* Footer */}
+      <footer className="bg-black pt-20 pb-8 px-8 border-t border-white/10 text-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <div>
+            <Image
+              src="/BKD_Logo.png"
+              alt="Badri Kedar Developers"
+              width={180}
+              height={70}
+              className="object-contain mb-6"
+              style={{ width: "auto", height: "auto" }} />
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              Building more than just properties - we build trust, value, and lasting relationships. Your future, our commitment.
+            </p>
+            <div className="flex items-center gap-3">
+              <Link href="https://www.facebook.com/badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaFacebookF size={16} /></Link>
+              <Link href="https://www.instagram.com/badrikedardevelopers?igsh=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaInstagram size={16} /></Link>
+              <Link href="https://youtube.com/@badrikedardevelopers?si=Sgf_tHWd8wQ4JJnx" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaYoutube size={16} /></Link>
+              <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%2 Media0in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaWhatsapp size={16} /></Link>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-lg mb-6 text-brand-gold">Quick Links</h3>
+            <ul className="space-y-3">
+              {['Home', 'About Us', 'Projects', 'Blogs', 'Our Partners', 'Contact Us'].map((link) => (
+                <li key={link}>
+                  <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Projects' ? '/projects' : link === 'Blogs' ? '/blogs' : link === 'Contact Us' ? '/contact' : link === 'Our Partners' ? '/partners' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
+                    <ChevronRight size={12} className="text-brand-gold" /> {link}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-lg mb-6 text-brand-gold">Contact Us</h3>
+            <ul className="space-y-4">
+              <li className="flex gap-3 text-sm text-gray-400">
+                <MapPin size={18} className="text-brand-gold shrink-0" />
+                <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
+              </li>
+              <li className="flex gap-3 text-sm text-gray-400 items-center">
+                <Mail size={18} className="text-brand-gold shrink-0" />
+                <span>info@badrikedardevelopers.com</span>
+              </li>
+              <li className="flex gap-3 text-sm text-gray-400 items-center">
+                <Clock size={18} className="text-brand-gold shrink-0" />
+                <span>Mon - Sat: 10:00 AM - 7:00 PM</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-lg mb-6 text-brand-gold">Featured Projects</h3>
+            <div className="grid grid-cols-2 gap-3">
+              {[
+                "/Proj1.png",
+                "/Proj2.png",
+                "/Proj3.png",
+                "/Proj4.png"
+              ].map((img, i) => (
+                <Link href={`/projects/${i + 1}`} key={i} className="block relative h-20 rounded overflow-hidden group">
+                  <Image src={img} alt="Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
+          <p>© 2026 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
         </div>
       </footer>
     </div>
