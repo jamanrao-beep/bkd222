@@ -13,22 +13,22 @@ export default function Projects() {
     {
       title: "Fun Valley, Majigrant", location: "Laltappar, Dehradun",
       type: "Residential", status: "Ongoing",
-      img: "/fun_valley_township.png"
+      img: "/new_prop_4.jpg"
     },
     {
       title: "Ranipokhari, Rishikesh Highway", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Ongoing",
-      img: "/480_sqyard_plot.png"
+      img: "/new_prop_1.jpg"
     },
     {
       title: "Thano, Rishikesh Highway", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Ongoing",
-      img: "/530_sqyard_plot.png"
+      img: "/new_prop_2.jpg"
     },
     {
       title: "New Defence Colony", location: "Sahastradhara, Dehradun",
       type: "Residential", status: "Ongoing",
-      img: "/181_sqyard_plot.png"
+      img: "/new_prop_3.jpg"
     }
   ];
 
@@ -304,10 +304,10 @@ export default function Projects() {
             <h3 className="font-bold text-lg mb-6 text-brand-gold font-serif">Featured Projects</h3>
             <div className="grid grid-cols-2 gap-3">
               {[
-                "/fun_valley_township.png",
-                "/480_sqyard_plot.png",
-                "/530_sqyard_plot.png",
-                "/181_sqyard_plot.png"
+                "/new_prop_4.jpg",
+                "/new_prop_1.jpg",
+                "/new_prop_2.jpg",
+                "/new_prop_3.jpg"
               ].map((img, i) => (
                 <Link href={`/projects/${i+1}`} key={i} className="block relative h-20 rounded overflow-hidden group">
                   <Image src={img} alt="Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform" />
