@@ -7,11 +7,11 @@ import {
   HandCoins, TrendingUp, Leaf, ShieldCheck, MapPin,
   ArrowLeft, Building2, Compass, Landmark,
   CheckCircle2, Building, Plane, Stethoscope, CarFront, Ruler,
-  GraduationCap, ChevronRight, Clock, Mail, Sun, Briefcase, Bus, Train, PlusSquare, HeartPulse, HardHat
+  GraduationCap, ChevronRight, Clock, Mail, Sun, Briefcase, Bus, Train, PlusSquare, HeartPulse
 } from "lucide-react";
 import { IndianRupee } from "lucide-react";
 
-export default function Plot480() {
+export default function Plot181() {
   const themeColor = "#000000";
   const accentColor = "#f59e0b"; // brand gold
 
@@ -36,8 +36,8 @@ export default function Plot480() {
       <section className="relative w-full h-[600px] flex flex-col">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/480_sqyard_plot.png"
-            alt="Ranipokhari Plot"
+            src="/181_sqyard_plot.png"
+            alt="New Defence Colony"
             fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
             priority
@@ -52,21 +52,21 @@ export default function Plot480() {
             <span className="text-gray-400">/</span>
             <Link href="/projects" className="hover:text-white transition-colors">Properties</Link>
             <span className="text-gray-400">/</span>
-            <span className="text-white">Ranipokhari, Dehradun</span>
+            <span className="text-white">New Defence Colony, Sahastradhara</span>
           </div>
 
           <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-2">
-            Ranipokhari,<br />Dehradun<br />
-            <span className="text-brand-gold">Rishikesh Highway</span>
+            New Defence Colony,<br />Sahastradhara<br />
+            <span className="text-brand-gold">Dehradun</span>
           </h1>
 
           <div className="flex items-center gap-2 font-semibold text-sm mb-6">
             <MapPin size={18} className="text-brand-gold" />
-            <span>North - West Facing</span>
+            <span>East Facing</span>
           </div>
 
           <p className="text-gray-300 text-base max-w-lg leading-relaxed mb-10">
-            Prime 480 Gaj plot just 30 meters from Dehradun-Rishikesh 4-Lane State Highway. Vastu compliant with 20 ft wide road access.
+            181 Gaj east-facing plot in fast-developing New Defence Colony. Ideal for residential or commercial investment.
           </p>
 
           <div className="flex flex-wrap gap-8 items-center border-t border-white/20 pt-6">
@@ -74,7 +74,7 @@ export default function Plot480() {
               <Map size={32} strokeWidth={1} className="text-brand-gold" />
               <div>
                 <p className="text-xs text-gray-400">Plot Size</p>
-                <p className="font-semibold text-sm">480 Gaj</p>
+                <p className="font-semibold text-sm">181 Gaj</p>
               </div>
             </div>
             <div className="w-px h-10 bg-white/20 hidden md:block"></div>
@@ -82,7 +82,7 @@ export default function Plot480() {
               <Navigation size={32} strokeWidth={1} className="text-brand-gold" />
               <div>
                 <p className="text-xs text-gray-400">Road Access</p>
-                <p className="font-semibold text-sm">20 ft Wide</p>
+                <p className="font-semibold text-sm">4-Lane Highway</p>
               </div>
             </div>
             <div className="w-px h-10 bg-white/20 hidden md:block"></div>
@@ -90,7 +90,7 @@ export default function Plot480() {
               <Compass size={32} strokeWidth={1} className="text-brand-gold" />
               <div>
                 <p className="text-xs text-gray-400">Facing</p>
-                <p className="font-semibold text-sm">North - West</p>
+                <p className="font-semibold text-sm">East</p>
               </div>
             </div>
           </div>
@@ -101,20 +101,20 @@ export default function Plot480() {
       <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="relative h-[400px] rounded-xl overflow-hidden group">
-            <Image src="/480_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+            <Image src="/181_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="relative h-[192px] rounded-xl overflow-hidden group">
-              <Image src="/480_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/181_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="relative h-[192px] rounded-xl overflow-hidden group">
-              <Image src="/480_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/181_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="relative h-[192px] rounded-xl overflow-hidden group">
-              <Image src="/480_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/181_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="relative h-[192px] rounded-xl overflow-hidden group">
-              <Image src="/480_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/181_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
           </div>
         </div>
@@ -130,11 +130,11 @@ export default function Plot480() {
 
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-6">
           {[
-            { icon: MapPin, title: "Prime Location", desc: "Just 30 meters from Dehradun-Rishikesh 4-Lane State Highway." },
-            { icon: Compass, title: "Vastu Compliant", desc: "Plot is vastu compliant ensuring positivity and prosperity." },
-            { icon: Navigation, title: "Wide Road Access", desc: "20 ft wide internal road for smooth connectivity." },
-            { icon: FileText, title: "Clear Title", desc: "100% clear title and complete documentation." },
-            { icon: TrendingUp, title: "Investment Value", desc: "High appreciation potential in a fast developing area." },
+            { icon: MapPin, title: "Prime Location", desc: "Located in New Defence Colony, Sahastradhara - a premium & peaceful area." },
+            { icon: Sun, title: "East Facing", desc: "Plot is east-facing, ensuring positivity and natural light." },
+            { icon: Navigation, title: "4-Lane Highway Access", desc: "Direct access to 4-Lane Highway for smooth connectivity." },
+            { icon: FileText, title: "Ideal for Investment", desc: "Perfect for residential or commercial development." },
+            { icon: TrendingUp, title: "High Appreciation", desc: "Located in a fast-developing area with high growth potential." },
           ].map((item, i) => (
             <div key={i} className="bg-white border border-gray-100 rounded-xl p-6 text-center shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-lg transition-shadow">
               <div className="mx-auto w-16 h-16 rounded-full border border-gray-100 flex items-center justify-center mb-4">
@@ -161,25 +161,25 @@ export default function Plot480() {
               <div className="flex items-center gap-3 text-gray-600 font-semibold">
                 <Map size={18} className="text-brand-gold" /> Plot Size
               </div>
-              <span className="font-bold text-gray-900">480 Gaj</span>
+              <span className="font-bold text-gray-900">181 Gaj</span>
             </div>
             <div className="flex items-center justify-between border-b border-gray-200 pb-4">
               <div className="flex items-center gap-3 text-gray-600 font-semibold">
                 <Compass size={18} className="text-brand-gold" /> Facing
               </div>
-              <span className="font-bold text-gray-900">North - West</span>
+              <span className="font-bold text-gray-900">East</span>
             </div>
             <div className="flex items-center justify-between border-b border-gray-200 pb-4">
               <div className="flex items-center gap-3 text-gray-600 font-semibold">
                 <Building2 size={18} className="text-brand-gold" /> Road Access
               </div>
-              <span className="font-bold text-gray-900">20 ft Wide</span>
+              <span className="font-bold text-gray-900">4-Lane Highway</span>
             </div>
             <div className="flex items-center justify-between border-b border-gray-200 pb-4">
               <div className="flex items-center gap-3 text-gray-600 font-semibold">
                 <Navigation size={18} className="text-brand-gold" /> Distance from Highway
               </div>
-              <span className="font-bold text-gray-900">30 meters</span>
+              <span className="font-bold text-gray-900">Adjacent</span>
             </div>
             <div className="flex items-center justify-between border-b border-gray-200 pb-4">
               <div className="flex items-center gap-3 text-gray-600 font-semibold">
@@ -194,13 +194,13 @@ export default function Plot480() {
               <div className="flex items-center gap-3 text-gray-600 font-semibold">
                 <MapPin size={18} className="text-brand-gold" /> Location
               </div>
-              <span className="font-bold text-gray-900 text-right">Ranipokhari, Dehradun Rishikesh Highway</span>
+              <span className="font-bold text-gray-900 text-right">New Defence Colony, Sahastradhara, Dehradun</span>
             </div>
             <div className="flex items-center justify-between border-b border-gray-200 pb-4">
               <div className="flex items-center gap-3 text-gray-600 font-semibold">
                 <Home size={18} className="text-brand-gold" /> Property Type
               </div>
-              <span className="font-bold text-gray-900">Residential Plot</span>
+              <span className="font-bold text-gray-900">Residential / Commercial Plot</span>
             </div>
             <div className="flex items-center justify-between border-b border-gray-200 pb-4">
               <div className="flex items-center gap-3 text-gray-600 font-semibold">
@@ -218,7 +218,7 @@ export default function Plot480() {
               <div className="flex items-center gap-3 text-gray-600 font-semibold">
                 <IndianRupee size={18} className="text-brand-gold" /> Price
               </div>
-              <span className="font-bold text-gray-900">₹30,000 / Gaj</span>
+              <span className="font-bold text-gray-900">₹70,000 / Gaj</span>
             </div>
           </div>
         </div>
@@ -232,12 +232,13 @@ export default function Plot480() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
           {[
-            { icon: Landmark, title: "Rishikesh", dist: "25 mins drive" },
-            { icon: Building, title: "Dehradun City", dist: "35 mins drive" },
-            { icon: Plane, title: "Jolly Grant Airport", dist: "45 mins drive" },
-            { icon: Train, title: "Railway Station", dist: "30 mins drive" },
+            { icon: Landmark, title: "Sahastradhara Road", dist: "2 mins drive" },
+            { icon: Building, title: "Dehradun City", dist: "20 mins drive" },
+            { icon: Plane, title: "Doon University", dist: "10 mins drive" },
+            { icon: Train, title: "Railway Station", dist: "25 mins drive" },
+            { icon: Bus, title: "ISBT Dehradun", dist: "20 mins drive" },
             { icon: GraduationCap, title: "School & College", dist: "10-15 mins drive" },
             { icon: HeartPulse, title: "Hospital", dist: "10 mins drive" },
           ].map((item, i) => (
@@ -261,10 +262,10 @@ export default function Plot480() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: TrendingUp, title: "High Growth Corridor", desc: "Located on Dehradun-Rishikesh Highway, a rapidly developing real estate corridor." },
-              { icon: Plane, title: "Excellent Connectivity", desc: "Well connected to major destinations with wide road network." },
-              { icon: HardHat, title: "Future Development", desc: "Surrounded by upcoming residential and commercial projects." },
-              { icon: IndianRupee, title: "Great Returns", desc: "High demand area ensuring excellent rental yield and property appreciation." },
+              { icon: TrendingUp, title: "Rapid Development", desc: "New Defence Colony is one of the fastest developing areas in Dehradun with modern infrastructure." },
+              { icon: ShieldCheck, title: "Excellent Connectivity", desc: "Direct access to Sahastradhara Road and 4-Lane Highway ensures easy and smooth travel." },
+              { icon: Home, title: "Safe & Secure Area", desc: "Gated community with wide roads and a peaceful environment for living & investment." },
+              { icon: IndianRupee, title: "Great Returns", desc: "High rental demand and future value appreciation make it a smart investment choice." },
             ].map((item, i) => (
               <div key={i} className="flex flex-col items-center text-center border-b lg:border-b-0 lg:border-r border-white/10 last:border-0 pb-8 lg:pb-0 px-4">
                 <div className="w-16 h-16 border border-brand-gold/30 rounded-full flex items-center justify-center mb-6 text-brand-gold">

@@ -7,7 +7,7 @@ import { MapPin, Mail, Clock } from "lucide-react";
 import FunValley from "./FunValley";
 import Plot480 from "./Plot480";
 import Plot530 from "./Plot530";
-import Plot620 from "./Plot620";
+import Plot181 from "./Plot181";
 
 export default async function ProjectDetail({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
@@ -31,7 +31,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
   }
 
   if (projectId === 4) {
-    return <Plot620 />;
+    return <Plot181 />;
   }
 
   const projectImage = `/Proj${projectId}.png`;
@@ -75,8 +75,8 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
           <div className="px-2">
             <h1 className="text-3xl md:text-4xl font-serif font-bold text-gray-900 mb-4">
               {projectId === 1 ? "Fun Valley Township" : 
-               projectId === 2 ? "480 sq yard" : 
-               projectId === 3 ? "530 sq yard" : "181 sq yard"}
+               projectId === 2 ? "Ranipokhari, Rishikesh Highway" : 
+               projectId === 3 ? "Thano, Rishikesh Highway" : "New Defence Colony, Sahastradhara"}
             </h1>
             <p className="text-gray-600 leading-relaxed mb-6">
               Welcome to this premium property offering unparalleled luxury, comfort, and state-of-the-art amenities. Designed with meticulous attention to detail, this space perfectly balances modern aesthetics with functional living. Surrounded by lush greenery and offering excellent connectivity, it presents an exceptional opportunity for both homeowners and investors seeking lasting value in Dehradun.

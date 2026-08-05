@@ -11,22 +11,22 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa"
 export default function Projects() {
   const projects = [
     {
-      title: "Fun Valley Township", location: "Dehradun, Uttarakhand",
+      title: "Fun Valley, Majigrant", location: "Laltappar, Dehradun",
       type: "Residential", status: "Ongoing",
       img: "/fun_valley_township.png"
     },
     {
-      title: "480 sq yard", location: "Dehradun, Uttarakhand",
+      title: "Ranipokhari, Rishikesh Highway", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Ongoing",
       img: "/480_sqyard_plot.png"
     },
     {
-      title: "530 sq yard", location: "Dehradun, Uttarakhand",
+      title: "Thano, Rishikesh Highway", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Ongoing",
       img: "/530_sqyard_plot.png"
     },
     {
-      title: "620 sq yard", location: "Dehradun, Uttarakhand",
+      title: "New Defence Colony", location: "Sahastradhara, Dehradun",
       type: "Residential", status: "Ongoing",
       img: "/181_sqyard_plot.png"
     }
