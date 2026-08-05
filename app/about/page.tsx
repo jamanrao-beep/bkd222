@@ -15,9 +15,9 @@ export default function About() {
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" />
+            <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" />
           </Link>
-          
+
           {/* Nav Links */}
           <nav className="hidden lg:flex items-center gap-10">
             <Link href="/" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">Home</Link>
@@ -26,7 +26,7 @@ export default function About() {
             <Link href="/learn" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">Read &amp; Learn More</Link>
             <Link href="/contact" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">Contact Us</Link>
           </nav>
-          
+
           {/* Enquire Now Button */}
           <Link href="/contact" className="bg-[#F7A300] text-black px-6 py-2.5 rounded text-sm font-bold flex items-center gap-2 hover:bg-[#e59800] transition-colors">
             Enquire Now <ArrowRight size={18} strokeWidth={2.5} />
@@ -42,7 +42,7 @@ export default function About() {
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-black/60" />
         </div>
-        
+
         <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 flex flex-col justify-center h-full pt-10">
           <div className="max-w-2xl text-white">
             <p className="text-[#F7A300] font-bold tracking-[0.15em] text-xs uppercase mb-4">ABOUT US</p>
@@ -82,7 +82,7 @@ export default function About() {
             </div>
             <div className="lg:w-[55%] w-full pt-4">
               <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg">
-                 <Image src="/universal_hero.jpg" alt="Scenic land" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+                <Image src="/universal_hero.jpg" alt="Scenic land" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function About() {
                   To provide genuine land investment opportunities with complete transparency, clear documentation and excellent customer service.
                 </p>
               </div>
-              
+
               {/* Vision */}
               <div className="flex-1 flex flex-col items-center text-center pt-8 md:pt-0 md:pl-12">
                 <div className="w-16 h-16 bg-[#111] rounded-full flex items-center justify-center mb-6">
@@ -120,7 +120,7 @@ export default function About() {
       <section className="bg-[#0f1115] py-16">
         <div className="max-w-[1400px] mx-auto px-6">
           <p className="text-[#F7A300] font-bold text-xs tracking-widest uppercase mb-12 text-center">OUR CORE VALUES</p>
-          
+
           <div className="flex flex-wrap lg:flex-nowrap justify-between gap-6 divide-y lg:divide-y-0 lg:divide-x divide-white/10">
             {[
               { icon: <ShieldCheck size={32} strokeWidth={1.5} />, title: "Transparency", desc: "We believe in complete clarity in every deal." },
@@ -149,16 +149,16 @@ export default function About() {
             {/* Left Image */}
             <div className="lg:w-1/2 w-full">
               <div className="relative w-full h-[350px] rounded-xl overflow-hidden shadow-lg">
-                <Image src="/universal_hero.jpg" alt="Partnership" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+                <Image src="../assets/handshake.png" alt="Partnership" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
             </div>
-            
+
             {/* Right Content */}
             <div className="lg:w-1/2 w-full pt-4">
               <h2 className="font-serif text-[34px] font-bold mb-8 text-gray-900 leading-tight">
                 <span className="text-[#F7A300]">Partnership</span> Module
               </h2>
-              
+
               <div className="mb-6">
                 <h3 className="font-bold text-gray-900 text-base mb-2">1. JV model - shared investment/shared profit</h3>
                 <ul className="list-disc pl-5 text-gray-700 text-sm space-y-1">
@@ -166,18 +166,18 @@ export default function About() {
                   <li>50-50% in profit.</li>
                 </ul>
               </div>
-              
+
               <div className="w-full border-t border-dashed border-gray-300 my-6"></div>
-              
+
               <div className="mb-6">
                 <h3 className="font-bold text-gray-900 text-base mb-2">2. Developers exclusive model -</h3>
                 <p className="text-gray-700 text-sm leading-relaxed mb-3">
-                  We offer land support on just 10% token money with a 10 - 14 months for construction and sale.<br/>
-                  With your investment in construction, you get to keep the profits.<br/>
+                  We offer land support on just 10% token money with a 10 - 14 months for construction and sale.<br />
+                  With your investment in construction, you get to keep the profits.<br />
                   We settle the remaining amount on sale.
                 </p>
               </div>
-              
+
               <p className="text-gray-700 text-sm italic font-medium bg-gray-50 p-4 rounded-lg border border-gray-100">
                 Each model can be customized depending on mutual agreement and project scale.
               </p>
@@ -188,47 +188,47 @@ export default function About() {
           <div className="mt-20 bg-[#fafafa] rounded-2xl p-8 border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex flex-wrap justify-between items-center gap-6">
             <div className="flex items-center gap-4 flex-1 justify-center">
               <div className="w-12 h-12 flex items-center justify-center text-[#F7A300]">
-                 <Calendar size={36} strokeWidth={1.5} />
+                <Calendar size={36} strokeWidth={1.5} />
               </div>
               <div>
                 <h4 className="font-bold text-2xl text-gray-900">10+</h4>
-                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wide">Years of<br/>Experience</p>
+                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wide">Years of<br />Experience</p>
               </div>
             </div>
-            
+
             <div className="hidden lg:block w-px h-12 bg-gray-200"></div>
-            
+
             <div className="flex items-center gap-4 flex-1 justify-center">
               <div className="w-12 h-12 flex items-center justify-center text-[#F7A300]">
-                 <MapPin size={36} strokeWidth={1.5} />
+                <MapPin size={36} strokeWidth={1.5} />
               </div>
               <div>
                 <h4 className="font-bold text-2xl text-gray-900">100+</h4>
-                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wide">Premium<br/>Locations</p>
+                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wide">Premium<br />Locations</p>
               </div>
             </div>
-            
+
             <div className="hidden lg:block w-px h-12 bg-gray-200"></div>
-            
+
             <div className="flex items-center gap-4 flex-1 justify-center">
               <div className="w-12 h-12 flex items-center justify-center text-[#F7A300]">
-                 <Building2 size={36} strokeWidth={1.5} />
+                <Building2 size={36} strokeWidth={1.5} />
               </div>
               <div>
                 <h4 className="font-bold text-2xl text-gray-900">57+</h4>
-                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wide">Projects<br/>Delivered</p>
+                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wide">Projects<br />Delivered</p>
               </div>
             </div>
-            
+
             <div className="hidden lg:block w-px h-12 bg-gray-200"></div>
-            
+
             <div className="flex items-center gap-4 flex-1 justify-center">
               <div className="w-12 h-12 flex items-center justify-center text-[#F7A300]">
-                 <Users size={36} strokeWidth={1.5} />
+                <Users size={36} strokeWidth={1.5} />
               </div>
               <div>
                 <h4 className="font-bold text-2xl text-gray-900">500+</h4>
-                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wide">Happy<br/>Investors</p>
+                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wide">Happy<br />Investors</p>
               </div>
             </div>
           </div>
@@ -301,14 +301,20 @@ export default function About() {
             </ul>
             <h4 className="text-white font-bold mb-4 tracking-wider text-xs uppercase">OUR LOCATION</h4>
             <div className="w-full h-24 bg-gray-800 rounded overflow-hidden relative border border-gray-700">
-               <Image src="/home.jpeg" alt="Map Location" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover opacity-50 grayscale hover:grayscale-0 transition-all" />
-               <div className="absolute inset-0 flex items-center justify-center">
-                  <MapPin size={24} className="text-[#ea4335] drop-shadow-md" />
-               </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110204.74617267597!2d77.94709420067305!3d30.32540979207907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c356c888af%3A0x4c3562c032518799!2sDehradun%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1715612345678!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+              ></iframe>
             </div>
           </div>
         </div>
-        
+
         <div className="max-w-[1400px] mx-auto px-6 pt-6 border-t border-gray-800 text-center flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-500 font-medium">
           <p>© 2026 Badri Kedar Developers. All Rights Reserved.</p>
         </div>

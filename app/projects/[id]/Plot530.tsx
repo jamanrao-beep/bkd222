@@ -39,7 +39,7 @@ export default function Plot530() {
       <section className="relative w-full h-[85vh] min-h-[600px] flex flex-col pt-[80px]">
         <div className="absolute inset-0 z-0 top-0">
           <Image
-            src="/plot530_hero.jpg"
+            src="/new_prop_2.jpg"
             alt="Thano Plot"
             fill sizes="(max-width: 768px) 100vw, 100vw"
             className="object-cover"
@@ -104,20 +104,20 @@ export default function Plot530() {
       <section className="w-full max-w-[1400px] mx-auto px-6 py-16 bg-[#f8f9fa]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="relative h-[420px] rounded-2xl overflow-hidden group shadow-md">
-            <Image src="/prop2_gal_main.jpg" alt="Property View" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+            <Image src="/prop2_gal_main.png" alt="Property View" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="relative h-[202px] rounded-2xl overflow-hidden group shadow-sm">
-              <Image src="/prop2_gal_1.jpg" alt="Property View 1" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="/prop2_gal_1.png" alt="Property View 1" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="relative h-[202px] rounded-2xl overflow-hidden group shadow-sm">
-              <Image src="/prop2_gal_2.jpg" alt="Property View 2" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="/prop2_gal_2.png" alt="Property View 2" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="relative h-[202px] rounded-2xl overflow-hidden group shadow-sm">
-              <Image src="/prop2_gal_3.jpg" alt="Property View 3" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="/gal_new_3.png" alt="Property View 3" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="relative h-[202px] rounded-2xl overflow-hidden group shadow-sm">
-              <Image src="/prop2_gal_4.jpg" alt="Property View 4" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <Image src="/gal_new_4.png" alt="Property View 4" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
             </div>
           </div>
         </div>
@@ -331,10 +331,16 @@ export default function Plot530() {
             </ul>
             <h4 className="text-white font-bold mb-4 tracking-wider text-xs uppercase">OUR LOCATION</h4>
             <div className="w-full h-24 bg-gray-800 rounded overflow-hidden relative border border-gray-700">
-               <Image src="/home.jpeg" alt="Map Location" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover opacity-50 grayscale hover:grayscale-0 transition-all" />
-               <div className="absolute inset-0 flex items-center justify-center">
-                  <MapPin size={24} className="text-[#ea4335] drop-shadow-md" />
-               </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110204.74617267597!2d77.94709420067305!3d30.32540979207907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c356c888af%3A0x4c3562c032518799!2sDehradun%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1715612345678!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+              ></iframe>
             </div>
           </div>
         </div>
