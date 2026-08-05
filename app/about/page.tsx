@@ -11,7 +11,7 @@ export default function About() {
   return (
     <main className="min-h-screen bg-white text-gray-800 font-sans selection:bg-[#F7A300] selection:text-white overflow-x-hidden">
       {/* 1. Header (Navbar) */}
-      <header className="absolute top-0 w-full z-50 bg-[#161616]/95 backdrop-blur-sm border-b border-white/10">
+      <header className="absolute top-0 w-full z-50 bg-black border-b border-white/10">
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
@@ -37,7 +37,7 @@ export default function About() {
       {/* 2. Hero Section */}
       <section className="relative w-full h-[60vh] min-h-[500px] flex items-center mt-[80px]">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0 top-[-80px]">
+        <div className="absolute inset-0 z-0 ">
           <Image src="/universal_hero.jpg" alt="Premium Plots" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" priority />
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-black/60" />
