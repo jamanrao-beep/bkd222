@@ -175,7 +175,7 @@ export default function Home() {
             {/* Card 1 */}
             <Link href="/properties" className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 block group flex flex-col hover:-translate-y-1 transition-transform duration-300">
               <div className="relative h-56 w-full">
-                <Image src="/new_prop_1.jpg" alt="Ranipokhari Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+                <Image src="/ranipokhri_thumbnail.jpg" alt="Ranipokhari Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="font-bold text-lg text-gray-900 mb-1 leading-tight">Ranipokhari, Dehradun<br/>Rishikesh Highway</h3>
@@ -206,7 +206,7 @@ export default function Home() {
             {/* Card 2 */}
             <Link href="/properties" className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 block group flex flex-col hover:-translate-y-1 transition-transform duration-300">
               <div className="relative h-56 w-full">
-                <Image src="/new_prop_2.jpg" alt="Thano Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+                <Image src="/thano_thumbnail.jpg" alt="Thano Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="font-bold text-lg text-gray-900 mb-1 leading-tight">Thano, Dehradun<br/>Rishikesh Highway</h3>

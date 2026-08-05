@@ -18,12 +18,12 @@ export default function Projects() {
     {
       title: "Ranipokhari, Rishikesh Highway", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Ongoing",
-      img: "/new_prop_1.jpg"
+      img: "/ranipokhri_thumbnail.jpg"
     },
     {
       title: "Thano, Rishikesh Highway", location: "Dehradun, Uttarakhand",
       type: "Residential", status: "Ongoing",
-      img: "/new_prop_2.jpg"
+      img: "/thano_thumbnail.jpg"
     },
     {
       title: "New Defence Colony", location: "Sahastradhara, Dehradun",
@@ -299,8 +299,8 @@ export default function Projects() {
             <div className="grid grid-cols-2 gap-3">
               {[
                 "/new_prop_4.jpg",
-                "/new_prop_1.jpg",
-                "/new_prop_2.jpg",
+                "/ranipokhri_thumbnail.jpg",
+                "/thano_thumbnail.jpg",
                 "/new_prop_3.jpg"
               ].map((img, i) => (
                 <Link href={`/projects/${i+1}`} key={i} className="block relative h-20 rounded overflow-hidden group">

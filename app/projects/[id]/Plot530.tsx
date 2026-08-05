@@ -39,7 +39,7 @@ export default function Plot530() {
       <section className="relative w-full h-[85vh] min-h-[600px] flex flex-col pt-[80px]">
         <div className="absolute inset-0 z-0 top-0">
           <Image
-            src="/new_prop_2.jpg"
+            src="/thano_thumbnail.jpg"
             alt="Thano Plot"
             fill sizes="(max-width: 768px) 100vw, 100vw"
             className="object-cover"
@@ -103,22 +103,17 @@ export default function Plot530() {
       {/* Image Grid */}
       <section className="w-full max-w-[1400px] mx-auto px-6 py-16 bg-[#f8f9fa]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <div className="relative h-[420px] rounded-2xl overflow-hidden group shadow-md">
-            <Image src="/prop2_gal_main.png" alt="Property View" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+          <div className="relative h-[300px] md:h-[420px] rounded-2xl overflow-hidden group shadow-md">
+            <Image src="/thano_gal_1.jpg" alt="Property View 1" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="relative h-[202px] rounded-2xl overflow-hidden group shadow-sm">
-              <Image src="/prop2_gal_1.png" alt="Property View 1" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
-            </div>
-            <div className="relative h-[202px] rounded-2xl overflow-hidden group shadow-sm">
-              <Image src="/prop2_gal_2.png" alt="Property View 2" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
-            </div>
-            <div className="relative h-[202px] rounded-2xl overflow-hidden group shadow-sm">
-              <Image src="/gal_new_3.png" alt="Property View 3" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
-            </div>
-            <div className="relative h-[202px] rounded-2xl overflow-hidden group shadow-sm">
-              <Image src="/gal_new_4.png" alt="Property View 4" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
-            </div>
+          <div className="relative h-[300px] md:h-[420px] rounded-2xl overflow-hidden group shadow-md">
+            <Image src="/thano_gal_2.jpg" alt="Property View 2" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+          </div>
+          <div className="relative h-[300px] md:h-[420px] rounded-2xl overflow-hidden group shadow-md">
+            <Image src="/thano_gal_3.jpg" alt="Property View 3" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+          </div>
+          <div className="relative h-[300px] md:h-[420px] rounded-2xl overflow-hidden group shadow-md">
+            <Image src="/thano_gal_4.jpg" alt="Property View 4" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
         </div>
       </section>
