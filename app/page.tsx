@@ -1,348 +1,484 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Phone, Mail, MapPin,
-  ChevronRight, ChevronLeft, Building2, Map, ShieldCheck,
-  Clock, Users, Award, Play, MessageCircle
+  MapPin, Phone, Mail, ChevronRight, ShieldCheck, Map, TrendingUp,
+  Check, Building2, Trees, Droplets, Mountain, Store, Users, Award, Compass, Car
 } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-brand-gold selection:text-white">
-      {/* Hero Section */}
-      <section className="relative w-full h-[90vh] min-h-[700px] flex flex-col">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/home.jpeg"
-            alt="Premium Building"
-            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/80" />
-        </div>
-
-        {/* Top Bar */}
-        <div className="relative z-10 hidden md:flex justify-between items-center px-8 py-2 text-xs text-gray-300 border-b border-white/10">
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <MapPin size={14} className="text-brand-gold" />
-              <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Phone size={14} className="text-brand-gold" />
-              <span>+91 92580 02814</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail size={14} className="text-brand-gold" />
-              <span>info@badrikedardevelopers.com</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <span className="font-semibold text-white">Follow Us:</span>
-            <Link href="https://www.facebook.com/badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
-            <Link href="https://www.instagram.com/badrikedardevelopers?igsh=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaInstagram size={14} /></Link>
-            <Link href="https://youtube.com/@badrikedardevelopers?si=Sgf_tHWd8wQ4JJnx" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaYoutube size={14} /></Link>
-            <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%2 Media0in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
-          </div>
-        </div>
-
-        {/* Navigation */}
-        <nav className="relative z-10 flex justify-between items-center px-8 py-4">
+    <main className="min-h-screen bg-gray-50 text-gray-800 font-sans selection:bg-[#F7A300] selection:text-white overflow-x-hidden">
+      {/* 1. Header (Navbar) */}
+      <header className="absolute top-0 w-full z-50 bg-[#161616]/95 backdrop-blur-sm border-b border-white/10">
+        <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
+          {/* Logo */}
           <Link href="/">
-            <Image
-              src="/BKD_Logo.png"
-              alt="Badri Kedar Developers"
-              width={160}
-              height={60}
-              className="object-contain"
-              style={{ width: "auto", height: "auto" }} />
+             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" />
           </Link>
-                                        <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
-            <Link href="/" className="text-brand-gold border-b-2 border-brand-gold pb-1">Home</Link>
-            <Link href="/about" className="hover:text-brand-gold transition-colors">About Us</Link>
-            <Link href="/projects" className="hover:text-brand-gold transition-colors">Projects</Link>
-            <Link href="/blogs" className="hover:text-brand-gold transition-colors">Blogs</Link>
-            <Link href="/partners" className="hover:text-brand-gold transition-colors">Our Partners</Link>
-            <Link href="/contact" className="hover:text-brand-gold transition-colors">Contact</Link>
-          </div>
-          <Link
-            href="/contact"
-            className="hidden md:flex items-center gap-2 bg-brand-gold text-white px-6 py-3 text-sm font-semibold hover:bg-brand-gold-hover transition-all"
-          >
-            Get Consultation <ChevronRight size={16} />
+          
+          {/* Nav Links */}
+          <nav className="hidden lg:flex items-center gap-10">
+            <Link href="/" className="text-white border-b-2 border-[#F7A300] pb-1 text-sm font-medium">Home</Link>
+            <Link href="/about" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">About Us</Link>
+            <Link href="/properties" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">Properties</Link>
+            <Link href="/learn" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">Read &amp; Learn More</Link>
+            <Link href="/contact" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">Contact Us</Link>
+          </nav>
+          
+          {/* Enquire Now Button */}
+          <Link href="/contact" className="bg-[#F7A300] text-black px-6 py-2.5 rounded text-sm font-bold flex items-center gap-2 hover:bg-[#e59800] transition-colors">
+            Enquire Now <ChevronRight size={18} strokeWidth={2.5} />
           </Link>
-        </nav>
+        </div>
+      </header>
 
-        {/* Hero Content */}
-        <div className="relative z-10 flex-1 flex items-center px-8 md:px-16 lg:px-24">
-          <div className="max-w-3xl">
-            <p className="text-brand-gold font-medium tracking-wide mb-4 text-sm md:text-base">
-              Building More Than Just Properties
-            </p>
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-              Building Trust.<br />
-              <span className="text-brand-gold">Creating Communities.</span>
+      {/* 2. Hero Section */}
+      <section className="relative w-full h-[90vh] min-h-[650px] flex items-center mt-[80px]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 top-[-80px]">
+          <Image src="/hero_high_res.png" alt="Premium Plots" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" priority />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-black/20" />
+        </div>
+        
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 flex justify-between items-center">
+          {/* Left Text */}
+          <div className="max-w-2xl text-white">
+            <p className="text-[#F7A300] font-bold tracking-[0.15em] text-xs uppercase mb-4">PREMIUM PLOTS. PRIME LOCATIONS.</p>
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-[75px] font-bold leading-[1.1] mb-6 tracking-tight">
+              Invest In<br />
+              Your <span className="text-[#F7A300]">Future</span><br />
+              Today
             </h1>
-            <p className="text-lg text-gray-200 mb-8 max-w-xl leading-relaxed">
-              Crafting premium real estate spaces that inspire trust, elevate lifestyles and create lasting value.
+            <p className="text-gray-200 text-lg md:text-xl max-w-lg leading-relaxed">
+              Discover premium land opportunities across Uttarakhand with high growth potential and secure returns.
             </p>
-            <div></div>
           </div>
-        </div>
-
-        {/* Floating Arrows */}
-        <button className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/20 hover:bg-black/50 transition-all backdrop-blur-sm">
-          <ChevronLeft size={24} />
-        </button>
-        <button className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full border border-white/20 flex items-center justify-center bg-black/20 hover:bg-black/50 transition-all backdrop-blur-sm">
-          <ChevronRight size={24} />
-        </button>
-
-        {/* Floating Stats Bar */}
-        <div className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 z-20 w-[90%] max-w-6xl">
-          <div className="bg-[#111] border border-white/10 rounded-2xl p-6 md:p-8 flex flex-wrap md:flex-nowrap justify-between gap-8 shadow-2xl backdrop-blur-md bg-opacity-95">
-            <div className="flex items-center gap-4 flex-1">
-              <Award className="text-brand-gold w-10 h-10" />
-              <div>
-                <h3 className="text-2xl font-bold">20+</h3>
-                <p className="text-sm text-gray-400">Years of Excellence</p>
+          
+          {/* Right Stats Panel */}
+          <div className="hidden lg:flex flex-col bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl p-8 py-10 w-72 items-center text-center mr-8">
+            <div className="flex flex-col items-center pb-6">
+              <div className="w-12 h-12 mb-3">
+                 <svg viewBox="0 0 24 24" fill="none" stroke="#F7A300" strokeWidth="1.5" className="w-full h-full"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
               </div>
+              <h3 className="text-3xl font-bold text-white mb-1">500+</h3>
+              <p className="text-sm text-gray-300">Happy Investors</p>
             </div>
-            <div className="hidden md:block w-px bg-white/10" />
-            <div className="flex items-center gap-4 flex-1">
-              <Users className="text-brand-gold w-10 h-10" />
-              <div>
-                <h3 className="text-2xl font-bold">500+</h3>
-                <p className="text-sm text-gray-400">Happy Clients</p>
+            
+            <div className="w-full h-px bg-white/10"></div>
+            
+            <div className="flex flex-col items-center py-6">
+              <div className="w-12 h-12 mb-3">
+                 <svg viewBox="0 0 24 24" fill="none" stroke="#F7A300" strokeWidth="1.5" className="w-full h-full"><path d="M12 15l-2 5l9-5l-2-5l-5 5z"/><circle cx="12" cy="8" r="5"/></svg>
               </div>
+              <h3 className="text-3xl font-bold text-white mb-1">100%</h3>
+              <p className="text-sm text-gray-300">Transparent Deals</p>
             </div>
-            <div className="hidden md:block w-px bg-white/10" />
-            <div className="flex items-center gap-4 flex-1">
-              <Building2 className="text-brand-gold w-10 h-10" />
-              <div>
-                <h3 className="text-2xl font-bold">100+</h3>
-                <p className="text-sm text-gray-400">Properties Delivered</p>
+            
+            <div className="w-full h-px bg-white/10"></div>
+            
+            <div className="flex flex-col items-center pt-6">
+              <div className="w-12 h-12 mb-3">
+                 <svg viewBox="0 0 24 24" fill="none" stroke="#F7A300" strokeWidth="1.5" className="w-full h-full"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
               </div>
-            </div>
-            <div className="hidden md:block w-px bg-white/10" />
-            <div className="flex items-center gap-4 flex-1">
-              <ShieldCheck className="text-brand-gold w-10 h-10" />
-              <div>
-                <h3 className="text-2xl font-bold">98%</h3>
-                <p className="text-sm text-gray-400">Customer Satisfaction</p>
-              </div>
+              <h3 className="text-3xl font-bold text-white mb-1 flex items-center gap-2">
+                Legally
+              </h3>
+              <p className="text-sm text-gray-300">Verified</p>
             </div>
           </div>
         </div>
-
-        {/* WhatsApp Floating Button */}
-        <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%2 Media0in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform">
-          <MessageCircle size={28} />
-        </Link>
       </section>
 
-      {/* Premium Developments */}
-      <section className="bg-white text-black pt-32 pb-20 px-8">
-        <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="font-serif text-4xl font-bold mb-4">Our Premium Developments</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover our handpicked residential and commercial projects designed for modern living and long-term value.
-          </p>
-        </div>
-
-        <div className="max-w-7xl mx-auto flex justify-center">
-          <Link href="/projects" className="block relative w-full max-w-4xl rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow group">
-            <Image src="/project.png" alt="Our Projects" width={1200} height={800} className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors flex items-center justify-center">
-              <span className="bg-brand-gold text-white px-8 py-4 rounded font-bold text-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0">Explore All Projects</span>
-            </div>
-          </Link>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="bg-[#111] text-white py-24 px-8 border-y border-white/5">
-        <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="font-serif text-4xl font-bold">
-            Why Choose Badri Kedar <span className="text-brand-gold">Developers</span>?
-          </h2>
-          <div className="w-24 h-1 bg-brand-gold mx-auto mt-6" />
-        </div>
-
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-          {[
-            { icon: Map, title: "Prime Locations", desc: "Strategically located in the best areas." },
-            { icon: Building2, title: "Quality Construction", desc: "Built with high-quality materials & standards." },
-            { icon: ShieldCheck, title: "Clear Documentation", desc: "100% transparent and legal process." },
-            { icon: Clock, title: "Timely Delivery", desc: "On-time possession and commitments." },
-            { icon: Users, title: "Customer First", desc: "Your satisfaction is our priority." },
-            { icon: Award, title: "Trusted Guidance", desc: "Expert advice at every step." }
-          ].map((feature, i) => (
-            <div key={i} className="border border-white/10 rounded-xl p-8 text-center hover:border-brand-gold/50 hover:bg-white/5 transition-all group">
-              <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center border border-brand-gold rounded-xl group-hover:bg-brand-gold/10 transition-colors">
-                <feature.icon className="text-brand-gold w-8 h-8" strokeWidth={1.5} />
+      {/* 3. Features Strip */}
+      <section className="bg-white py-8 border-b border-gray-100 shadow-sm relative z-20">
+        <div className="max-w-[1400px] mx-auto px-6">
+          <div className="flex flex-wrap lg:flex-nowrap justify-between items-center gap-6">
+            <div className="flex items-center gap-4">
+              <ShieldCheck className="w-10 h-10 text-[#F7A300] stroke-[1.5]" />
+              <div>
+                <h4 className="font-bold text-gray-900 text-sm">Verified Properties</h4>
+                <p className="text-xs text-gray-500">100% Legal &amp; Transparent</p>
               </div>
-              <h3 className="font-bold mb-3">{feature.title}</h3>
-              <p className="text-sm text-gray-400">{feature.desc}</p>
             </div>
-          ))}
+            <div className="flex items-center gap-4">
+              <MapPin className="w-10 h-10 text-[#F7A300] stroke-[1.5]" />
+              <div>
+                <h4 className="font-bold text-gray-900 text-sm">Prime Locations</h4>
+                <p className="text-xs text-gray-500">High Growth Corridors</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 flex justify-center items-center"><svg viewBox="0 0 24 24" fill="none" stroke="#F7A300" strokeWidth="1.5" className="w-10 h-10"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
+              <div>
+                <h4 className="font-bold text-gray-900 text-sm">Secure Investment</h4>
+                <p className="text-xs text-gray-500">Clear Titles. Safe Deals.</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <TrendingUp className="w-10 h-10 text-[#F7A300] stroke-[1.5]" />
+              <div>
+                <h4 className="font-bold text-gray-900 text-sm">Best Returns</h4>
+                <p className="text-xs text-gray-500">High Appreciation Potential</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-10 h-10 flex justify-center items-center"><svg viewBox="0 0 24 24" fill="none" stroke="#F7A300" strokeWidth="1.5" className="w-10 h-10"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+              <div>
+                <h4 className="font-bold text-gray-900 text-sm">End to End Support</h4>
+                <p className="text-xs text-gray-500">From Search to Settlement</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Our Story */}
-      <section className="bg-darker-bg py-24 px-8">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <p className="text-brand-gold font-bold tracking-widest text-xs uppercase mb-4">Our Story</p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Together We Build Opportunities Not Just Structure
+      {/* 4. Why Invest With Us */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-[1400px] mx-auto px-6 flex flex-col lg:flex-row gap-16 items-center">
+          <div className="lg:w-[40%]">
+            <p className="text-[#F7A300] font-bold text-xs tracking-widest uppercase mb-4">WHY INVEST WITH US</p>
+            <h2 className="font-serif text-5xl font-bold mb-6 text-gray-900 leading-tight">
+              Building <span className="text-[#F7A300]">Trust.</span><br />
+              Creating <span className="text-[#F7A300]">Value.</span>
             </h2>
-            <p className="text-gray-400 mb-6 leading-relaxed">
-              Established in the heart of Dev Bhumi, Uttarakhand, Badri Kedar Developers was founded with a simple yet powerful vision - to create thoughtfully planned developments that combine modern infrastructure with the natural beauty of the region.
+            <p className="text-gray-600 mb-8 text-lg leading-relaxed">
+              We specialize in premium land parcels that offer not just ownership, but long term value and peace of mind.
             </p>
-            <p className="text-gray-400 mb-10 leading-relaxed">
-              Every project is guided by transparency, quality craftsmanship, and long-term value, ensuring our customers invest with complete confidence.
-            </p>
-
-            <div className="grid grid-cols-2 gap-y-8 gap-x-4 mb-10">
-              <div>
-                <div className="w-10 h-10 border border-brand-gold rounded flex items-center justify-center mb-3">
-                  <ShieldCheck className="text-brand-gold w-5 h-5" />
-                </div>
-                <h4 className="font-bold mb-1">Integrity</h4>
-                <p className="text-xs text-gray-500">We do what we say, always.</p>
-              </div>
-              <div>
-                <div className="w-10 h-10 border border-brand-gold rounded flex items-center justify-center mb-3">
-                  <ShieldCheck className="text-brand-gold w-5 h-5" />
-                </div>
-                <h4 className="font-bold mb-1">Transparency</h4>
-                <p className="text-xs text-gray-500">Clear process, complete trust.</p>
-              </div>
-              <div>
-                <div className="w-10 h-10 border border-brand-gold rounded flex items-center justify-center mb-3">
-                  <Award className="text-brand-gold w-5 h-5" />
-                </div>
-                <h4 className="font-bold mb-1">Quality</h4>
-                <p className="text-xs text-gray-500">No compromises on standards.</p>
-              </div>
-              <div>
-                <div className="w-10 h-10 border border-brand-gold rounded flex items-center justify-center mb-3">
-                  <Building2 className="text-brand-gold w-5 h-5" />
-                </div>
-                <h4 className="font-bold mb-1">Sustainability</h4>
-                <p className="text-xs text-gray-500">Building for a better tomorrow.</p>
-              </div>
-            </div>
-
-
+            <ul className="space-y-4">
+              {['Clear Titles & Documentation', 'High Appreciation Potential', 'Best Locations in Uttarakhand', 'Hassle Free Buying Process'].map((item, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <div className="bg-[#F7A300] rounded-full p-0.5">
+                    <Check size={16} className="text-white stroke-[3]" />
+                  </div>
+                  <span className="text-gray-800 font-medium">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-
+          <div className="lg:w-[60%] w-full">
+            <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-xl">
+               <Image src="/about_new.jpg" alt="Scenic land" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative py-20 px-8 bg-[#1a1a1a] border-t border-white/10">
-        <div className="absolute inset-0 opacity-10">
-          <Image src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" alt="" />
+      {/* 5. Our Top Properties */}
+      <section className="py-24 bg-white">
+        <div className="max-w-[1400px] mx-auto px-6">
+          <p className="text-[#F7A300] font-bold text-xs tracking-widest uppercase mb-8">OUR TOP PROPERTIES</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+            {/* Card 1 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col hover:-translate-y-1 transition-transform duration-300">
+              <div className="relative h-56 w-full">
+                <Image src="/480_sqyard_plot.png" alt="Ranipokhari Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="font-bold text-lg text-gray-900 mb-1 leading-tight">Ranipokhari, Dehradun<br/>Rishikesh Highway</h3>
+                <div className="flex items-center gap-1.5 text-gray-500 mb-4 mt-2">
+                  <MapPin size={14} className="text-[#F7A300]" />
+                  <span className="text-xs font-medium uppercase tracking-wide">North - West Facing</span>
+                </div>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2 text-sm text-gray-600 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#F7A300] mt-1.5 shrink-0"></div>
+                    <span>Plot Size: 480 Gaj (Approx. 4,320 Sq. Ft.)</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-gray-600 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#F7A300] mt-1.5 shrink-0"></div>
+                    <span>Just 30 meters from Dehradun-Rishikesh 4-Lane State Highway</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-gray-600 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#F7A300] mt-1.5 shrink-0"></div>
+                    <span>20 ft Wide Road Access</span>
+                  </li>
+                </ul>
+                <div className="pt-4 border-t border-gray-100 mt-auto">
+                  <p className="font-bold text-[#F7A300] text-xl">₹30,000 <span className="text-gray-500 text-sm font-normal">per Gaj (Negotiable)</span></p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col hover:-translate-y-1 transition-transform duration-300">
+              <div className="relative h-56 w-full">
+                <Image src="/530_sqyard_plot.png" alt="Thano Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="font-bold text-lg text-gray-900 mb-1 leading-tight">Thano, Dehradun<br/>Rishikesh Highway</h3>
+                <div className="flex items-center gap-1.5 text-gray-500 mb-4 mt-2">
+                  <MapPin size={14} className="text-[#F7A300]" />
+                  <span className="text-xs font-medium uppercase tracking-wide">North-East &amp; South-East Facing</span>
+                </div>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2 text-sm text-gray-600 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#F7A300] mt-1.5 shrink-0"></div>
+                    <span>Plot Size: 530 Gaj (Approx. 4,760 Sq. Ft.)</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-gray-600 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#F7A300] mt-1.5 shrink-0"></div>
+                    <span>Just 300 meters from Pacific Housing Project</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-gray-600 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#F7A300] mt-1.5 shrink-0"></div>
+                    <span>18 ft &amp; 14 ft Double Side Road Access</span>
+                  </li>
+                </ul>
+                <div className="pt-4 border-t border-gray-100 mt-auto">
+                  <p className="font-bold text-[#F7A300] text-xl">₹30,000 <span className="text-gray-500 text-sm font-normal">per Gaj (Negotiable)</span></p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col hover:-translate-y-1 transition-transform duration-300">
+              <div className="relative h-56 w-full">
+                <Image src="/181_sqyard_plot.png" alt="New Defence Colony Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="font-bold text-lg text-gray-900 mb-1 leading-tight">New Defence Colony,<br/>Sahastradhara</h3>
+                <div className="flex items-center gap-1.5 text-gray-500 mb-4 mt-2">
+                  <MapPin size={14} className="text-[#F7A300]" />
+                  <span className="text-xs font-medium uppercase tracking-wide">East Facing</span>
+                </div>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2 text-sm text-gray-600 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#F7A300] mt-1.5 shrink-0"></div>
+                    <span>Plot Size: 181 Gaj (28x61&apos;6&quot;x28x56)</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-gray-600 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#F7A300] mt-1.5 shrink-0"></div>
+                    <span>Just 800 meters from Sahastradhara 4-Lane Highway</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-gray-600 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#F7A300] mt-1.5 shrink-0"></div>
+                    <span>East-facing plot for positive vastu</span>
+                  </li>
+                </ul>
+                <div className="pt-4 border-t border-gray-100 mt-auto">
+                  <p className="font-bold text-[#F7A300] text-xl">₹70,000 <span className="text-gray-500 text-sm font-normal">per Gaj (Negotiable)</span></p>
+                </div>
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col hover:-translate-y-1 transition-transform duration-300">
+              <div className="relative h-56 w-full">
+                <Image src="/fun_valley_township.png" alt="Fun Valley Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="font-bold text-lg text-gray-900 mb-1 leading-tight">Fun Valley, Majrigrant,<br/>Laltappar, Dehradun</h3>
+                <div className="flex items-center gap-1.5 text-gray-500 mb-4 mt-2">
+                  <MapPin size={14} className="text-[#F7A300]" />
+                  <span className="text-xs font-medium uppercase tracking-wide">Haridwar Highway</span>
+                </div>
+                <ul className="space-y-3 mb-6 flex-grow">
+                  <li className="flex items-start gap-2 text-sm text-gray-600 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#F7A300] mt-1.5 shrink-0"></div>
+                    <span>57 Bigha gated township with 100+ plots</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-gray-600 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#F7A300] mt-1.5 shrink-0"></div>
+                    <span>Fully clear land with transparent paperwork</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-sm text-gray-600 leading-snug">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#F7A300] mt-1.5 shrink-0"></div>
+                    <span>Ideal for residential &amp; future-focused investment</span>
+                  </li>
+                </ul>
+                <div className="pt-4 border-t border-gray-100 mt-auto">
+                  <p className="font-bold text-gray-900 text-lg">Rate: <span className="text-[#F7A300]">₹28,000+</span> <span className="text-gray-500 text-sm font-normal">per sq. yard</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
-          <div>
-            <p className="text-brand-gold font-bold tracking-widest text-xs uppercase mb-3">Looking To Invest?</p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
-              Let&apos;s Build Something<br />
-              Extraordinary <span className="text-brand-gold">Together</span>
+      </section>
+
+      {/* 6. Info Sections (Dark) */}
+      <section className="bg-[#1f2329] text-white py-16">
+        <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-12 divide-y lg:divide-y-0 lg:divide-x divide-white/10">
+          
+          {/* Column 1 */}
+          <div className="lg:pr-8">
+            <div className="flex items-center gap-3 mb-3">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#F7A300" strokeWidth="1.5" className="w-5 h-5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              <p className="text-[#F7A300] font-bold text-[11px] tracking-widest uppercase">DEHRADUN - GROWTH CORRIDOR</p>
+            </div>
+            <h2 className="font-serif text-3xl font-bold mb-4 leading-snug">
+              Strategic Locations.<br/>
+              Stronger <span className="text-[#F7A300]">Future.</span>
             </h2>
-            <p className="text-gray-400 max-w-xl">
-              Whether you are looking for a home, an investment, or a commercial space, we have the perfect option for you.
+            <p className="text-gray-400 text-sm leading-relaxed mb-8">
+              All our properties are located in high growth corridors with excellent connectivity and rapid infrastructure development.
             </p>
-          </div>
-          <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="flex items-center justify-center gap-3 bg-brand-gold text-white px-8 py-4 font-semibold hover:bg-brand-gold-hover transition-all min-w-[200px] rounded">
-              Call Now <Phone size={18} />
-            </Link>
-            <Link href="/contact" className="flex items-center justify-center gap-3 border border-white/20 px-8 py-4 font-semibold hover:bg-white hover:text-black transition-all min-w-[200px] rounded">
-              Chat on WhatsApp <MessageCircle size={18} className="text-green-500" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-black pt-20 pb-8 px-8 border-t border-white/10">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div>
-            <Image
-              src="/BKD_Logo.png"
-              alt="Badri Kedar Developers"
-              width={180}
-              height={70}
-              className="object-contain mb-6"
-              style={{ width: "auto", height: "auto" }} />
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Building more than just properties - we build trust, value, and lasting relationships. Your future, our commitment.
-            </p>
-            <div className="flex items-center gap-3">
-              <Link href="https://www.facebook.com/badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaFacebookF size={16} /></Link>
-              <Link href="https://www.instagram.com/badrikedardevelopers?igsh=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaInstagram size={16} /></Link>
-              <Link href="https://youtube.com/@badrikedardevelopers?si=Sgf_tHWd8wQ4JJnx" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaYoutube size={16} /></Link>
-              <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%2 Media0in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaWhatsapp size={16} /></Link>
+            
+            <div className="grid grid-cols-4 gap-4 text-center">
+              <div className="flex flex-col items-center">
+                <Award className="text-[#F7A300] w-6 h-6 mb-2" strokeWidth={1.5} />
+                <h4 className="text-white font-bold text-lg mb-1">10+</h4>
+                <p className="text-[#F7A300] text-[9px] font-semibold uppercase leading-tight">Years of<br/>Experience</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <MapPin className="text-[#F7A300] w-6 h-6 mb-2" strokeWidth={1.5} />
+                <h4 className="text-white font-bold text-lg mb-1">100+</h4>
+                <p className="text-[#F7A300] text-[9px] font-semibold uppercase leading-tight">Premium<br/>Locations</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <Map className="text-[#F7A300] w-6 h-6 mb-2" strokeWidth={1.5} />
+                <h4 className="text-white font-bold text-lg mb-1">57+</h4>
+                <p className="text-[#F7A300] text-[9px] font-semibold uppercase leading-tight">Bigha Land<br/>Developed</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <Users className="text-[#F7A300] w-6 h-6 mb-2" strokeWidth={1.5} />
+                <h4 className="text-white font-bold text-lg mb-1">500+</h4>
+                <p className="text-[#F7A300] text-[9px] font-semibold uppercase leading-tight">Happy<br/>Investors</p>
+              </div>
             </div>
           </div>
 
-          <div>
-            <h3 className="font-bold text-lg mb-6 text-brand-gold">Quick Links</h3>
-            <ul className="space-y-3">
-              {['Home', 'About Us', 'Projects', 'Blogs', 'Our Partners', 'Contact Us'].map((link) => (
-                <li key={link}>
-                  <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Projects' ? '/projects' : link === 'Blogs' ? '/blogs' : link === 'Contact Us' ? '/contact' : link === 'Our Partners' ? '/partners' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
-                    <ChevronRight size={12} className="text-brand-gold" /> {link}
-                  </Link>
+          {/* Column 2 */}
+          <div className="pt-10 lg:pt-0 lg:px-12">
+            <div className="flex items-center gap-3 mb-6">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#F7A300" strokeWidth="1.5" className="w-5 h-5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+              <h3 className="text-[#F7A300] font-bold text-[11px] tracking-widest uppercase">PROJECT HIGHLIGHTS</h3>
+            </div>
+            <ul className="space-y-4">
+              {[
+                {text: 'Wide internal roads & smooth connectivity'},
+                {text: 'Green parks & landscaped surroundings'},
+                {text: 'Street lighting, water supply & electricity'},
+                {text: 'Peaceful environment with mountain views'},
+                {text: 'Vastu-friendly plots'},
+                {text: 'On-campus utility/general store'}
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-3 text-[13px] text-gray-300 font-medium">
+                  <div className="w-5 h-5 rounded flex items-center justify-center shrink-0 border border-[#F7A300]">
+                     <Check size={12} strokeWidth={3} className="text-[#F7A300]" />
+                  </div>
+                  <span>{item.text}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-bold text-lg mb-6 text-brand-gold">Contact Us</h3>
+          {/* Column 3 */}
+          <div className="pt-10 lg:pt-0 lg:pl-12">
+            <div className="flex items-center gap-3 mb-6">
+               <svg viewBox="0 0 24 24" fill="none" stroke="#F7A300" strokeWidth="1.5" className="w-5 h-5"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+               <h3 className="text-[#F7A300] font-bold text-[11px] tracking-widest uppercase">NEARBY LANDMARKS</h3>
+            </div>
             <ul className="space-y-4">
-              <li className="flex gap-3 text-sm text-gray-400">
-                <MapPin size={18} className="text-brand-gold shrink-0" />
-                <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
-              </li>
-              <li className="flex gap-3 text-sm text-gray-400 items-center">
-                <Mail size={18} className="text-brand-gold shrink-0" />
-                <span>info@badrikedardevelopers.com</span>
-              </li>
-              <li className="flex gap-3 text-sm text-gray-400 items-center">
-                <Clock size={18} className="text-brand-gold shrink-0" />
-                <span>Mon - Sat: 10:00 AM - 7:00 PM</span>
-              </li>
+              {[
+                {name: 'Jolly Grant Airport', dist: '14 km', icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-4 h-4 text-[#F7A300]"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.2-1.1.6L3 8l6 4-4 4-2.8-.9c-.4-.1-.8.2-1 .6L1 17l4.8 2.2L8 24l1.2-.2c.4-.2.7-.6.6-1l-.9-2.8 4-4 4 6 1.2-.7c.4-.2.7-.6.6-1.1z"/></svg>},
+                {name: 'Rishikesh', dist: '23 km', icon: <MapPin size={16} className="text-[#F7A300]" />},
+                {name: 'Dehradun City', dist: '20 km', icon: <Building2 size={16} className="text-[#F7A300]" />},
+                {name: 'Bhaniawala Chowk', dist: '7 km', icon: <MapPin size={16} className="text-[#F7A300]" />},
+                {name: 'Himalayan Institute', dist: '9 km', icon: <MapPin size={16} className="text-[#F7A300]" />}
+              ].map((item, i) => (
+                <li key={i} className="flex items-center justify-between text-[13px] text-gray-300 font-medium">
+                  <div className="flex items-center gap-3">
+                    {item.icon}
+                    <span>{item.name}</span>
+                  </div>
+                  <span>{item.dist}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
+        </div>
+      </section>
+
+      {/* 7. Call To Action Strip */}
+      <section className="bg-[#2c3138] border-t border-white/5 py-10">
+        <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="font-bold text-lg mb-6 text-brand-gold">Featured Projects</h3>
-            <div className="grid grid-cols-2 gap-3">
-              {[
-                "/fun_valley_township.png",
-                "/480_sqyard_plot.png",
-                "/530_sqyard_plot.png",
-                "/181_sqyard_plot.png"
-              ].map((img, i) => (
-                <Link href={`/projects/${i + 1}`} key={i} className="block relative h-20 rounded overflow-hidden group">
-                  <Image src={img} alt="Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform" />
-                </Link>
-              ))}
+            <h2 className="text-2xl md:text-[28px] font-serif text-white mb-2 leading-tight">Ready to Invest in Your Future?</h2>
+            <p className="text-gray-400 text-sm">Connect with our property experts and find the perfect plot for you.</p>
+          </div>
+          <div className="flex gap-4">
+            <Link href="tel:+919756580000" className="bg-[#F7A300] text-black px-6 py-3 rounded text-sm font-bold flex items-center gap-2 hover:bg-[#e59800] transition-colors">
+              <Phone size={16} fill="black" /> Call Now
+            </Link>
+            <Link href="https://wa.me/919756580000" className="bg-transparent border border-white/30 text-white px-6 py-3 rounded text-sm font-bold flex items-center gap-2 hover:bg-white/10 transition-colors">
+              <FaWhatsapp size={18} /> WhatsApp Us
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Footer */}
+      <footer className="bg-[#0a0a0a] text-gray-400 pt-16 pb-8 text-[13px]">
+        <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          {/* Logo & About */}
+          <div>
+            <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={200} height={60} className="mb-6 h-12 w-auto object-contain" />
+            <p className="mb-6 leading-relaxed">
+              Premium land opportunities across Uttarakhand for a better tomorrow.
+            </p>
+            <div className="flex gap-3">
+              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaFacebookF size={13} /></Link>
+              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaInstagram size={13} /></Link>
+              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaYoutube size={13} /></Link>
+              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaLinkedinIn size={13} /></Link>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-white font-bold mb-6 tracking-wider text-xs uppercase">QUICK LINKS</h4>
+            <ul className="space-y-3 font-medium">
+              <li><Link href="/" className="hover:text-[#F7A300] transition-colors">Home</Link></li>
+              <li><Link href="/about" className="hover:text-[#F7A300] transition-colors">About Us</Link></li>
+              <li><Link href="/properties" className="hover:text-[#F7A300] transition-colors">Properties</Link></li>
+              <li><Link href="/learn" className="hover:text-[#F7A300] transition-colors">Read &amp; Learn More</Link></li>
+              <li><Link href="/contact" className="hover:text-[#F7A300] transition-colors">Contact Us</Link></li>
+            </ul>
+          </div>
+
+          {/* Important Links */}
+          <div>
+            <h4 className="text-white font-bold mb-6 tracking-wider text-xs uppercase">IMPORTANT LINKS</h4>
+            <ul className="space-y-3 font-medium">
+              <li><Link href="/privacy" className="hover:text-[#F7A300] transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-[#F7A300] transition-colors">Terms &amp; Conditions</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact & Location */}
+          <div>
+            <h4 className="text-white font-bold mb-6 tracking-wider text-xs uppercase">CONTACT US</h4>
+            <ul className="space-y-3 mb-8 font-medium">
+              <li className="flex items-center gap-3">
+                <Phone size={14} className="text-[#F7A300]" />
+                <span>+91 9756580000</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail size={14} className="text-[#F7A300]" />
+                <span>info@badrikedardevelopers.com</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <MapPin size={14} className="text-[#F7A300] shrink-0 mt-0.5" />
+                <span>Dehradun, Uttarakhand, India</span>
+              </li>
+            </ul>
+            <h4 className="text-white font-bold mb-4 tracking-wider text-xs uppercase">OUR LOCATION</h4>
+            <div className="w-full h-24 bg-gray-800 rounded overflow-hidden relative border border-gray-700">
+               <Image src="/home.jpeg" alt="Map Location" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover opacity-50 grayscale hover:grayscale-0 transition-all" />
+               <div className="absolute inset-0 flex items-center justify-center">
+                  <MapPin size={24} className="text-[#ea4335] drop-shadow-md" />
+               </div>
             </div>
           </div>
         </div>
-
-        <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-500">
-          <p>© 2026 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
+        
+        <div className="max-w-[1400px] mx-auto px-6 pt-6 border-t border-gray-800 text-center flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-500 font-medium">
+          <p>© 2024 Badri Kedar Developers. All Rights Reserved.</p>
         </div>
       </footer>
     </main>

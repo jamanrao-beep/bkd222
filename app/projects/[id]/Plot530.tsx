@@ -101,20 +101,20 @@ export default function Plot530() {
       <section className="w-full max-w-[1400px] mx-auto px-4 md:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="relative h-[400px] rounded-xl overflow-hidden group">
-            <Image src="/530_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+            <Image src="/530_sqyard_plot.png" alt="Property View" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div className="relative h-[192px] rounded-xl overflow-hidden group">
-              <Image src="/530_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/530_sqyard_plot.png" alt="Property View" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="relative h-[192px] rounded-xl overflow-hidden group">
-              <Image src="/530_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/530_sqyard_plot.png" alt="Property View" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="relative h-[192px] rounded-xl overflow-hidden group">
-              <Image src="/530_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/530_sqyard_plot.png" alt="Property View" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
             <div className="relative h-[192px] rounded-xl overflow-hidden group">
-              <Image src="/530_sqyard_plot.png" alt="Property View" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Image src="/530_sqyard_plot.png" alt="Property View" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
             </div>
           </div>
         </div>

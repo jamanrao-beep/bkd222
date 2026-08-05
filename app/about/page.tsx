@@ -1,460 +1,325 @@
 import Image from "next/image";
 import Link from "next/link";
-import { 
-  Phone, Mail, MapPin, 
-  ChevronRight, ChevronLeft, Building2, ShieldCheck, 
-  Clock, Users, Award, Target, Eye, Gem, 
-  CheckCircle2, FileText, Leaf, Star, Quote
+import {
+  MapPin, Phone, Mail, ChevronRight, ShieldCheck, Map, TrendingUp,
+  Check, Building2, Trees, Droplets, Mountain, Store, Users, Award, Compass, Car,
+  CheckCircle2, FileText, Target, Eye, Handshake, Headphones, Calendar, ArrowRight
 } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-white text-black selection:bg-brand-gold selection:text-white">
-      {/* Header & Hero Section */}
-      <section className="relative w-full h-[60vh] min-h-[500px] flex flex-col">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000" 
-            alt="Premium Building" 
-            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/70" />
-        </div>
-
-        {/* Top Bar */}
-        <div className="relative z-10 hidden md:flex justify-between items-center px-8 py-2 text-xs text-gray-300 border-b border-white/10">
-          <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <MapPin size={14} className="text-brand-gold" />
-              <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Phone size={14} className="text-brand-gold" />
-              <span>+91 92580 02814</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail size={14} className="text-brand-gold" />
-              <span>info@badrikedardevelopers.com</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-4">
-            <span className="font-semibold text-white">Follow Us:</span>
-            <Link href="https://www.facebook.com/badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
-            <Link href="https://www.instagram.com/badrikedardevelopers?igsh=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaInstagram size={14} /></Link>
-            <Link href="https://youtube.com/@badrikedardevelopers?si=Sgf_tHWd8wQ4JJnx" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaYoutube size={14} /></Link>
-            <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%2 Media0in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
-          </div>
-        </div>
-
-        {/* Navigation */}
-        <nav className="relative z-10 flex justify-between items-center px-8 py-4">
+    <main className="min-h-screen bg-white text-gray-800 font-sans selection:bg-[#F7A300] selection:text-white overflow-x-hidden">
+      {/* 1. Header (Navbar) */}
+      <header className="absolute top-0 w-full z-50 bg-[#161616]/95 backdrop-blur-sm border-b border-white/10">
+        <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
+          {/* Logo */}
           <Link href="/">
-            <Image 
-              src="/BKD_Logo.png" 
-              alt="Badri Kedar Developers" 
-              width={160} 
-              height={60} 
-              className="object-contain"
-             style={{ width: "auto", height: "auto" }} />
+             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" />
           </Link>
-                                        <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
-            <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
-            <Link href="/about" className="text-brand-gold border-b-2 border-brand-gold pb-1">About Us</Link>
-            <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>
-            <Link href="/blogs" className="text-white hover:text-brand-gold transition-colors">Blogs</Link>
-            <Link href="/partners" className="text-white hover:text-brand-gold transition-colors">Our Partners</Link>
-            <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>
-          </div>
-          <Link 
-            href="/contact" 
-            className="hidden md:flex items-center gap-2 bg-brand-gold text-white px-6 py-3 text-sm font-semibold hover:bg-brand-gold-hover transition-all"
-          >
-            Get Consultation
+          
+          {/* Nav Links */}
+          <nav className="hidden lg:flex items-center gap-10">
+            <Link href="/" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">Home</Link>
+            <Link href="/about" className="text-white border-b-2 border-[#F7A300] pb-1 text-sm font-medium">About Us</Link>
+            <Link href="/properties" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">Properties</Link>
+            <Link href="/learn" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">Read &amp; Learn More</Link>
+            <Link href="/contact" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">Contact Us</Link>
+          </nav>
+          
+          {/* Enquire Now Button */}
+          <Link href="/contact" className="bg-[#F7A300] text-black px-6 py-2.5 rounded text-sm font-bold flex items-center gap-2 hover:bg-[#e59800] transition-colors">
+            Enquire Now <ArrowRight size={18} strokeWidth={2.5} />
           </Link>
-        </nav>
-
-        {/* Hero Content */}
-        <div className="relative z-10 flex-1 flex flex-col justify-center px-8 md:px-16 lg:px-24">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-white mb-4">About Us</h1>
-          <p className="text-lg text-gray-300 font-medium mb-6">Building trust. Creating communities.</p>
-          <div className="flex items-center gap-2 text-sm text-brand-gold font-semibold">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <ChevronRight size={14} className="text-gray-400" />
-            <span className="text-white">About Us</span>
-          </div>
         </div>
-      </section>
+      </header>
 
-      {/* Our Journey */}
-      <section className="py-24 px-8 max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative h-[600px] rounded-xl overflow-hidden shadow-2xl">
-            <Image 
-              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" 
-              alt="Our Journey" 
-              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-              className="object-cover"
-            />
-          </div>
-          <div>
-            <p className="text-brand-gold font-bold tracking-widest text-xs uppercase mb-3">OUR JOURNEY</p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-gray-900">Our Journey</h2>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Established in the heart of Dev Bhumi, Uttarakhand, Badri Kedar Developers was founded with a simple yet powerful vision - to create thoughtfully planned developments that combine modern infrastructure with the natural beauty of the region.
-            </p>
-            <p className="text-gray-600 mb-12 leading-relaxed">
-              Every project is guided by transparency, quality craftsmanship, and long-term value, ensuring our customers invest with complete confidence.
-            </p>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-              <div className="flex flex-col items-start text-left">
-                <Users className="text-brand-gold w-8 h-8 mb-4" />
-                <h4 className="font-bold text-gray-900 mb-2 text-sm">Customer First</h4>
-                <p className="text-xs text-gray-500">Your satisfaction is our top priority.</p>
-              </div>
-              <div className="flex flex-col items-start text-left">
-                <FileText className="text-brand-gold w-8 h-8 mb-4" />
-                <h4 className="font-bold text-gray-900 mb-2 text-sm">Legally Verified Properties</h4>
-                <p className="text-xs text-gray-500">All our projects are 100% legally verified.</p>
-              </div>
-              <div className="flex flex-col items-start text-left">
-                <Leaf className="text-brand-gold w-8 h-8 mb-4" />
-                <h4 className="font-bold text-gray-900 mb-2 text-sm">Sustainable Development</h4>
-                <p className="text-xs text-gray-500">Building a better tomorrow, responsibly.</p>
-              </div>
-              <div className="flex flex-col items-start text-left">
-                <FileText className="text-brand-gold w-8 h-8 mb-4" />
-                <h4 className="font-bold text-gray-900 mb-2 text-sm">Transparent Documentation</h4>
-                <p className="text-xs text-gray-500">Clear, simple & hassle-free process.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission, Vision, Values */}
-      <section className="bg-zinc-50 py-24 px-8 border-y border-gray-200">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full border border-brand-gold/30 flex items-center justify-center mb-6">
-              <Target className="text-brand-gold w-8 h-8" />
-            </div>
-            <h3 className="font-serif text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              Deliver exceptional real estate developments through innovation, transparency, and uncompromising quality.
-            </p>
-          </div>
-          <div className="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full border border-brand-gold/30 flex items-center justify-center mb-6">
-              <Eye className="text-brand-gold w-8 h-8" />
-            </div>
-            <h3 className="font-serif text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
-              To become Uttarakhand&apos;s most trusted real estate developer, creating communities that inspire generations.
-            </p>
-          </div>
-          <div className="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center text-center">
-            <div className="w-16 h-16 rounded-full border border-brand-gold/30 flex items-center justify-center mb-6">
-              <Gem className="text-brand-gold w-8 h-8" />
-            </div>
-            <h3 className="font-serif text-2xl font-bold text-gray-900 mb-6">Our Values</h3>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-4 w-full text-left">
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <CheckCircle2 size={16} className="text-brand-gold shrink-0" /> Integrity
-              </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <CheckCircle2 size={16} className="text-brand-gold shrink-0" /> Sustainability
-              </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <CheckCircle2 size={16} className="text-brand-gold shrink-0" /> Customer Commitment
-              </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <CheckCircle2 size={16} className="text-brand-gold shrink-0" /> Innovation
-              </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <CheckCircle2 size={16} className="text-brand-gold shrink-0" /> Transparency
-              </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <CheckCircle2 size={16} className="text-brand-gold shrink-0" /> Excellence
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="bg-[#0f1115] text-white py-24 px-8 border-y border-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-brand-gold font-bold tracking-widest text-xs uppercase mb-3">MEET OUR LEADERSHIP</p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold">The People Behind Our Promise</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Leader 1 */}
-            <div className="border border-brand-gold/30 rounded-xl overflow-hidden flex flex-col sm:flex-row bg-[#16181d] group">
-              <div className="relative w-full sm:w-2/5 h-64 sm:h-auto shrink-0">
-                <Image 
-                  src="/Prashanth singh.png" 
-                  alt="Prashant Singh" 
-                  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="p-8 flex flex-col justify-center">
-                <h3 className="font-serif text-2xl font-bold text-brand-gold mb-1">PRASHANT SINGH</h3>
-                <p className="text-sm text-gray-400 mb-4">Director</p>
-                <p className="text-sm text-gray-300 leading-relaxed mb-6">
-                  With a strong foundation in real estate and a deep understanding of market dynamics, Prashant Singh leads with integrity and vision. His commitment to quality, transparency, and customer satisfaction drives the company&apos;s growth and success.
-                </p>
-                <div style={{ fontFamily: "'Caveat', 'Dancing Script', cursive" }} className="text-brand-gold text-4xl opacity-80 mt-2">Prashant Singh</div>
-              </div>
-            </div>
-
-            </div>
-        </div>
-      </section>
-
-      {/* Construction Partner */}
-      <section className="relative py-24 px-8">
-        <div className="absolute inset-0 z-0">
-          <Image 
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80" 
-            alt="Construction Site" 
-            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0f1115] via-[#0f1115]/90 to-transparent" />
+      {/* 2. Hero Section */}
+      <section className="relative w-full h-[60vh] min-h-[500px] flex items-center mt-[80px]">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 top-[-80px]">
+          <Image src="/home.jpeg" alt="Premium Plots" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" priority />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-black/60" />
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto flex">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 flex flex-col justify-center h-full pt-10">
           <div className="max-w-2xl text-white">
-            <p className="text-brand-gold font-bold tracking-widest text-xs uppercase mb-3">OUR CONSTRUCTION PARTNER</p>
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Kailash Constructions Company</h2>
-            <p className="text-gray-300 leading-relaxed mb-12">
-              We are proud to be associated with Kailash Construction Company, a trusted name in the construction industry with over 10 years of experience. Known for their quality workmanship, innovative techniques, and on-time project delivery, they play a vital role in turning our vision into reality.
+            <p className="text-[#F7A300] font-bold tracking-[0.15em] text-xs uppercase mb-4">ABOUT US</p>
+            <h1 className="font-serif text-5xl md:text-6xl font-bold leading-[1.1] mb-6 tracking-tight">
+              Building <span className="text-[#F7A300]">Trust.</span><br />
+              Creating <span className="text-[#F7A300]">Value.</span>
+            </h1>
+            <p className="text-gray-200 text-base md:text-lg max-w-lg leading-relaxed font-medium">
+              We are committed to helping you invest in premium land assets that offer long term value, security and peace of mind.
             </p>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div>
-                <Award className="text-brand-gold w-10 h-10 mb-3" />
-                <h4 className="font-bold text-lg mb-1">10+</h4>
-                <p className="text-xs text-gray-400">Experience</p>
-              </div>
-              <div>
-                <Building2 className="text-brand-gold w-10 h-10 mb-3" />
-                <h4 className="font-bold text-lg mb-1">Quality</h4>
-                <p className="text-xs text-gray-400">Workmanship</p>
-              </div>
-              <div>
-                <Target className="text-brand-gold w-10 h-10 mb-3" />
-                <h4 className="font-bold text-lg mb-1">Innovative</h4>
-                <p className="text-xs text-gray-400">Techniques</p>
-              </div>
-              <div>
-                <Clock className="text-brand-gold w-10 h-10 mb-3" />
-                <h4 className="font-bold text-lg mb-1">On-Time</h4>
-                <p className="text-xs text-gray-400">Delivery</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="bg-zinc-50 py-24 px-8">
-        <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900">
-            WHY CHOOSE BADRI KEDAR DEVELOPERS?
-          </h2>
-        </div>
-
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6">
-          {[
-            { icon: Building2, title: "Premium Developments", desc: "Modern architecture and world-class amenities." },
-            { icon: MapPin, title: "Prime Locations", desc: "Strategically located in high-growth areas." },
-            { icon: FileText, title: "Clear Documentation", desc: "100% transparent and hassle-free process." },
-            { icon: Leaf, title: "Sustainable Planning", desc: "Eco-friendly projects for a better future." },
-            { icon: ShieldCheck, title: "Trusted Guidance", desc: "Expert advice at every step of your real estate journey." },
-            { icon: Clock, title: "Timely Delivery", desc: "On-time possession with uncompromised quality." }
-          ].map((feature, i) => (
-            <div key={i} className="bg-white border border-gray-100 rounded-xl p-8 text-center shadow-sm hover:shadow-md transition-shadow group flex flex-col items-center justify-start">
-              <div className="w-14 h-14 mb-6 flex items-center justify-center border border-brand-gold/30 rounded-full group-hover:bg-brand-gold/5 transition-colors shrink-0">
-                <feature.icon className="text-brand-gold w-6 h-6" strokeWidth={1.5} />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-3 leading-snug text-sm">{feature.title}</h3>
-              <p className="text-xs text-gray-500 leading-relaxed">{feature.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Stats Bar */}
-      <section className="bg-[#0f1115] py-12 px-8 border-y border-white/5 text-white">
-        <div className="max-w-7xl mx-auto flex flex-wrap md:flex-nowrap justify-between gap-8">
-          <div className="flex items-center gap-4 flex-1 justify-center md:justify-start">
-            <Award className="text-brand-gold w-12 h-12" />
-            <div>
-              <h3 className="text-3xl font-bold mb-1">20+</h3>
-              <p className="text-xs text-gray-400">Years of Excellence</p>
-            </div>
-          </div>
-          <div className="hidden md:block w-px bg-white/10" />
-          <div className="flex items-center gap-4 flex-1 justify-center md:justify-start">
-            <Users className="text-brand-gold w-12 h-12" />
-            <div>
-              <h3 className="text-3xl font-bold mb-1">500+</h3>
-              <p className="text-xs text-gray-400">Happy Clients</p>
-            </div>
-          </div>
-          <div className="hidden md:block w-px bg-white/10" />
-          <div className="flex items-center gap-4 flex-1 justify-center md:justify-start">
-            <Building2 className="text-brand-gold w-12 h-12" />
-            <div>
-              <h3 className="text-3xl font-bold mb-1">100+</h3>
-              <p className="text-xs text-gray-400">Properties Delivered</p>
-            </div>
-          </div>
-          <div className="hidden md:block w-px bg-white/10" />
-          <div className="flex items-center gap-4 flex-1 justify-center md:justify-start">
-            <ShieldCheck className="text-brand-gold w-12 h-12" />
-            <div>
-              <h3 className="text-3xl font-bold mb-1">98%</h3>
-              <p className="text-xs text-gray-400">Customer Satisfaction</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Commitment & Testimonial */}
-      <section className="bg-zinc-50 border-b border-gray-200">
-        <div className="grid lg:grid-cols-2">
-          {/* Commitment (Left) */}
-          <div className="relative py-24 px-8 lg:px-16 flex items-center bg-[#0f1115] text-white">
-            <div className="absolute inset-0 z-0">
-              <Image 
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80" 
-                alt="Our Commitment" 
-                fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-                className="object-cover opacity-30"
-              />
-            </div>
-            <div className="relative z-10 max-w-xl">
-              <p className="text-brand-gold font-bold tracking-widest text-xs uppercase mb-3">OUR COMMITMENT</p>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Every Investment Deserves Complete Confidence
+      {/* 3. Who We Are Section */}
+      <section className="py-20 bg-white relative z-20">
+        <div className="max-w-[1400px] mx-auto px-6">
+          <div className="flex flex-col lg:flex-row gap-16 items-start mb-20">
+            <div className="lg:w-[45%]">
+              <p className="text-[#F7A300] font-bold text-xs tracking-widest uppercase mb-4">WHO WE ARE</p>
+              <h2 className="font-serif text-4xl lg:text-[40px] font-bold mb-6 text-gray-900 leading-tight">
+                Your <span className="text-[#F7A300]">Trusted Partner</span> in Land Investment
               </h2>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                We don&apos;t just develop properties - we create opportunities for families, investors, and future generations. 
+              <p className="text-gray-600 mb-8 text-[15px] leading-relaxed">
+                Badri Kedar Developers is a trusted name in real estate investment across Uttarakhand. We specialize in premium land parcels that offer not just ownership, but long term value and peace of mind.
               </p>
-              <p className="text-gray-300 mb-10 leading-relaxed">
-                Every development reflects our commitment to quality, transparency, and long-term value.
-              </p>
-              <div className="flex gap-4">
-                <Link href="/projects" className="bg-brand-gold text-white px-8 py-4 font-semibold hover:bg-brand-gold-hover transition-all rounded">
-                  Explore Projects
-                </Link>
-                <Link href="/contact" className="border border-white/30 px-8 py-4 font-semibold hover:bg-white hover:text-black transition-all rounded">
-                  Contact Us
-                </Link>
+              <ul className="space-y-4">
+                {['Clear Titles & Documentation', 'High Appreciation Potential', 'Best Locations in Uttarakhand', 'Hassle Free Buying Process'].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3">
+                    <div className="bg-[#F7A300] rounded-full p-0.5">
+                      <Check size={16} className="text-white stroke-[3]" />
+                    </div>
+                    <span className="text-gray-800 font-medium text-sm">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="lg:w-[55%] w-full pt-4">
+              <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg">
+                 <Image src="/home.jpeg" alt="Scenic land" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
             </div>
           </div>
 
-          {/* Testimonial (Right) replaced with GMB */}
-          <div className="py-24 px-8 lg:px-16 flex flex-col justify-center items-center bg-white relative">
-            <h2 className="font-serif text-3xl font-bold text-gray-900 mb-8 uppercase tracking-wide text-center">CHECK OUR GOOGLE REVIEWS</h2>
-            <Link href="https://share.google/ftjiKC7wvTx2g4uvT" target="_blank" rel="noopener noreferrer" className="bg-white p-10 md:p-14 rounded-2xl shadow-2xl border border-gray-100 max-w-lg w-full relative group hover:border-brand-gold transition-colors flex flex-col items-center text-center">
-              <div className="w-20 h-20 bg-brand-gold/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <Star size={40} className="text-brand-gold" fill="currentColor" />
+          {/* 4. Mission & Vision Box */}
+          <div className="bg-[#fafafa] rounded-2xl p-10 md:p-14 border border-gray-100 shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+            <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-gray-200">
+              {/* Mission */}
+              <div className="flex-1 flex flex-col items-center text-center pb-8 md:pb-0 md:pr-12">
+                <div className="w-16 h-16 bg-[#111] rounded-full flex items-center justify-center mb-6">
+                  <Target className="text-[#F7A300] w-8 h-8" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                <p className="text-gray-600 text-sm leading-relaxed max-w-sm">
+                  To provide genuine land investment opportunities with complete transparency, clear documentation and excellent customer service.
+                </p>
               </div>
-              <h3 className="font-bold text-gray-900 text-xl mb-4">See what our clients say on Google</h3>
-              <p className="text-gray-500 mb-8">We pride ourselves on delivering excellent service and quality. Click here to read our Google My Business reviews.</p>
-              <span className="inline-flex items-center gap-2 bg-brand-gold text-white px-8 py-4 font-semibold hover:bg-brand-gold-hover transition-all rounded shadow-lg">
-                View on Google
-              </span>
+              
+              {/* Vision */}
+              <div className="flex-1 flex flex-col items-center text-center pt-8 md:pt-0 md:pl-12">
+                <div className="w-16 h-16 bg-[#111] rounded-full flex items-center justify-center mb-6">
+                  <Eye className="text-[#F7A300] w-8 h-8" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                <p className="text-gray-600 text-sm leading-relaxed max-w-sm">
+                  To be the most trusted and preferred land investment company in Uttarakhand, known for integrity, reliability and value creation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Our Core Values Section */}
+      <section className="bg-[#0f1115] py-16">
+        <div className="max-w-[1400px] mx-auto px-6">
+          <p className="text-[#F7A300] font-bold text-xs tracking-widest uppercase mb-12 text-center">OUR CORE VALUES</p>
+          
+          <div className="flex flex-wrap lg:flex-nowrap justify-between gap-6 divide-y lg:divide-y-0 lg:divide-x divide-white/10">
+            {[
+              { icon: <ShieldCheck size={32} strokeWidth={1.5} />, title: "Transparency", desc: "We believe in complete clarity in every deal." },
+              { icon: <Handshake size={32} strokeWidth={1.5} />, title: "Integrity", desc: "Honest practices and ethical commitment." },
+              { icon: <TrendingUp size={32} strokeWidth={1.5} />, title: "Growth", desc: "Delivering high value and long term growth." },
+              { icon: <FileText size={32} strokeWidth={1.5} />, title: "Legal Safety", desc: "All our properties are legally verified and secure." },
+              { icon: <Users size={32} strokeWidth={1.5} />, title: "Customer First", desc: "Your satisfaction and trust are our top priorities." },
+              { icon: <Headphones size={32} strokeWidth={1.5} />, title: "End to End Support", desc: "From search to settlement, we are with you." }
+            ].map((value, i) => (
+              <div key={i} className={`flex flex-col items-center text-center flex-1 ${i !== 0 ? 'pt-6 lg:pt-0 lg:pl-6' : ''}`}>
+                <div className="text-[#F7A300] mb-4">
+                  {value.icon}
+                </div>
+                <h4 className="text-white font-bold text-[15px] mb-3">{value.title}</h4>
+                <p className="text-gray-400 text-xs leading-relaxed">{value.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Partnership Module Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-[1400px] mx-auto px-6">
+          <div className="flex flex-col lg:flex-row gap-16 items-start">
+            {/* Left Image */}
+            <div className="lg:w-1/2 w-full">
+              <div className="relative w-full h-[350px] rounded-xl overflow-hidden shadow-lg">
+                <Image src="/home.jpeg" alt="Partnership" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+              </div>
+            </div>
+            
+            {/* Right Content */}
+            <div className="lg:w-1/2 w-full pt-4">
+              <h2 className="font-serif text-[34px] font-bold mb-8 text-gray-900 leading-tight">
+                <span className="text-[#F7A300]">Partnership</span> Module
+              </h2>
+              
+              <div className="mb-6">
+                <h3 className="font-bold text-gray-900 text-base mb-2">1. JV model - shared investment/shared profit</h3>
+                <ul className="list-disc pl-5 text-gray-700 text-sm space-y-1">
+                  <li>50-50% in investment</li>
+                  <li>50-50% in profit.</li>
+                </ul>
+              </div>
+              
+              <div className="w-full border-t border-dashed border-gray-300 my-6"></div>
+              
+              <div className="mb-6">
+                <h3 className="font-bold text-gray-900 text-base mb-2">2. Developers exclusive model -</h3>
+                <p className="text-gray-700 text-sm leading-relaxed mb-3">
+                  We offer land support on just 10% token money with a 10 - 14 months for construction and sale.<br/>
+                  With your investment in construction, you get to keep the profits.<br/>
+                  We settle the remaining amount on sale.
+                </p>
+              </div>
+              
+              <p className="text-gray-700 text-sm italic font-medium bg-gray-50 p-4 rounded-lg border border-gray-100">
+                Each model can be customized depending on mutual agreement and project scale.
+              </p>
+            </div>
+          </div>
+
+          {/* 7. Stats Bar */}
+          <div className="mt-20 bg-[#fafafa] rounded-2xl p-8 border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] flex flex-wrap justify-between items-center gap-6">
+            <div className="flex items-center gap-4 flex-1 justify-center">
+              <div className="w-12 h-12 flex items-center justify-center text-[#F7A300]">
+                 <Calendar size={36} strokeWidth={1.5} />
+              </div>
+              <div>
+                <h4 className="font-bold text-2xl text-gray-900">10+</h4>
+                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wide">Years of<br/>Experience</p>
+              </div>
+            </div>
+            
+            <div className="hidden lg:block w-px h-12 bg-gray-200"></div>
+            
+            <div className="flex items-center gap-4 flex-1 justify-center">
+              <div className="w-12 h-12 flex items-center justify-center text-[#F7A300]">
+                 <MapPin size={36} strokeWidth={1.5} />
+              </div>
+              <div>
+                <h4 className="font-bold text-2xl text-gray-900">100+</h4>
+                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wide">Premium<br/>Locations</p>
+              </div>
+            </div>
+            
+            <div className="hidden lg:block w-px h-12 bg-gray-200"></div>
+            
+            <div className="flex items-center gap-4 flex-1 justify-center">
+              <div className="w-12 h-12 flex items-center justify-center text-[#F7A300]">
+                 <Building2 size={36} strokeWidth={1.5} />
+              </div>
+              <div>
+                <h4 className="font-bold text-2xl text-gray-900">57+</h4>
+                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wide">Projects<br/>Delivered</p>
+              </div>
+            </div>
+            
+            <div className="hidden lg:block w-px h-12 bg-gray-200"></div>
+            
+            <div className="flex items-center gap-4 flex-1 justify-center">
+              <div className="w-12 h-12 flex items-center justify-center text-[#F7A300]">
+                 <Users size={36} strokeWidth={1.5} />
+              </div>
+              <div>
+                <h4 className="font-bold text-2xl text-gray-900">500+</h4>
+                <p className="text-[11px] text-gray-500 font-bold uppercase tracking-wide">Happy<br/>Investors</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8. Call To Action Strip */}
+      <section className="bg-[#2c3138] border-t border-white/5 py-10">
+        <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="text-2xl md:text-[28px] font-serif text-white mb-2 leading-tight">Ready to Invest in Your Future?</h2>
+            <p className="text-gray-400 text-sm">Connect with our experts today and explore the best land opportunities.</p>
+          </div>
+          <div className="flex gap-4">
+            <Link href="/contact" className="bg-[#F7A300] text-black px-6 py-3 rounded text-sm font-bold flex items-center gap-2 hover:bg-[#e59800] transition-colors">
+              Enquire Now <ArrowRight size={16} strokeWidth={2.5} />
+            </Link>
+            <Link href="tel:+919756580000" className="bg-transparent border border-white/30 text-white px-6 py-3 rounded text-sm font-bold flex items-center gap-2 hover:bg-white/10 transition-colors">
+              <Phone size={16} fill="transparent" /> Contact Us
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-black pt-20 pb-8 px-8 border-t border-white/10 text-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+      {/* 9. Footer */}
+      <footer className="bg-[#0a0a0a] text-gray-400 pt-16 pb-8 text-[13px]">
+        <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          {/* Logo & About */}
           <div>
-            <Image 
-              src="/BKD_Logo.png" 
-              alt="Badri Kedar Developers" 
-              width={180} 
-              height={70} 
-              className="object-contain mb-6"
-             style={{ width: "auto", height: "auto" }} />
-            <p className="text-gray-400 text-sm leading-relaxed mb-6">
-              Building more than just properties - we build trust, value, and lasting relationships. Your future, our commitment.
+            <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={200} height={60} className="mb-6 h-12 w-auto object-contain" />
+            <p className="mb-6 leading-relaxed">
+              Premium land opportunities across Uttarakhand for a better tomorrow.
             </p>
-            <div className="flex items-center gap-3">
-              <Link href="https://www.facebook.com/badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaFacebookF size={16} /></Link>
-              <Link href="https://www.instagram.com/badrikedardevelopers?igsh=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaInstagram size={16} /></Link>
-              <Link href="https://youtube.com/@badrikedardevelopers?si=Sgf_tHWd8wQ4JJnx" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaYoutube size={16} /></Link>
-              <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%2 Media0in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaWhatsapp size={16} /></Link>
+            <div className="flex gap-3">
+              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaFacebookF size={13} /></Link>
+              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaInstagram size={13} /></Link>
+              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaYoutube size={13} /></Link>
+              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaLinkedinIn size={13} /></Link>
             </div>
           </div>
 
+          {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-lg mb-6 text-brand-gold">Quick Links</h3>
-            <ul className="space-y-3">
-              {['Home', 'About Us', 'Projects', 'Blogs', 'Contact Us'].map((link) => (
-                <li key={link}>
-                  <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Projects' ? '/projects' : link === 'Blogs' ? '/blogs' : link === 'Contact Us' ? '/contact' : link === 'Our Partners' ? '/partners' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
-                    <ChevronRight size={12} className="text-brand-gold" /> {link}
-                  </Link>
-                </li>
-              ))}
+            <h4 className="text-white font-bold mb-6 tracking-wider text-xs uppercase">QUICK LINKS</h4>
+            <ul className="space-y-3 font-medium">
+              <li><Link href="/" className="hover:text-[#F7A300] transition-colors">Home</Link></li>
+              <li><Link href="/about" className="hover:text-[#F7A300] transition-colors">About Us</Link></li>
+              <li><Link href="/properties" className="hover:text-[#F7A300] transition-colors">Properties</Link></li>
+              <li><Link href="/learn" className="hover:text-[#F7A300] transition-colors">Read &amp; Learn More</Link></li>
+              <li><Link href="/contact" className="hover:text-[#F7A300] transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
+          {/* Important Links */}
           <div>
-            <h3 className="font-bold text-lg mb-6 text-brand-gold">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex gap-3 text-sm text-gray-400">
-                <MapPin size={18} className="text-brand-gold shrink-0" />
-                <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
+            <h4 className="text-white font-bold mb-6 tracking-wider text-xs uppercase">IMPORTANT LINKS</h4>
+            <ul className="space-y-3 font-medium">
+              <li><Link href="/privacy" className="hover:text-[#F7A300] transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:text-[#F7A300] transition-colors">Terms &amp; Conditions</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact & Location */}
+          <div>
+            <h4 className="text-white font-bold mb-6 tracking-wider text-xs uppercase">CONTACT US</h4>
+            <ul className="space-y-3 mb-8 font-medium">
+              <li className="flex items-center gap-3">
+                <Phone size={14} className="text-[#F7A300]" />
+                <span>+91 9756580000</span>
               </li>
-              <li className="flex gap-3 text-sm text-gray-400 items-center">
-                <Mail size={18} className="text-brand-gold shrink-0" />
+              <li className="flex items-center gap-3">
+                <Mail size={14} className="text-[#F7A300]" />
                 <span>info@badrikedardevelopers.com</span>
               </li>
-              <li className="flex gap-3 text-sm text-gray-400 items-center">
-                <Clock size={18} className="text-brand-gold shrink-0" />
-                <span>Mon - Sat: 10:00 AM - 7:00 PM</span>
+              <li className="flex items-start gap-3">
+                <MapPin size={14} className="text-[#F7A300] shrink-0 mt-0.5" />
+                <span>Dehradun, Uttarakhand, India</span>
               </li>
             </ul>
-          </div>
-
-          <div>
-            <h3 className="font-bold text-lg mb-6 text-brand-gold">Featured Projects</h3>
-            <div className="grid grid-cols-2 gap-3">
-              {[
-                "/fun_valley_township.png",
-                "/480_sqyard_plot.png",
-                "/530_sqyard_plot.png",
-                "/181_sqyard_plot.png"
-              ].map((img, i) => (
-                <Link href={`/projects/${i+1}`} key={i} className="block relative h-20 rounded overflow-hidden group">
-                  <Image src={img} alt="Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform" />
-                </Link>
-              ))}
+            <h4 className="text-white font-bold mb-4 tracking-wider text-xs uppercase">OUR LOCATION</h4>
+            <div className="w-full h-24 bg-gray-800 rounded overflow-hidden relative border border-gray-700">
+               <Image src="/home.jpeg" alt="Map Location" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover opacity-50 grayscale hover:grayscale-0 transition-all" />
+               <div className="absolute inset-0 flex items-center justify-center">
+                  <MapPin size={24} className="text-[#ea4335] drop-shadow-md" />
+               </div>
             </div>
           </div>
         </div>
-
-        <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-gray-500">
-          <p>© 2026 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
-          
+        
+        <div className="max-w-[1400px] mx-auto px-6 pt-6 border-t border-gray-800 text-center flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-500 font-medium">
+          <p>© 2024 Badri Kedar Developers. All Rights Reserved.</p>
         </div>
       </footer>
     </main>
