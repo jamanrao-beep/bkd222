@@ -414,7 +414,7 @@ export default function Home() {
 
       {/* 8. Footer */}
       <footer className="bg-[#0a0a0a] text-gray-400 pt-16 pb-8 text-[13px]">
-        <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Logo & About */}
           <div>
             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={200} height={60} className="mb-6 h-12 w-auto object-contain" />
@@ -438,15 +438,6 @@ export default function Home() {
               <li><Link href="/properties" className="hover:text-[#F7A300] transition-colors">Properties</Link></li>
               <li><Link href="/learn" className="hover:text-[#F7A300] transition-colors">Read &amp; Learn More</Link></li>
               <li><Link href="/contact" className="hover:text-[#F7A300] transition-colors">Contact Us</Link></li>
-            </ul>
-          </div>
-
-          {/* Important Links */}
-          <div>
-            <h4 className="text-white font-bold mb-6 tracking-wider text-xs uppercase">IMPORTANT LINKS</h4>
-            <ul className="space-y-3 font-medium">
-              <li><Link href="/privacy" className="hover:text-[#F7A300] transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-[#F7A300] transition-colors">Terms &amp; Conditions</Link></li>
             </ul>
           </div>
 
@@ -478,7 +469,7 @@ export default function Home() {
         </div>
         
         <div className="max-w-[1400px] mx-auto px-6 pt-6 border-t border-gray-800 text-center flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-500 font-medium">
-          <p>© 2024 Badri Kedar Developers. All Rights Reserved.</p>
+          <p>© 2026 Badri Kedar Developers. All Rights Reserved.</p>
         </div>
       </footer>
     </main>

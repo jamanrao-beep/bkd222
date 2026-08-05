@@ -284,7 +284,7 @@ export default function Plot181() {
 
       {/* Footer */}
       <footer className="bg-[#0a0a0a] text-gray-400 pt-16 pb-8 px-6 text-[13px] relative border-t border-white/5">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Logo & About */}
           <div>
             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={200} height={60} className="mb-6 h-12 w-auto object-contain" />
@@ -308,15 +308,6 @@ export default function Plot181() {
               <li><Link href="/properties" className="hover:text-[#F7A300] transition-colors">Properties</Link></li>
               <li><Link href="/learn" className="hover:text-[#F7A300] transition-colors">Read &amp; Learn More</Link></li>
               <li><Link href="/contact" className="hover:text-[#F7A300] transition-colors">Contact Us</Link></li>
-            </ul>
-          </div>
-
-          {/* Important Links */}
-          <div>
-            <h4 className="text-white font-bold mb-6 tracking-wider text-xs uppercase">IMPORTANT LINKS</h4>
-            <ul className="space-y-3 font-medium">
-              <li><Link href="/privacy" className="hover:text-[#F7A300] transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-[#F7A300] transition-colors">Terms &amp; Conditions</Link></li>
             </ul>
           </div>
 
@@ -348,7 +339,7 @@ export default function Plot181() {
         </div>
         
         <div className="max-w-[1400px] mx-auto pt-6 border-t border-gray-800 flex items-center justify-center text-xs text-gray-500 font-medium">
-          <p className="text-center w-full">© 2024 Badri Kedar Developers. All Rights Reserved.</p>
+          <p className="text-center w-full">© 2026 Badri Kedar Developers. All Rights Reserved.</p>
         </div>
         
         {/* Scroll to top button */}
