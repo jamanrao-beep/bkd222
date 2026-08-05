@@ -104,16 +104,16 @@ export default function FunValley() {
       <section className="w-full max-w-[1400px] mx-auto px-6 py-16 bg-[#f8f9fa]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div className="relative h-[300px] md:h-[420px] rounded-2xl overflow-hidden group shadow-md">
-            <Image src="/fv_ground_1.jpg" alt="Property View 1" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+            <Image src="/fv_ground_1.jpg" alt="Property View 1" fill sizes="(max-width: 768px) 100vw, 50vw" priority className="object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
           <div className="relative h-[300px] md:h-[420px] rounded-2xl overflow-hidden group shadow-md">
-            <Image src="/fv_ground_2.jpg" alt="Property View 2" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+            <Image src="/fv_ground_2.jpg" alt="Property View 2" fill sizes="(max-width: 768px) 100vw, 50vw" priority className="object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
           <div className="relative h-[300px] md:h-[420px] rounded-2xl overflow-hidden group shadow-md">
-            <Image src="/fv_ground_3.jpg" alt="Property View 3" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+            <Image src="/fv_ground_3.jpg" alt="Property View 3" fill sizes="(max-width: 768px) 100vw, 50vw" priority className="object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
           <div className="relative h-[300px] md:h-[420px] rounded-2xl overflow-hidden group shadow-md">
-            <Image src="/fv_ground_4.jpg" alt="Property View 4" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+            <Image src="/fv_ground_4.jpg" alt="Property View 4" fill sizes="(max-width: 768px) 100vw, 50vw" priority className="object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
         </div>
       </section>
