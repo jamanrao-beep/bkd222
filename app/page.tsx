@@ -14,7 +14,7 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" />
+             <Image src="/universal_hero.jpg/BKD_Logo.png alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" />
           </Link>
           
           {/* Nav Links */}
@@ -37,7 +37,7 @@ export default function Home() {
       <section className="relative w-full h-[90vh] min-h-[650px] flex items-center mt-[80px]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 top-[-80px]">
-          <Image src="/hero_high_res.png" alt="Premium Plots" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" priority />
+          <Image src="/universal_hero.jpg" alt="Premium Plots" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" priority />
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
           <div className="absolute inset-0 bg-black/20" />
@@ -460,7 +460,7 @@ export default function Home() {
             </ul>
             <h4 className="text-white font-bold mb-4 tracking-wider text-xs uppercase">OUR LOCATION</h4>
             <div className="w-full h-24 bg-gray-800 rounded overflow-hidden relative border border-gray-700">
-               <Image src="/home.jpeg" alt="Map Location" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover opacity-50 grayscale hover:grayscale-0 transition-all" />
+               <Image src="/universal_hero.jpg" alt="Map Location" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover opacity-50 grayscale hover:grayscale-0 transition-all" />
                <div className="absolute inset-0 flex items-center justify-center">
                   <MapPin size={24} className="text-[#ea4335] drop-shadow-md" />
                </div>

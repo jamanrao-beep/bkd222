@@ -74,7 +74,7 @@ export default function LearnPage() {
       {/* 1. Header Navigation */}
       <nav className="absolute top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-transparent border-b border-white/10">
         <Link href="/">
-          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" priority />
+          <Image src="/universal_hero.jpg/BKD_Logo.png alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" priority />
         </Link>
         <div className="hidden lg:flex items-center gap-10 text-sm font-medium">
           <Link href="/" className="text-gray-300 hover:text-[#F7A300] transition-colors">Home</Link>
@@ -92,7 +92,7 @@ export default function LearnPage() {
       <section className="relative w-full h-[60vh] min-h-[450px] overflow-hidden flex flex-col justify-end pb-[10vh]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 top-[-80px]">
-          <Image src="/home.jpeg" alt="Latest Articles" fill sizes="(max-width: 768px) 100vw, 100vw" priority className="object-cover" />
+          <Image src="/universal_hero.jpg" alt="Latest Articles" fill sizes="(max-width: 768px) 100vw, 100vw" priority className="object-cover" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         

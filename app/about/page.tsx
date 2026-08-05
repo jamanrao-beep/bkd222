@@ -15,7 +15,7 @@ export default function About() {
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" />
+             <Image src="/universal_hero.jpg/BKD_Logo.png alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" />
           </Link>
           
           {/* Nav Links */}
@@ -38,7 +38,7 @@ export default function About() {
       <section className="relative w-full h-[60vh] min-h-[500px] flex items-center mt-[80px]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 top-[-80px]">
-          <Image src="/home.jpeg" alt="Premium Plots" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" priority />
+          <Image src="/universal_hero.jpg" alt="Premium Plots" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" priority />
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-black/60" />
         </div>
@@ -82,7 +82,7 @@ export default function About() {
             </div>
             <div className="lg:w-[55%] w-full pt-4">
               <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg">
-                 <Image src="/home.jpeg" alt="Scenic land" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+                 <Image src="/universal_hero.jpg" alt="Scenic land" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function About() {
             {/* Left Image */}
             <div className="lg:w-1/2 w-full">
               <div className="relative w-full h-[350px] rounded-xl overflow-hidden shadow-lg">
-                <Image src="/home.jpeg" alt="Partnership" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+                <Image src="/universal_hero.jpg" alt="Partnership" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
             </div>
             

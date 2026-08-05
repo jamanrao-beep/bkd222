@@ -17,7 +17,7 @@ export default function Properties() {
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" />
+             <Image src="/universal_hero.jpg/BKD_Logo.png alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" />
           </Link>
           
           {/* Nav Links */}
@@ -40,7 +40,7 @@ export default function Properties() {
       <section className="relative w-full h-[60vh] min-h-[500px] flex items-center mt-[80px]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 top-[-80px]">
-          <Image src="/home.jpeg" alt="Premium Plots" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" priority />
+          <Image src="/universal_hero.jpg" alt="Premium Plots" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" priority />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         
@@ -332,7 +332,7 @@ export default function Properties() {
       {/* 5. Call To Action Strip */}
       <section className="bg-[#2c3138] border-t border-white/5 py-10 relative">
         <div className="absolute inset-0 z-0 opacity-20">
-          <Image src="/home.jpeg" alt="CTA bg" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+          <Image src="/universal_hero.jpg" alt="CTA bg" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#2c3138] via-[#2c3138]/90 to-transparent" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">

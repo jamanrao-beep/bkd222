@@ -16,7 +16,7 @@ export default function Contact() {
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" priority />
+             <Image src="/universal_hero.jpg/BKD_Logo.png alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" priority />
           </Link>
           
           {/* Nav Links */}
@@ -39,7 +39,7 @@ export default function Contact() {
       <section className="relative w-full h-[55vh] min-h-[450px] flex items-center mt-[80px]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 top-[-80px]">
-          <Image src="/home.jpeg" alt="Contact Us" fill sizes="(max-width: 768px) 100vw, 100vw" priority className="object-cover" />
+          <Image src="/universal_hero.jpg" alt="Contact Us" fill sizes="(max-width: 768px) 100vw, 100vw" priority className="object-cover" />
           <div className="absolute inset-0 bg-black/60" />
         </div>
         
@@ -145,9 +145,15 @@ export default function Contact() {
                 <div>
                   <input type="tel" placeholder="Your Phone Number" className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors" />
                 </div>
+
                 <div>
-                  <input type="text" placeholder="Subject" className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors" />
+                  <select defaultValue="" className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors text-gray-500 focus:text-gray-900 cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%239ca3af%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[length:12px_12px] bg-[right_1.25rem_center]">
+                    <option value="" disabled hidden>I'm a...</option>
+                    <option value="Buyer">Buyer</option>
+                    <option value="Channel Partner">Channel Partner/Real Estate Professional</option>
+                  </select>
                 </div>
+
                 <div>
                   <textarea placeholder="Your Message" rows={6} className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors resize-none"></textarea>
                 </div>
@@ -235,7 +241,7 @@ export default function Contact() {
       {/* 5. Call To Action Strip */}
       <section className="bg-[#1a1c20] border-t border-white/5 py-12 relative overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
-          <Image src="/home.jpeg" alt="CTA Background" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover grayscale" />
+          <Image src="/universal_hero.jpg" alt="CTA Background" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover grayscale" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1c20] via-[#1a1c20]/90 to-transparent" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
