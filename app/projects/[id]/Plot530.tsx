@@ -39,7 +39,7 @@ export default function Plot530() {
       <section className="relative w-full h-[85vh] min-h-[600px] flex flex-col pt-[80px]">
         <div className="absolute inset-0 z-0 top-0">
           <Image
-            src="/prop2_hero.jpg"
+            src="/plot530_hero.jpg"
             alt="Thano Plot"
             fill sizes="(max-width: 768px) 100vw, 100vw"
             className="object-cover"
