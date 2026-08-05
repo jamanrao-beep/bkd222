@@ -6,6 +6,8 @@ import {
   CheckCircle2, FileText, Target, Eye, Handshake, Headphones, Calendar, ArrowRight
 } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import handshakeImg from "../../assets/handshake.png";
+
 
 export default function About() {
   return (
@@ -149,7 +151,7 @@ export default function About() {
             {/* Left Image */}
             <div className="lg:w-1/2 w-full">
               <div className="relative w-full h-[350px] rounded-xl overflow-hidden shadow-lg">
-                <Image src="../assets/handshake.png" alt="Partnership" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+                <Image src={handshakeImg} alt="Partnership" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
             </div>
 

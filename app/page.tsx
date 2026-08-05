@@ -173,7 +173,7 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {/* Card 1 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col hover:-translate-y-1 transition-transform duration-300">
+            <Link href="/properties" className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 block group flex flex-col hover:-translate-y-1 transition-transform duration-300">
               <div className="relative h-56 w-full">
                 <Image src="/new_prop_1.jpg" alt="Ranipokhari Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
@@ -201,10 +201,10 @@ export default function Home() {
                   <p className="font-bold text-[#F7A300] text-xl">₹30,000 <span className="text-gray-500 text-sm font-normal">per Gaj (Negotiable)</span></p>
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* Card 2 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col hover:-translate-y-1 transition-transform duration-300">
+            <Link href="/properties" className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 block group flex flex-col hover:-translate-y-1 transition-transform duration-300">
               <div className="relative h-56 w-full">
                 <Image src="/new_prop_2.jpg" alt="Thano Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
@@ -232,10 +232,10 @@ export default function Home() {
                   <p className="font-bold text-[#F7A300] text-xl">₹30,000 <span className="text-gray-500 text-sm font-normal">per Gaj (Negotiable)</span></p>
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* Card 3 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col hover:-translate-y-1 transition-transform duration-300">
+            <Link href="/properties" className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 block group flex flex-col hover:-translate-y-1 transition-transform duration-300">
               <div className="relative h-56 w-full">
                 <Image src="/new_prop_3.jpg" alt="New Defence Colony Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
@@ -263,10 +263,10 @@ export default function Home() {
                   <p className="font-bold text-[#F7A300] text-xl">₹70,000 <span className="text-gray-500 text-sm font-normal">per Gaj (Negotiable)</span></p>
                 </div>
               </div>
-            </div>
+            </Link>
 
             {/* Card 4 */}
-            <div className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col hover:-translate-y-1 transition-transform duration-300">
+            <Link href="/properties" className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 block group flex flex-col hover:-translate-y-1 transition-transform duration-300">
               <div className="relative h-56 w-full">
                 <Image src="/new_prop_4.jpg" alt="Fun Valley Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
@@ -294,7 +294,7 @@ export default function Home() {
                   <p className="font-bold text-gray-900 text-lg">Rate: <span className="text-[#F7A300]">₹28,000+</span> <span className="text-gray-500 text-sm font-normal">per sq. yard</span></p>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
