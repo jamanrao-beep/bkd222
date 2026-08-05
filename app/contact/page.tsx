@@ -5,25 +5,26 @@ import {
   ChevronRight, ChevronLeft, Building2, ShieldCheck, 
   Clock, Users, Award, Target, Eye, Gem, 
   CheckCircle2, FileText, Leaf, Star, Quote,
-  Send, User, BookOpen, Clock4, Timer
+  Send, User, BookOpen, Clock4, Timer,
+  MessageSquare, Calendar, Handshake, ChevronUp
 } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
   return (
-    <main className="min-h-screen bg-[#fafafa] text-black selection:bg-brand-gold selection:text-white flex flex-col font-sans">
+    <main className="min-h-screen bg-[#f9fafb] text-black selection:bg-brand-gold selection:text-white flex flex-col font-sans">
       {/* Header & Hero Section */}
-      <section className="relative w-full h-[50vh] min-h-[400px] flex flex-col">
+      <section className="relative w-full h-[55vh] min-h-[450px] flex flex-col">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
-            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=2000" 
+            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2000" 
             alt="Premium Building" 
             fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/75" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
 
         {/* Top Bar */}
@@ -45,9 +46,9 @@ export default function Contact() {
           <div className="flex items-center gap-4">
             <span className="font-semibold text-white">Follow Us:</span>
             <Link href="https://www.facebook.com/badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
-            <Link href="https://www.instagram.com/badrikedardevelopers?igsh=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaInstagram size={14} /></Link>
-            <Link href="https://youtube.com/@badrikedardevelopers?si=Sgf_tHWd8wQ4JJnx" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaYoutube size={14} /></Link>
-            <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%2 Media0in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
+            <Link href="https://www.instagram.com/badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaInstagram size={14} /></Link>
+            <Link href="https://youtube.com/@badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaYoutube size={14} /></Link>
+            <Link href="https://wa.me/919756580000" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
           </div>
         </div>
 
@@ -55,14 +56,14 @@ export default function Contact() {
         <nav className="relative z-10 flex justify-between items-center px-8 py-5">
           <Link href="/">
             <Image 
-              src="/BKD_Logo.png" 
+              src="/bkd-white-logo.png" 
               alt="Badri Kedar Developers" 
               width={160} 
               height={60} 
               className="object-contain"
              style={{ width: "auto", height: "auto" }} />
           </Link>
-                                        <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
+          <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
             <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
             <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>
             <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>
@@ -79,341 +80,272 @@ export default function Contact() {
         </nav>
 
         {/* Hero Content */}
-        <div className="relative z-10 flex-1 flex flex-col justify-center px-8 md:px-16 lg:px-24 pb-12">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-white mb-4">Contact Us</h1>
-          <p className="text-lg text-gray-300 font-medium mb-6">Let&apos;s Build Your Future Together</p>
-          <div className="flex items-center gap-2 text-sm text-brand-gold font-semibold">
+        <div className="relative z-10 flex-1 flex flex-col justify-center px-8 md:px-16 lg:px-24 pb-12 pt-10 max-w-5xl">
+          <div className="flex items-center gap-2 text-sm font-semibold mb-6">
             <Link href="/" className="text-brand-gold hover:text-white transition-colors">Home</Link>
-            <ChevronRight size={14} className="text-brand-gold" />
+            <span className="text-white">/</span>
             <span className="text-white">Contact Us</span>
+          </div>
+          <h1 className="font-serif text-5xl md:text-6xl font-bold text-white mb-6">Contact Us</h1>
+          <p className="text-lg text-gray-200 max-w-2xl leading-relaxed">
+            We&apos;re here to help you make the right real estate investment in Dehradun. Reach out to us for any queries, site visits, or more information.
+          </p>
+        </div>
+      </section>
+
+      {/* Cards Section */}
+      <section className="relative z-20 px-8 max-w-7xl mx-auto w-full -mt-10 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Card 1 */}
+          <div className="bg-white rounded-xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] flex items-start gap-4 border border-gray-100">
+            <div className="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center shrink-0">
+              <MessageSquare className="text-white w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="font-bold text-gray-900 text-base mb-1">Message Us</h3>
+              <p className="font-semibold text-gray-900 text-sm mb-1">+91 9756580000</p>
+              <p className="text-xs text-gray-500">Chat with us for quick assistance</p>
+            </div>
+          </div>
+          {/* Card 2 */}
+          <div className="bg-white rounded-xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] flex items-start gap-4 border border-gray-100">
+            <div className="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center shrink-0">
+              <Mail className="text-white w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="font-bold text-gray-900 text-base mb-1">Email Us</h3>
+              <p className="font-semibold text-gray-900 text-xs sm:text-sm mb-1 break-all">info@badrikedardevelopers.com</p>
+              <p className="text-xs text-gray-500">We reply within 24 hours</p>
+            </div>
+          </div>
+          {/* Card 3 */}
+          <div className="bg-white rounded-xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] flex items-start gap-4 border border-gray-100">
+            <div className="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center shrink-0">
+              <MapPin className="text-white w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="font-bold text-gray-900 text-base mb-1">Visit Us</h3>
+              <p className="font-semibold text-gray-900 text-sm mb-1">Dehradun, Uttarakhand, India</p>
+              <p className="text-xs text-gray-500">Get directions on the map</p>
+            </div>
+          </div>
+          {/* Card 4 */}
+          <div className="bg-white rounded-xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] flex items-start gap-4 border border-gray-100">
+            <div className="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center shrink-0">
+              <FaWhatsapp className="text-white w-6 h-6" />
+            </div>
+            <div>
+              <h3 className="font-bold text-gray-900 text-base mb-1">WhatsApp</h3>
+              <p className="font-semibold text-gray-900 text-sm mb-1">+91 9756580000</p>
+              <p className="text-xs text-gray-500">Chat with us on WhatsApp</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Main Contact Section */}
-      <section className="py-20 px-8 max-w-7xl mx-auto w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-          
-          {/* Left Side: Info & Map */}
-          <div className="flex flex-col">
-            <h2 className="font-serif text-4xl font-bold text-gray-900 mb-4">
-              Get <span className="text-brand-gold">In</span> Touch
+      {/* Main Grid: Form and Map */}
+      <section className="px-8 max-w-7xl mx-auto w-full pb-20">
+        <div className="grid lg:grid-cols-2 gap-16">
+          {/* Left: Form */}
+          <div>
+            <h2 className="font-serif text-3xl font-bold text-gray-900 mb-4">
+              Send Us a <span className="text-brand-gold">Message</span>
             </h2>
-            <p className="text-gray-500 mb-10 leading-relaxed text-sm md:text-base max-w-md">
-              We are here to help you find the perfect property or answer any questions you may have. Reach out to us anytime!
+            <div className="w-12 h-0.5 bg-brand-gold mb-6" />
+            <p className="text-gray-600 mb-8 text-sm leading-relaxed">
+              Have a question or need assistance? Fill out the form and our team will get back to you shortly.
             </p>
-
-            <div className="grid sm:grid-cols-2 gap-6 mb-12">
-              {/* Office Address */}
-              <div className="bg-white p-6 rounded-xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center shrink-0">
-                  <MapPin className="text-brand-gold w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 text-sm mb-1">Office Address</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">
-                    Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001
-                  </p>
-                </div>
+            <form className="flex flex-col gap-4">
+              <div className="grid grid-cols-2 gap-4">
+                <input type="text" placeholder="Your Name" className="w-full bg-white border border-gray-200 text-gray-900 placeholder-gray-400 text-sm rounded-lg focus:ring-brand-gold focus:border-brand-gold p-4" />
+                <input type="email" placeholder="Your Email" className="w-full bg-white border border-gray-200 text-gray-900 placeholder-gray-400 text-sm rounded-lg focus:ring-brand-gold focus:border-brand-gold p-4" />
               </div>
-
-              {/* Email Address */}
-              <div className="bg-white p-6 rounded-xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center shrink-0">
-                  <Mail className="text-brand-gold w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 text-sm mb-1">Email Address</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">
-                    info@badrikedardevelopers.com
-                  </p>
-                </div>
+              <input type="tel" placeholder="Your Phone Number" className="w-full bg-white border border-gray-200 text-gray-900 placeholder-gray-400 text-sm rounded-lg focus:ring-brand-gold focus:border-brand-gold p-4" />
+              <input type="text" placeholder="Subject" className="w-full bg-white border border-gray-200 text-gray-900 placeholder-gray-400 text-sm rounded-lg focus:ring-brand-gold focus:border-brand-gold p-4" />
+              <textarea placeholder="Your Message" rows={5} className="w-full bg-white border border-gray-200 text-gray-900 placeholder-gray-400 text-sm rounded-lg focus:ring-brand-gold focus:border-brand-gold p-4 resize-none"></textarea>
+              <div className="flex items-center gap-2 mt-2">
+                <input type="checkbox" id="agree" className="w-4 h-4 text-brand-gold border-gray-300 rounded focus:ring-brand-gold" />
+                <label htmlFor="agree" className="text-sm text-gray-500 font-medium">
+                  I agree to the <Link href="#" className="text-brand-gold hover:underline">Privacy Policy</Link> and <Link href="#" className="text-brand-gold hover:underline">Terms & Conditions</Link>.
+                </label>
               </div>
-
-              {/* Working Hours */}
-              <div className="bg-white p-6 rounded-xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-brand-gold/10 flex items-center justify-center shrink-0">
-                  <Clock4 className="text-brand-gold w-6 h-6" />
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 text-sm mb-1">Working Hours</h4>
-                  <p className="text-xs text-gray-500 leading-relaxed">
-                    Mon - Sat: 10:00 AM - 7:00 PM<br/>
-                    Sunday: Closed
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <h3 className="font-serif text-2xl font-bold text-gray-900 mb-6">
-              Find Us On <span className="text-brand-gold">Map</span>
-            </h3>
-            <div className="relative w-full h-[300px] rounded-xl overflow-hidden shadow-md border border-gray-100 bg-gray-200">
-              <iframe
-                src="https://maps.google.com/maps?q=Bhagirath%20Enclave%2C%2052%2C%20Balbir%20Rd%2C%20Dalanwala%2C%20Dehradun%2C%20Uttarakhand%20248001&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={true}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0"
-              ></iframe>
-            </div>
-          </div>
-
-          {/* Right Side: Contact Form */}
-          <div className="bg-[#1a1c23] rounded-2xl p-8 md:p-10 shadow-2xl flex flex-col">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-white mb-4">
-              Send Us <span className="text-brand-gold">A Message</span>
-            </h2>
-            <p className="text-gray-400 mb-8 text-sm">
-              Fill out the form below and our team will get back to you as soon as possible.
-            </p>
-
-            <form className="flex flex-col gap-5 flex-1">
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <User className="h-5 w-5 text-gray-500" />
-                </div>
-                <input 
-                  type="text" 
-                  placeholder="Your Name" 
-                  className="w-full bg-[#111318] border border-white/10 text-white placeholder-gray-500 text-sm rounded-lg focus:ring-brand-gold focus:border-brand-gold block pl-12 p-4 transition-colors"
-                />
-              </div>
-
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <Mail className="h-5 w-5 text-gray-500" />
-                </div>
-                <input 
-                  type="email" 
-                  placeholder="Email Address" 
-                  className="w-full bg-[#111318] border border-white/10 text-white placeholder-gray-500 text-sm rounded-lg focus:ring-brand-gold focus:border-brand-gold block pl-12 p-4 transition-colors"
-                />
-              </div>
-
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <Phone className="h-5 w-5 text-gray-500" />
-                </div>
-                <input 
-                  type="tel" 
-                  placeholder="Phone Number" 
-                  className="w-full bg-[#111318] border border-white/10 text-white placeholder-gray-500 text-sm rounded-lg focus:ring-brand-gold focus:border-brand-gold block pl-12 p-4 transition-colors"
-                />
-              </div>
-
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <Users className="h-5 w-5 text-gray-500" />
-                </div>
-                <select 
-                  className="w-full bg-[#111318] border border-white/10 text-white text-sm rounded-lg focus:ring-brand-gold focus:border-brand-gold block pl-12 p-4 transition-colors appearance-none cursor-pointer"
-                  defaultValue=""
-                >
-                  <option value="" disabled className="text-gray-500">I am a...</option>
-                  <option value="buyer">Buyer</option>
-                  <option value="partner">Channel Partner / Real Estate Agent</option>
-                </select>
-                <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-                  <ChevronDown className="h-5 w-5 text-gray-500" />
-                </div>
-              </div>
-
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <BookOpen className="h-5 w-5 text-gray-500" />
-                </div>
-                <input 
-                  type="text" 
-                  placeholder="Subject" 
-                  className="w-full bg-[#111318] border border-white/10 text-white placeholder-gray-500 text-sm rounded-lg focus:ring-brand-gold focus:border-brand-gold block pl-12 p-4 transition-colors"
-                />
-              </div>
-
-              <div className="relative flex-1">
-                <div className="absolute top-4 left-0 pl-4 flex items-start pointer-events-none">
-                  <FileText className="h-5 w-5 text-gray-500" />
-                </div>
-                <textarea 
-                  placeholder="Your Message" 
-                  rows={4}
-                  className="w-full h-full min-h-[120px] bg-[#111318] border border-white/10 text-white placeholder-gray-500 text-sm rounded-lg focus:ring-brand-gold focus:border-brand-gold block pl-12 p-4 transition-colors resize-none"
-                ></textarea>
-              </div>
-
-              <button 
-                type="button"
-                className="w-full bg-brand-gold text-white font-semibold rounded-lg text-sm px-5 py-4 mt-2 flex items-center justify-center gap-2 hover:bg-brand-gold-hover transition-colors shadow-lg shadow-brand-gold/20"
-              >
+              <button type="button" className="bg-brand-gold text-white font-semibold rounded-lg text-sm px-8 py-3.5 mt-4 flex items-center justify-center gap-2 hover:bg-brand-gold-hover transition-colors w-fit shadow-[0_4px_14px_0_rgba(232,139,32,0.39)]">
                 Send Message <Send size={16} />
               </button>
             </form>
           </div>
 
-        </div>
-      </section>
-
-      {/* Why Connect With Us */}
-      <section className="py-20 px-8 bg-white border-y border-gray-100">
-        <div className="max-w-7xl mx-auto text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why Connect With <span className="text-brand-gold">Us?</span>
-          </h2>
-          <div className="w-16 h-1 bg-brand-gold mx-auto rounded-full" />
-        </div>
-
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {[
-            { 
-              icon: Award, 
-              title: "Verified Properties", 
-              desc: "100% legally verified and hassle-free properties." 
-            },
-            { 
-              icon: Timer, 
-              title: "Quick Response", 
-              desc: "We value your time and respond quickly." 
-            },
-            { 
-              icon: Users, 
-              title: "Trusted Experts", 
-              desc: "Experienced professionals guiding you at every step." 
-            },
-            { 
-              icon: ShieldCheck, 
-              title: "Transparent Process", 
-              desc: "Clear documentation and complete transparency." 
-            }
-          ].map((item, i) => (
-            <div key={i} className="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50 flex flex-col items-center text-center hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-shadow">
-              <div className="w-16 h-16 rounded-full bg-brand-gold/5 flex items-center justify-center mb-6">
-                <item.icon className="text-brand-gold w-8 h-8" strokeWidth={1.5} />
+          {/* Right: Map and Features */}
+          <div className="flex flex-col gap-10">
+            {/* Map */}
+            <div>
+              <h2 className="font-serif text-3xl font-bold text-gray-900 mb-4">
+                Our <span className="text-brand-gold">Office</span>
+              </h2>
+              <div className="w-12 h-0.5 bg-brand-gold mb-6" />
+              <div className="relative w-full h-[280px] rounded-xl overflow-hidden shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] border border-gray-100 bg-gray-200">
+                <iframe
+                  src="https://maps.google.com/maps?q=Dehradun%2C%20Uttarakhand%2C%20India&t=&z=12&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="absolute inset-0"
+                ></iframe>
               </div>
-              <h3 className="font-bold text-gray-900 mb-3 text-lg">{item.title}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
             </div>
-          ))}
+
+            {/* Features */}
+            <div>
+              <h2 className="font-serif text-3xl font-bold text-gray-900 mb-4">
+                Why Contact <span className="text-brand-gold">Us?</span>
+              </h2>
+              <div className="w-12 h-0.5 bg-brand-gold mb-8" />
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div className="flex flex-col items-center">
+                  <User className="text-brand-gold w-8 h-8 mb-3" strokeWidth={1.5} />
+                  <h4 className="font-bold text-gray-900 text-xs mb-2">Expert Guidance</h4>
+                  <p className="text-[10px] text-gray-500 leading-relaxed max-w-[120px]">Get professional advice for your real estate investment.</p>
+                </div>
+                <div className="flex flex-col items-center border-l border-gray-200">
+                  <Calendar className="text-brand-gold w-8 h-8 mb-3" strokeWidth={1.5} />
+                  <h4 className="font-bold text-gray-900 text-xs mb-2">Site Visit Assistance</h4>
+                  <p className="text-[10px] text-gray-500 leading-relaxed max-w-[120px]">We help you schedule and plan your site visits.</p>
+                </div>
+                <div className="flex flex-col items-center border-l border-gray-200">
+                  <FileText className="text-brand-gold w-8 h-8 mb-3" strokeWidth={1.5} />
+                  <h4 className="font-bold text-gray-900 text-xs mb-2">Transparent Process</h4>
+                  <p className="text-[10px] text-gray-500 leading-relaxed max-w-[120px]">Clear information and support at every step.</p>
+                </div>
+                <div className="flex flex-col items-center border-l border-gray-200">
+                  <Handshake className="text-brand-gold w-8 h-8 mb-3" strokeWidth={1.5} />
+                  <h4 className="font-bold text-gray-900 text-xs mb-2">Dedicated Support</h4>
+                  <p className="text-[10px] text-gray-500 leading-relaxed max-w-[120px]">Our team is here to assist you with all your queries.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-[#0f1115] relative overflow-hidden">
-        {/* Background Building Graphic */}
-        <div className="absolute right-0 bottom-0 opacity-10 pointer-events-none">
-          <Image 
-            src="/building-outline.png" 
-            alt="Cityscape" 
-            width={400} 
-            height={300} 
-            className="object-contain"
-            // Fallback in case image doesn't exist, we just won't see it or we can use an inline SVG
-          />
+      <section className="relative bg-[#0a0a0a] overflow-hidden py-12 px-8 border-b-4 border-brand-gold">
+        {/* Background Overlay */}
+        <div className="absolute inset-0 z-0 opacity-30">
+          <Image src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&q=80" alt="Road Background" fill className="object-cover" />
         </div>
         
-        <div className="max-w-7xl mx-auto px-8 py-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative z-10">
-          <div className="w-full lg:w-1/3 relative h-64 lg:h-80 rounded-2xl overflow-hidden shadow-2xl">
-             <Image 
-               src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" 
-               alt="Luxury Home" 
-               fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
-               className="object-cover"
-             />
-          </div>
-          <div className="flex-1 flex flex-col justify-center text-white">
-            <h2 className="font-serif text-3xl md:text-5xl font-bold mb-4 leading-tight">
-              Ready to Invest in <span className="text-brand-gold">Your Future?</span>
-            </h2>
-            <p className="text-gray-400 mb-10 max-w-lg text-sm md:text-base leading-relaxed">
-              Let&apos;s find the perfect property that matches your goals. Our team is ready to assist you.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="flex items-center justify-center gap-2 bg-brand-gold text-white px-8 py-3.5 font-semibold rounded-lg hover:bg-brand-gold-hover transition-all text-sm shadow-lg shadow-brand-gold/20">
-                Call Now <Phone size={16} />
-              </Link>
-              <Link href="/contact" className="flex items-center justify-center gap-2 border border-white/20 px-8 py-3.5 font-semibold rounded-lg hover:bg-white hover:text-black transition-all text-sm bg-white/5">
-                Chat on WhatsApp <FaWhatsapp size={16} />
-              </Link>
+        <div className="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex items-center gap-6">
+            <div className="w-16 h-16 rounded-full border-2 border-brand-gold/30 flex items-center justify-center shrink-0 border-dashed">
+               <div className="w-12 h-12 rounded-full bg-brand-gold flex items-center justify-center">
+                 <MessageSquare className="text-white w-6 h-6 fill-current" />
+               </div>
+            </div>
+            <div>
+              <h2 className="font-serif text-3xl font-bold text-white mb-2">
+                Let&apos;s Talk About <span className="text-brand-gold">Your Future!</span>
+              </h2>
+              <p className="text-gray-300 text-sm max-w-lg leading-relaxed">
+                Have questions or need help choosing the right plot?<br className="hidden sm:block" /> Message us today — we&apos;re here to help.
+              </p>
             </div>
           </div>
+          <button className="shrink-0 bg-brand-gold text-white font-bold rounded text-sm px-6 py-4 flex items-center gap-2 hover:bg-brand-gold-hover transition-colors shadow-lg shadow-brand-gold/20">
+            <MessageSquare size={16} className="fill-current" /> Message Us: +91 9756580000
+          </button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0a0b0f] pt-20 pb-8 px-8 border-t border-white/5 text-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div>
+      <footer className="bg-[#111111] pt-16 pb-6 px-8 text-white relative">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+          {/* Col 1 */}
+          <div className="lg:col-span-1">
             <Image 
               src="/BKD_Logo.png" 
               alt="Badri Kedar Developers" 
-              width={180} 
-              height={70} 
-              className="object-contain mb-6"
+              width={160} 
+              height={60} 
+              className="object-contain mb-4"
              style={{ width: "auto", height: "auto" }} />
-            <p className="text-gray-400 text-sm leading-relaxed mb-6 pr-4">
-              Building more than just properties - we build trust, value, and lasting relationships. Your future, our commitment.
+            <p className="text-gray-400 text-xs leading-relaxed mb-6 font-medium">
+              Premium land opportunities across Uttarakhand for a better tomorrow.
             </p>
             <div className="flex items-center gap-3">
-              <Link href="https://www.facebook.com/badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
-              <Link href="https://www.instagram.com/badrikedardevelopers?igsh=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaInstagram size={14} /></Link>
-              <Link href="https://youtube.com/@badrikedardevelopers?si=Sgf_tHWd8wQ4JJnx" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaYoutube size={14} /></Link>
-              <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%2 Media0in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
+              <Link href="https://www.facebook.com/badrikedardevelopers" target="_blank" className="w-7 h-7 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaFacebookF size={10} /></Link>
+              <Link href="https://www.instagram.com/badrikedardevelopers" target="_blank" className="w-7 h-7 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaInstagram size={10} /></Link>
+              <Link href="https://youtube.com/@badrikedardevelopers" target="_blank" className="w-7 h-7 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaYoutube size={10} /></Link>
+              <Link href="#" target="_blank" className="w-7 h-7 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><span className="text-[10px] font-bold">in</span></Link>
             </div>
           </div>
 
+          {/* Col 2 */}
           <div>
-            <h3 className="font-bold text-lg mb-6 text-brand-gold font-serif">Quick Links</h3>
+            <h3 className="font-bold text-xs mb-5 uppercase tracking-wide">QUICK LINKS</h3>
             <ul className="space-y-3">
-              {['Home', 'About Us', 'Projects', 'Blogs', 'Contact Us'].map((link) => (
+              {['Home', 'About Us', 'Properties', 'Read & Learn More', 'Contact Us'].map((link) => (
                 <li key={link}>
-                  <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Projects' ? '/projects' : link === 'Blogs' ? '/blogs' : link === 'Contact Us' ? '/contact' : link === 'Our Partners' ? '/partners' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
-                    <ChevronRight size={12} className="text-brand-gold" /> {link}
+                  <Link href="#" className="text-gray-400 hover:text-brand-gold transition-colors text-xs font-medium">
+                    {link}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* Col 3 */}
           <div>
-            <h3 className="font-bold text-lg mb-6 text-brand-gold font-serif">Contact Us</h3>
+            <h3 className="font-bold text-xs mb-5 uppercase tracking-wide">IMPORTANT LINKS</h3>
+            <ul className="space-y-3">
+              <li><Link href="#" className="text-gray-400 hover:text-brand-gold transition-colors text-xs font-medium">Privacy Policy</Link></li>
+              <li><Link href="#" className="text-gray-400 hover:text-brand-gold transition-colors text-xs font-medium">Terms & Conditions</Link></li>
+            </ul>
+          </div>
+
+          {/* Col 4 */}
+          <div>
+            <h3 className="font-bold text-xs mb-5 uppercase tracking-wide">CONTACT US</h3>
             <ul className="space-y-4">
-              <li className="flex gap-3 text-sm text-gray-400">
-                <MapPin size={18} className="text-brand-gold shrink-0 mt-0.5" />
-                <span className="leading-relaxed">Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
+              <li className="flex gap-3 text-xs text-gray-400 items-start font-medium">
+                <Phone size={14} className="text-brand-gold shrink-0 mt-0.5" />
+                <span>+91 9756580000</span>
               </li>
-              <li className="flex gap-3 text-sm text-gray-400 items-center">
-                <Mail size={18} className="text-brand-gold shrink-0" />
+              <li className="flex gap-3 text-xs text-gray-400 items-start font-medium">
+                <Mail size={14} className="text-brand-gold shrink-0 mt-0.5" />
                 <span>info@badrikedardevelopers.com</span>
               </li>
-              <li className="flex gap-3 text-sm text-gray-400 items-center">
-                <Clock size={18} className="text-brand-gold shrink-0" />
-                <span>Mon - Sat: 10:00 AM - 7:00 PM</span>
+              <li className="flex gap-3 text-xs text-gray-400 items-start font-medium">
+                <MapPin size={14} className="text-brand-gold shrink-0 mt-0.5" />
+                <span>Dehradun, Uttarakhand, India</span>
               </li>
             </ul>
           </div>
 
+          {/* Col 5 */}
           <div>
-            <h3 className="font-bold text-lg mb-6 text-brand-gold font-serif">Our Projects</h3>
-            <div className="grid grid-cols-2 gap-3">
-              {[
-                "/fun_valley_township.png",
-                "/480_sqyard_plot.png",
-                "/530_sqyard_plot.png",
-                "/181_sqyard_plot.png"
-              ].map((img, i) => (
-                <Link href={`/projects/${i+1}`} key={i} className="block relative h-20 rounded overflow-hidden group">
-                  <Image src={img} alt="Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform" />
-                </Link>
-              ))}
+            <h3 className="font-bold text-xs mb-5 uppercase tracking-wide">OUR LOCATION</h3>
+            <div className="relative w-full h-24 rounded border border-white/10 bg-gray-200 overflow-hidden">
+               <iframe
+                  src="https://maps.google.com/maps?q=Dehradun%2C%20Uttarakhand%2C%20India&t=&z=10&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  className="absolute inset-0 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all"
+                ></iframe>
             </div>
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-gray-500">
-          <p>© 2026 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
-          
+        <div className="max-w-7xl mx-auto pt-6 border-t border-white/10 flex items-center justify-center text-[11px] text-gray-500 relative">
+          <p>© 2024 Badri Kedar Developers. All Rights Reserved.</p>
+          <button className="absolute right-0 bottom-0 bg-brand-gold w-8 h-8 rounded text-white flex items-center justify-center hover:bg-brand-gold-hover transition-colors shadow-lg">
+            <ChevronUp size={16} />
+          </button>
         </div>
       </footer>
     </main>
