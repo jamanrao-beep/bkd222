@@ -41,13 +41,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
       {/* Navigation */}
       <nav className="bg-black relative z-10 flex justify-between items-center px-8 py-5">
         <Link href="/">
-          <Image 
-            src="/BKD_Logo.png" 
-            alt="Badri Kedar Developers" 
-            width={160} 
-            height={60} 
-            className="object-contain"
-           style={{ width: "auto", height: "auto" }} />
+          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
         </Link>
                                       <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
             <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>

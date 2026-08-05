@@ -20,7 +20,7 @@ export default function Plot530() {
       {/* Navigation */}
       <nav className="absolute top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-transparent border-b border-white/10">
         <Link href="/">
-          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" priority />
+          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" priority />
         </Link>
         <div className="hidden lg:flex items-center gap-10 text-sm font-medium">
           <Link href="/" className="text-gray-300 hover:text-[#F7A300] transition-colors">Home</Link>

@@ -16,7 +16,7 @@ export default function Contact() {
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={220} height={70} className="h-12 w-auto object-contain" priority />
+             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" priority />
           </Link>
           
           {/* Nav Links */}
