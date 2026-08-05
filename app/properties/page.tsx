@@ -252,7 +252,7 @@ export default function Properties() {
             {/* Card 4 */}
             <div className="bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col hover:-translate-y-1 transition-transform duration-300">
               <div className="relative h-56 w-full">
-                <Image src="/new_prop_4.jpg" alt="Fun Valley Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+                <Image src="/funvalley_thumbnail.jpg" alt="Fun Valley Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                 <div className="absolute top-4 left-4 bg-[#F7A300] text-black text-[10px] font-bold px-3 py-1 rounded uppercase tracking-wider">PREMIUM</div>
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur text-gray-800 p-1.5 rounded"><MapIcon size={16} /></div>
               </div>

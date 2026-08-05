@@ -13,7 +13,7 @@ export default function Projects() {
     {
       title: "Fun Valley, Majigrant", location: "Laltappar, Dehradun",
       type: "Residential", status: "Ongoing",
-      img: "/new_prop_4.jpg"
+      img: "/funvalley_thumbnail.jpg"
     },
     {
       title: "Ranipokhari, Rishikesh Highway", location: "Dehradun, Uttarakhand",
@@ -298,7 +298,7 @@ export default function Projects() {
             <h3 className="font-bold text-lg mb-6 text-brand-gold font-serif">Featured Projects</h3>
             <div className="grid grid-cols-2 gap-3">
               {[
-                "/new_prop_4.jpg",
+                "/funvalley_thumbnail.jpg",
                 "/ranipokhri_thumbnail.jpg",
                 "/thano_thumbnail.jpg",
                 "/new_prop_3.jpg"

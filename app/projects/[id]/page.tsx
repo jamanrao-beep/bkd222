@@ -154,7 +154,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
             <h3 className="font-bold text-lg mb-6 text-brand-gold">Featured Projects</h3>
             <div className="grid grid-cols-2 gap-3">
               {[
-                "/new_prop_4.jpg",
+                "/funvalley_thumbnail.jpg",
                 "/ranipokhri_thumbnail.jpg",
                 "/thano_thumbnail.jpg",
                 "/new_prop_3.jpg"
