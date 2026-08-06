@@ -460,10 +460,16 @@ export default function Home() {
             </ul>
             <h4 className="text-white font-bold mb-4 tracking-wider text-xs uppercase">OUR LOCATION</h4>
             <div className="w-full h-24 bg-gray-800 rounded overflow-hidden relative border border-gray-700">
-               <Image src="/universal_hero.jpg" alt="Map Location" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover opacity-50 grayscale hover:grayscale-0 transition-all" />
-               <div className="absolute inset-0 flex items-center justify-center">
-                  <MapPin size={24} className="text-[#ea4335] drop-shadow-md" />
-               </div>
+              <iframe
+                src="https://maps.google.com/maps?q=Dehradun,+Uttarakhand,+India&t=&z=11&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+              ></iframe>
             </div>
           </div>
         </div>
