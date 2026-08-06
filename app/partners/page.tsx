@@ -53,7 +53,7 @@ export default function Partners() {
         {/* Navigation */}
         <nav className="relative z-10 flex justify-between items-center px-8 py-5">
           <Link href="/">
-            <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
+            <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
           </Link>
                                         <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
             <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
@@ -300,7 +300,7 @@ export default function Partners() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>
             <Image 
-              src="/BKD_Logo.png" 
+              src="/BKD_Logo_V2.png" 
               alt="Badri Kedar Developers" 
               width={180} 
               height={70} 
@@ -366,7 +366,7 @@ export default function Partners() {
         </div>
 
         <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-center gap-4 text-sm text-gray-500">
-          <p>© 2026 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
+          <p className="text-center w-full">© 2026 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
           
         </div>
       </footer>

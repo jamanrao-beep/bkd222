@@ -16,7 +16,7 @@ export default function Contact() {
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" priority />
+             <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" priority />
           </Link>
           
           {/* Nav Links */}
@@ -274,7 +274,7 @@ export default function Contact() {
         <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Logo & About */}
           <div>
-            <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={200} height={60} className="mb-6 h-12 w-auto object-contain" />
+            <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={250} height={80} className="mb-6 h-20 md:h-24 w-auto object-contain" />
             <p className="mb-6 leading-relaxed text-xs pr-4">
               Premium land opportunities across Uttarakhand for a better tomorrow.
             </p>

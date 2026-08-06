@@ -14,7 +14,7 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
+             <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
           </Link>
           
           {/* Nav Links */}
@@ -268,7 +268,7 @@ export default function Home() {
             {/* Card 4 */}
             <Link href="/properties" className="bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 block group flex flex-col hover:-translate-y-1 transition-transform duration-300">
               <div className="relative h-56 w-full">
-                <Image src="/funvalley_thumbnail.jpg" alt="Fun Valley Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+                <Image src="/funvalley_new_thumbnail.jpg" alt="Fun Valley Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="font-bold text-lg text-gray-900 mb-1 leading-tight">Fun Valley, Majrigrant,<br/>Laltappar, Dehradun</h3>
@@ -417,7 +417,7 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Logo & About */}
           <div>
-            <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={200} height={60} className="mb-6 h-12 w-auto object-contain" />
+            <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={250} height={80} className="mb-6 h-20 md:h-24 w-auto object-contain" />
             <p className="mb-6 leading-relaxed">
               Premium land opportunities across Uttarakhand for a better tomorrow.
             </p>
@@ -469,7 +469,7 @@ export default function Home() {
         </div>
         
         <div className="max-w-[1400px] mx-auto px-6 pt-6 border-t border-gray-800 text-center flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-500 font-medium">
-          <p>© 2026 Badri Kedar Developers. All Rights Reserved.</p>
+          <p className="text-center w-full">© 2026 Badri Kedar Developers. All Rights Reserved.</p>
         </div>
       </footer>
     </main>

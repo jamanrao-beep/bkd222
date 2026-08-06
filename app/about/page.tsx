@@ -17,7 +17,7 @@ export default function About() {
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-            <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
+            <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
           </Link>
 
           {/* Nav Links */}
@@ -147,16 +147,16 @@ export default function About() {
       {/* 6. Partnership Module Section */}
       <section className="py-24 bg-white">
         <div className="max-w-[1400px] mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-16 items-stretch">
             {/* Left Image */}
             <div className="lg:w-1/2 w-full">
-              <div className="relative w-full h-[350px] rounded-xl overflow-hidden shadow-lg">
+              <div className="relative w-full h-full min-h-[350px] rounded-xl overflow-hidden shadow-lg">
                 <Image src={handshakeImg} alt="Partnership" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
               </div>
             </div>
 
             {/* Right Content */}
-            <div className="lg:w-1/2 w-full pt-4">
+            <div className="lg:w-1/2 w-full flex flex-col justify-center">
               <h2 className="font-serif text-[34px] font-bold mb-8 text-gray-900 leading-tight">
                 <span className="text-[#F7A300]">Partnership</span> Module
               </h2>
@@ -180,7 +180,7 @@ export default function About() {
                 </p>
               </div>
 
-              <p className="text-gray-700 text-sm italic font-medium bg-gray-50 p-4 rounded-lg border border-gray-100">
+              <p className="text-gray-700 text-sm italic font-medium">
                 Each model can be customized depending on mutual agreement and project scale.
               </p>
             </div>
@@ -260,7 +260,7 @@ export default function About() {
         <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Logo & About */}
           <div>
-            <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={200} height={60} className="mb-6 h-12 w-auto object-contain" />
+            <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={250} height={80} className="mb-6 h-20 md:h-24 w-auto object-contain" />
             <p className="mb-6 leading-relaxed">
               Premium land opportunities across Uttarakhand for a better tomorrow.
             </p>
@@ -318,7 +318,7 @@ export default function About() {
         </div>
 
         <div className="max-w-[1400px] mx-auto px-6 pt-6 border-t border-gray-800 text-center flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-gray-500 font-medium">
-          <p>© 2026 Badri Kedar Developers. All Rights Reserved.</p>
+          <p className="text-center w-full">© 2026 Badri Kedar Developers. All Rights Reserved.</p>
         </div>
       </footer>
     </main>

@@ -17,7 +17,7 @@ export default function Properties() {
         <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link href="/">
-             <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
+             <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
           </Link>
           
           {/* Nav Links */}
@@ -252,7 +252,7 @@ export default function Properties() {
             {/* Card 4 */}
             <div className="bg-white rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col hover:-translate-y-1 transition-transform duration-300">
               <div className="relative h-56 w-full">
-                <Image src="/funvalley_thumbnail.jpg" alt="Fun Valley Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+                <Image src="/funvalley_new_thumbnail.jpg" alt="Fun Valley Plot" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                 <div className="absolute top-4 left-4 bg-[#F7A300] text-black text-[10px] font-bold px-3 py-1 rounded uppercase tracking-wider">PREMIUM</div>
                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur text-gray-800 p-1.5 rounded"><MapIcon size={16} /></div>
               </div>
@@ -356,7 +356,7 @@ export default function Properties() {
         <div className="max-w-[1400px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Logo & About */}
           <div>
-            <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={200} height={60} className="mb-6 h-12 w-auto object-contain" />
+            <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={250} height={80} className="mb-6 h-20 md:h-24 w-auto object-contain" />
             <p className="mb-6 leading-relaxed">
               Premium land opportunities across Uttarakhand for a better tomorrow.
             </p>

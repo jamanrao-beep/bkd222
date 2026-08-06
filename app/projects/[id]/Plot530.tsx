@@ -20,7 +20,7 @@ export default function Plot530() {
       {/* Navigation */}
       <nav className="absolute top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-transparent border-b border-white/10">
         <Link href="/">
-          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" priority />
+          <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" priority />
         </Link>
         <div className="hidden lg:flex items-center gap-10 text-sm font-medium">
           <Link href="/" className="text-gray-300 hover:text-[#F7A300] transition-colors">Home</Link>
@@ -102,21 +102,25 @@ export default function Plot530() {
 
       {/* Image Grid */}
       <section className="w-full max-w-[1400px] mx-auto px-6 py-16 bg-[#f8f9fa]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <div className="relative h-[300px] md:h-[420px] rounded-2xl overflow-hidden group shadow-md">
-            <Image src="/thano_gal_1.jpg" alt="Property View 1" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div className="relative h-[420px] rounded-2xl overflow-hidden group shadow-md">
+            <Image src="/thano_new_gal_main.png" alt="Property View" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
           </div>
-          <div className="relative h-[300px] md:h-[420px] rounded-2xl overflow-hidden group shadow-md">
-            <Image src="/thano_gal_2.jpg" alt="Property View 2" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative h-[202px] rounded-2xl overflow-hidden group shadow-sm">
+              <Image src="/thano_new_gal_1.png" alt="Property View 1" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="relative h-[202px] rounded-2xl overflow-hidden group shadow-sm">
+              <Image src="/thano_new_gal_2.png" alt="Property View 2" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="relative h-[202px] rounded-2xl overflow-hidden group shadow-sm">
+              <Image src="/thano_new_gal_3.png" alt="Property View 3" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+            </div>
+            <div className="relative h-[202px] rounded-2xl overflow-hidden group shadow-sm">
+              <Image src="/thano_new_gal_4.png" alt="Property View 4" fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
+            </div>
           </div>
-          <div className="relative h-[300px] md:h-[420px] rounded-2xl overflow-hidden group shadow-md">
-            <Image src="/thano_gal_3.jpg" alt="Property View 3" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
-          </div>
-          <div className="relative h-[300px] md:h-[420px] rounded-2xl overflow-hidden group shadow-md">
-            <Image src="/thano_gal_4.jpg" alt="Property View 4" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-700" />
-          </div>
-        </div>
-      </section>
+        </div></section>
 
       {/* Property Highlights */}
       <section className="w-full max-w-[1400px] mx-auto px-6 pb-16 pt-8 bg-[#f8f9fa]">
@@ -283,7 +287,7 @@ export default function Plot530() {
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Logo & About */}
           <div>
-            <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={200} height={60} className="mb-6 h-12 w-auto object-contain" />
+            <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={250} height={80} className="mb-6 h-20 md:h-24 w-auto object-contain" />
             <p className="mb-6 leading-relaxed text-xs pr-4">
               Premium land opportunities across Uttarakhand for a better tomorrow.
             </p>

@@ -41,7 +41,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
       {/* Navigation */}
       <nav className="bg-black relative z-10 flex justify-between items-center px-8 py-5">
         <Link href="/">
-          <Image src="/BKD_Logo.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
+          <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
         </Link>
                                       <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
             <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
@@ -102,7 +102,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
         <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
             <Image 
-              src="/BKD_Logo.png" 
+              src="/BKD_Logo_V2.png" 
               alt="Badri Kedar Developers" 
               width={180} 
               height={70} 
@@ -168,7 +168,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
         </div>
 
         <div className="max-w-[1600px] mx-auto pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-center text-xs text-gray-500">
-          <p>© 2026 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
+          <p className="text-center w-full">© 2026 <span className="text-brand-gold">Badri Kedar Developers</span>. All Rights Reserved.</p>
         </div>
       </footer>
     </main>
