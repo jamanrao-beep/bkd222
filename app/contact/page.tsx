@@ -1,14 +1,106 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
   MapPin, Phone, Mail, ChevronRight, ArrowRight, ArrowUp, Calendar,
-  MessageSquare, UserCheck, FileText, Handshake, Send
+  MessageSquare, UserCheck, FileText, Handshake, Send, CheckCircle2, AlertCircle, Loader2
 } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    role: "",
+    message: "",
+    agree: true,
+  });
+
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    if (type === "checkbox") {
+      const checked = (e.target as HTMLInputElement).checked;
+      setFormData((prev) => ({ ...prev, [name]: checked }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formData.name.trim()) {
+      setStatus("error");
+      setResponseMessage("Please enter your name.");
+      return;
+    }
+
+    if (!formData.email.trim() && !formData.phone.trim()) {
+      setStatus("error");
+      setResponseMessage("Please provide either your email address or phone number so we can reach you.");
+      return;
+    }
+
+    if (!formData.message.trim()) {
+      setStatus("error");
+      setResponseMessage("Please write a short message regarding your inquiry.");
+      return;
+    }
+
+    if (!formData.agree) {
+      setStatus("error");
+      setResponseMessage("Please agree to the terms and privacy policy before submitting.");
+      return;
+    }
+
+    setStatus("loading");
+    setResponseMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          role: formData.role,
+          message: formData.message,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (res.ok && (data.success || !data.error)) {
+        setStatus("success");
+        setResponseMessage("Thank you! Your message has been sent directly to Badrikedardevelopers@gmail.com. Our team will get back to you shortly.");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          role: "",
+          message: "",
+          agree: true,
+        });
+      } else {
+        setStatus("error");
+        setResponseMessage(data.error || "Failed to send message. Please try again or contact us via WhatsApp.");
+      }
+    } catch (err: any) {
+      console.error(err);
+      setStatus("error");
+      setResponseMessage("An unexpected error occurred. Please try contacting us directly via WhatsApp or Phone.");
+    }
+  };
+
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800 font-sans selection:bg-[#F7A300] selection:text-white overflow-x-hidden">
       {/* 1. Header (Navbar) */}
@@ -132,41 +224,117 @@ export default function Contact() {
               <p className="text-gray-600 text-sm mb-8 leading-relaxed">
                 Have a question or need assistance? Fill out the form and our team will get back to you shortly.
               </p>
+
+              {/* Status alerts */}
+              {status === "success" && (
+                <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 rounded-xl flex items-start gap-3 text-emerald-800 text-sm animate-in fade-in duration-300">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold mb-0.5">Message Sent Successfully!</p>
+                    <p className="text-xs text-emerald-700 leading-relaxed">{responseMessage}</p>
+                  </div>
+                </div>
+              )}
+
+              {status === "error" && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl flex items-start gap-3 text-red-800 text-sm animate-in fade-in duration-300">
+                  <AlertCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
+                  <div>
+                    <p className="font-semibold mb-0.5">Submission Error</p>
+                    <p className="text-xs text-red-700 leading-relaxed">{responseMessage}</p>
+                  </div>
+                </div>
+              )}
               
-              <form className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   <div>
-                    <input type="text" placeholder="Your Name" className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors" />
+                    <input 
+                      type="text" 
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="Your Name *" 
+                      className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors" 
+                    />
                   </div>
                   <div>
-                    <input type="email" placeholder="Your Email" className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors" />
+                    <input 
+                      type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="Your Email Address" 
+                      className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors" 
+                    />
                   </div>
                 </div>
                 <div>
-                  <input type="tel" placeholder="Your Phone Number" className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors" />
+                  <input 
+                    type="tel" 
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder="Your Phone Number *" 
+                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors" 
+                  />
                 </div>
 
                 <div>
-                  <select defaultValue="" className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors text-gray-500 focus:text-gray-900 cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%239ca3af%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[length:12px_12px] bg-[right_1.25rem_center]">
-                    <option value="" disabled hidden>I'm a...</option>
-                    <option value="Buyer">Buyer</option>
-                    <option value="Channel Partner">Channel Partner/Real Estate Professional</option>
+                  <select 
+                    name="role"
+                    value={formData.role}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors text-gray-700 cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%239ca3af%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[length:12px_12px] bg-[right_1.25rem_center]"
+                  >
+                    <option value="">I&apos;m a... (Select Category)</option>
+                    <option value="Buyer">Buyer / Investor</option>
+                    <option value="Channel Partner">Channel Partner / Real Estate Professional</option>
+                    <option value="General Inquiry">General Inquiry</option>
                   </select>
                 </div>
 
                 <div>
-                  <textarea placeholder="Your Message" rows={6} className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors resize-none"></textarea>
+                  <textarea 
+                    name="message"
+                    required
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Your Message / Property Requirements *" 
+                    rows={5} 
+                    className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-[#F7A300] focus:ring-1 focus:ring-[#F7A300] transition-colors resize-none"
+                  ></textarea>
                 </div>
                 
                 <div className="flex items-center gap-3 pt-2">
-                  <input type="checkbox" id="terms" className="w-4 h-4 rounded border-gray-300 text-[#F7A300] focus:ring-[#F7A300]" />
-                  <label htmlFor="terms" className="text-xs font-medium text-gray-600">
+                  <input 
+                    type="checkbox" 
+                    id="terms" 
+                    name="agree"
+                    checked={formData.agree}
+                    onChange={handleChange}
+                    className="w-4 h-4 rounded border-gray-300 text-[#F7A300] focus:ring-[#F7A300] cursor-pointer" 
+                  />
+                  <label htmlFor="terms" className="text-xs font-medium text-gray-600 cursor-pointer">
                     I agree to the <Link href="/privacy" className="text-[#F7A300] hover:underline">Privacy Policy</Link> and <Link href="/terms" className="text-[#F7A300] hover:underline">Terms &amp; Conditions</Link>.
                   </label>
                 </div>
                 
-                <button type="button" className="bg-[#F7A300] text-white px-8 py-3.5 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:bg-[#e59800] transition-colors mt-6">
-                  Send Message <Send size={16} fill="currentColor" className="ml-1" />
+                <button 
+                  type="submit" 
+                  disabled={status === "loading"}
+                  className="bg-[#F7A300] text-white px-8 py-3.5 rounded-lg text-sm font-bold flex items-center justify-center gap-2 hover:bg-[#e59800] active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed transition-all mt-6 shadow-lg shadow-[#F7A300]/20"
+                >
+                  {status === "loading" ? (
+                    <>
+                      Sending Message... <Loader2 size={16} className="animate-spin ml-1" />
+                    </>
+                  ) : (
+                    <>
+                      Send Message <Send size={16} fill="currentColor" className="ml-1" />
+                    </>
+                  )}
                 </button>
               </form>
             </div>
