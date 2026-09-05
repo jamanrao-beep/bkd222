@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "./components/Navbar";
 import {
   MapPin, Phone, Mail, ChevronRight, ShieldCheck, Map, TrendingUp,
   Check, Building2, Trees, Droplets, Mountain, Store, Users, Award, Compass, Car
@@ -10,28 +11,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800 font-sans selection:bg-[#F7A300] selection:text-white overflow-x-hidden">
       {/* 1. Header (Navbar) */}
-      <header className="absolute top-0 w-full z-50 bg-black border-b border-white/10">
-        <div className="max-w-[1400px] mx-auto px-6 py-4 flex justify-between items-center">
-          {/* Logo */}
-          <Link href="/">
-             <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
-          </Link>
-          
-          {/* Nav Links */}
-          <nav className="hidden lg:flex items-center gap-10">
-            <Link href="/" className="text-white border-b-2 border-[#F7A300] pb-1 text-sm font-medium">Home</Link>
-            <Link href="/about" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">About Us</Link>
-            <Link href="/properties" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">Properties</Link>
-            <Link href="/learn" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">Read &amp; Learn More</Link>
-            <Link href="/contact" className="text-gray-300 hover:text-[#F7A300] text-sm font-medium transition-colors">Contact Us</Link>
-          </nav>
-          
-          {/* Enquire Now Button */}
-          <Link href="/contact" className="bg-[#F7A300] text-black px-6 py-2.5 rounded text-sm font-bold flex items-center gap-2 hover:bg-[#e59800] transition-colors">
-            Enquire Now <ChevronRight size={18} strokeWidth={2.5} />
-          </Link>
-        </div>
-      </header>
+      <Navbar activePage="home" />
 
       {/* 2. Hero Section */}
       <section className="relative w-full h-[90vh] min-h-[650px] flex items-center mt-[80px]">

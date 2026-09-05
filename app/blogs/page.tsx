@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "../components/Navbar";
 import { 
   Phone, Mail, MapPin, 
   ChevronRight, ChevronLeft, 
@@ -28,63 +29,46 @@ export default function Blogs() {
       img: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80"
     },
     {
-      title: "Gated Township vs Open Plot: Which is Better?",
-      excerpt: "Choosing between a plot inside a gated township and a standalone open plot is one of the most common dilemmas for lan...",
+      title: "How RERA Uttarakhand Protects Land Buyers in 2026",
+      excerpt: "Navigating land transactions requires full clarity on regulatory frameworks. Learn how RERA guidelines in Uttarakhand...",
       date: "May 15, 2025",
-      img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80"
+      img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80"
     },
     {
-      title: "15 Things You Must Check Before Buying Land in Dehradun",
-      excerpt: "Buying land is a significant decision, and Dehradun's growing market makes due diligence more important than ever. Be...",
+      title: "Top 7 Things to Verify Before Purchasing Land in Dehradun",
+      excerpt: "Due diligence is the most critical step before investing in property. Here is the ultimate checklist for land buyers...",
       date: "May 10, 2025",
-      img: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "Why Laltappar–Majrigrant is Becoming Dehradun's Next Investment Hub",
-      excerpt: "Among Dehradun's emerging real estate pockets, Laltappar–Majrigrant is quickly building a reputation as the city's ne...",
-      date: "May 07, 2025",
-      img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "Farmhouse Land vs Residential Plots: Which Gives Better Returns?",
-      excerpt: "Both farmhouse land and residential plots have carved out strong demand in Dehradun's real estate market, but they se...",
-      date: "May 05, 2025",
       img: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=600&q=80"
     },
     {
-      title: "How to Finance Your Plot Purchase in Dehradun",
-      excerpt: "Financing a plot purchase works differently from financing a ready home, and understanding your options can make the ...",
-      date: "May 02, 2025",
-      img: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80"
-    },
-    {
-      title: "Future Development Projects That Will Increase Land Prices in Dehradun",
-      excerpt: "Dehradun's land prices are being shaped by a wave of infrastructure and development projects that are steadily transf...",
-      date: "Apr 29, 2025",
-      img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80"
-    },
-    {
       title: "Why Land is the Safest Long-Term Investment in Uttarakhand",
-      excerpt: "When it comes to building long-term wealth, land continues to stand out as one of the most reliable investment option...",
+      excerpt: "When it comes to building long-term wealth, land continues to stand out as one of the most reliable investment avenues...",
       date: "Apr 25, 2025",
-      img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=600&q=80"
-    },
+      img: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80"
+    }
+  ];
+
+  const popularArticles = [
+    { title: "Why Investing in Dehradun Plots is Better Than Buying Flats in 2026", date: "May 24, 2025", img: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=150&q=80" },
+    { title: "Top 10 Emerging Areas to Buy Land in Dehradun", date: "May 21, 2025", img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=150&q=80" },
+    { title: "Complete Guide to Buying Residential Plots in Uttarakhand", date: "May 18, 2025", img: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=150&q=80" },
+    { title: "How RERA Uttarakhand Protects Land Buyers in 2026", date: "May 15, 2025", img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=150&q=80" },
   ];
 
   const categories = [
-    { name: "Investment Tips", count: "10" },
-    { name: "Plot Buying Guide", count: "08" },
-    { name: "Dehradun Real Estate", count: "12" },
-    { name: "Infrastructure Update", count: "06" },
-    { name: "Legal & RERA", count: "07" },
+    { name: "Real Estate Guide", count: "12" },
+    { name: "Investment Tips", count: "08" },
+    { name: "Legal & Documentation", count: "04" },
+    { name: "Area Guides", count: "06" },
     { name: "Lifestyle & Living", count: "05" },
     { name: "Market Trends", count: "09" }
   ];
 
   return (
     <main className="min-h-screen bg-[#f8f9fa] text-black selection:bg-brand-gold selection:text-white flex flex-col font-sans">
+      <Navbar activePage="learn" />
       {/* Header & Hero Section */}
-      <section className="relative w-full h-[55vh] min-h-[450px] flex flex-col">
+      <section className="relative w-full h-[55vh] min-h-[450px] flex flex-col mt-[80px]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image 
@@ -96,52 +80,6 @@ export default function Blogs() {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent" />
         </div>
-
-        {/* Top Bar */}
-        <div className="relative z-10 hidden md:flex justify-between items-center px-8 py-2 text-xs text-gray-300 border-b border-white/10">
-          <div className="flex items-center gap-6">
-            <a href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-brand-gold transition-colors">
-              <MapPin size={14} className="text-brand-gold" />
-              <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
-            </a>
-            <a href="tel:+919058571709" className="flex items-center gap-2 hover:text-brand-gold transition-colors">
-              <Phone size={14} className="text-brand-gold" />
-              <span>+91 90585 71709</span>
-            </a>
-            <a href="mailto:Badrikedardevelopers@gmail.com" className="flex items-center gap-2 hover:text-brand-gold transition-colors">
-              <Mail size={14} className="text-brand-gold" />
-              <span>Badrikedardevelopers@gmail.com</span>
-            </a>
-          </div>
-          <div className="flex items-center gap-4">
-            <span className="font-semibold text-white">Follow Us:</span>
-            <Link href="https://www.facebook.com/share/1EnGjVx2PK/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
-            <Link href="https://www.instagram.com/badrikedardevelopers?igsi=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaInstagram size={14} /></Link>
-            <Link href="https://youtube.com/@badrikedardevelopers?si=C-P664QQ8mtwgujs" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaYoutube size={14} /></Link>
-            <Link href="https://wa.me/919058571709" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
-          </div>
-        </div>
-
-        {/* Navigation */}
-        <nav className="relative z-10 flex justify-between items-center px-8 py-5">
-          <Link href="/">
-            <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
-          </Link>
-                                        <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
-            <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
-            <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>
-            <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>
-            <Link href="/blogs" className="text-brand-gold border-b-2 border-brand-gold pb-1">Blogs</Link>
-            <Link href="/partners" className="text-white hover:text-brand-gold transition-colors">Our Partners</Link>
-            <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>
-          </div>
-          <Link
-            href="/contact"
-            className="hidden md:flex items-center gap-2 bg-brand-gold text-white px-6 py-3 text-sm font-semibold hover:bg-brand-gold-hover transition-all"
-          >
-            Get Consultation <ChevronRight size={16} />
-          </Link>
-        </nav>
 
         {/* Hero Content */}
         <div className="relative z-10 flex-1 flex flex-col justify-center px-8 md:px-16 lg:px-24 pb-8">

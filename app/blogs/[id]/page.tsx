@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articles } from "../data";
+import Navbar from "../../components/Navbar";
 import { 
   Phone, Mail, MapPin, Clock,
   ChevronRight, Calendar, ArrowLeft
@@ -18,54 +19,10 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ id:
 
   return (
     <main className="min-h-screen bg-[#f8f9fa] text-black selection:bg-brand-gold selection:text-white flex flex-col font-sans">
-      {/* Top Bar */}
-      <div className="relative z-10 hidden md:flex justify-between items-center px-8 py-2 text-xs text-gray-300 border-b border-white/10 bg-black">
-        <div className="flex items-center gap-6">
-          <a href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-brand-gold transition-colors">
-            <MapPin size={14} className="text-brand-gold" />
-            <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
-          </a>
-          <a href="tel:+919058571709" className="flex items-center gap-2 hover:text-brand-gold transition-colors">
-            <Phone size={14} className="text-brand-gold" />
-            <span>+91 90585 71709</span>
-          </a>
-          <a href="mailto:Badrikedardevelopers@gmail.com" className="flex items-center gap-2 hover:text-brand-gold transition-colors">
-            <Mail size={14} className="text-brand-gold" />
-            <span>Badrikedardevelopers@gmail.com</span>
-          </a>
-        </div>
-        <div className="flex items-center gap-4">
-          <span className="font-semibold text-white">Follow Us:</span>
-          <Link href="https://www.facebook.com/share/1EnGjVx2PK/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
-          <Link href="https://www.instagram.com/badrikedardevelopers?igsi=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaInstagram size={14} /></Link>
-          <Link href="https://youtube.com/@badrikedardevelopers?si=C-P664QQ8mtwgujs" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaYoutube size={14} /></Link>
-          <Link href="https://wa.me/919058571709" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
-        </div>
-      </div>
-
-      {/* Navigation */}
-      <nav className="relative z-10 flex justify-between items-center px-8 py-5 bg-black">
-        <Link href="/">
-          <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
-        </Link>
-        <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
-          <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
-          <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>
-          <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>
-          <Link href="/blogs" className="text-brand-gold border-b-2 border-brand-gold pb-1">Blogs</Link>
-          <Link href="/partners" className="text-white hover:text-brand-gold transition-colors">Our Partners</Link>
-          <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>
-        </div>
-        <Link
-          href="/contact"
-          className="hidden md:flex items-center gap-2 bg-brand-gold text-white px-6 py-3 text-sm font-semibold hover:bg-brand-gold-hover transition-all"
-        >
-          Get Consultation <ChevronRight size={16} />
-        </Link>
-      </nav>
+      <Navbar activePage="learn" />
 
       {/* Hero / Header Image */}
-      <section className="relative w-full h-[45vh] min-h-[350px] flex flex-col">
+      <section className="relative w-full h-[45vh] min-h-[350px] flex flex-col mt-[80px]">
         <div className="absolute inset-0 z-0">
           <Image 
             src={article.img} 

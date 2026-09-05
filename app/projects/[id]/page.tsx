@@ -4,6 +4,7 @@ import { ChevronRight, ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { MapPin, Mail, Clock } from "lucide-react";
+import Navbar from "../../components/Navbar";
 import FunValley from "./FunValley";
 import Plot480 from "./Plot480";
 import Plot530 from "./Plot530";
@@ -39,22 +40,10 @@ export default async function ProjectDetail({ params }: { params: Promise<{ id: 
   return (
     <main className="min-h-screen bg-[#f8f9fa] text-black selection:bg-brand-gold selection:text-white flex flex-col font-sans">
       {/* Navigation */}
-      <nav className="bg-black relative z-10 flex justify-between items-center px-8 py-5">
-        <Link href="/">
-          <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" />
-        </Link>
-                                      <div className="hidden lg:flex items-center gap-8 text-sm font-medium">
-            <Link href="/" className="text-white hover:text-brand-gold transition-colors">Home</Link>
-            <Link href="/about" className="text-white hover:text-brand-gold transition-colors">About Us</Link>
-            <Link href="/projects" className="text-white hover:text-brand-gold transition-colors">Projects</Link>
-            <Link href="/blogs" className="text-white hover:text-brand-gold transition-colors">Blogs</Link>
-            <Link href="/partners" className="text-white hover:text-brand-gold transition-colors">Our Partners</Link>
-            <Link href="/contact" className="text-white hover:text-brand-gold transition-colors">Contact</Link>
-          </div>
-      </nav>
+      <Navbar activePage="properties" />
 
       {/* Main Content */}
-      <section className="py-12 px-8 max-w-[1200px] mx-auto w-full flex-1">
+      <section className="py-12 px-8 max-w-[1200px] mx-auto w-full flex-1 mt-[80px]">
         
         
         <div className="bg-white rounded-2xl p-4 md:p-8 shadow-xl border border-gray-100 mb-12">

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "../../components/Navbar";
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import {
   Map, Users, Navigation, TreePine, Home,
@@ -18,22 +19,7 @@ export default function Plot530() {
   return (
     <div className="w-full bg-[#f8f9fa] min-h-screen font-sans selection:bg-[#F7A300] selection:text-white">
       {/* Navigation */}
-      <nav className="absolute top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-transparent border-b border-white/10">
-        <Link href="/">
-          <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" priority />
-        </Link>
-        <div className="hidden lg:flex items-center gap-10 text-sm font-medium">
-          <Link href="/" className="text-gray-300 hover:text-[#F7A300] transition-colors">Home</Link>
-          <Link href="/about" className="text-gray-300 hover:text-[#F7A300] transition-colors">About Us</Link>
-          <Link href="/properties" className="text-white border-b-2 border-[#F7A300] pb-1">Properties</Link>
-          <Link href="/learn" className="text-gray-300 hover:text-[#F7A300] transition-colors">Read &amp; Learn More</Link>
-          <Link href="/contact" className="text-gray-300 hover:text-[#F7A300] transition-colors">Contact Us</Link>
-        </div>
-        {/* Enquire Now Button */}
-        <Link href="/contact" className="bg-[#F7A300] text-black px-6 py-2.5 rounded text-sm font-bold flex items-center gap-2 hover:bg-[#e59800] transition-colors">
-          Enquire Now <ArrowRight size={18} strokeWidth={2.5} />
-        </Link>
-      </nav>
+      <Navbar activePage="properties" />
 
       {/* Top Hero Section */}
       <section className="relative w-full h-[85vh] min-h-[600px] flex flex-col pt-[80px]">

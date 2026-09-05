@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "../components/Navbar";
 import { FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { ArrowRight, MapPin, Phone, Mail, ArrowUp, Calendar } from "lucide-react";
 
@@ -72,21 +73,7 @@ export default function LearnPage() {
   return (
     <main className="w-full bg-[#f8f9fa] min-h-screen font-sans selection:bg-[#F7A300] selection:text-white">
       {/* 1. Header Navigation */}
-      <nav className="absolute top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-black border-b border-white/10">
-        <Link href="/">
-          <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={440} height={140} className="h-24 w-auto object-contain" priority />
-        </Link>
-        <div className="hidden lg:flex items-center gap-10 text-sm font-medium">
-          <Link href="/" className="text-gray-300 hover:text-[#F7A300] transition-colors">Home</Link>
-          <Link href="/about" className="text-gray-300 hover:text-[#F7A300] transition-colors">About Us</Link>
-          <Link href="/properties" className="text-gray-300 hover:text-[#F7A300] transition-colors">Properties</Link>
-          <Link href="/learn" className="text-white border-b-2 border-[#F7A300] pb-1">Read &amp; Learn More</Link>
-          <Link href="/contact" className="text-gray-300 hover:text-[#F7A300] transition-colors">Contact Us</Link>
-        </div>
-        <Link href="/contact" className="bg-[#F7A300] text-black px-6 py-2.5 rounded text-sm font-bold flex items-center gap-2 hover:bg-[#e59800] transition-colors">
-          Enquire Now <ArrowRight size={18} strokeWidth={2.5} />
-        </Link>
-      </nav>
+      <Navbar activePage="learn" />
 
       {/* 2. Hero Section */}
       <section className="relative w-full mt-[80px] h-[60vh] min-h-[450px] overflow-hidden flex flex-col justify-end pb-[10vh]">
