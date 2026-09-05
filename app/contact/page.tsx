@@ -66,52 +66,52 @@ export default function Contact() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             
             {/* Card 1 */}
-            <div className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
-              <div className="w-12 h-12 bg-[#F7A300] rounded-full flex items-center justify-center shrink-0">
+            <a href="tel:+919058571709" className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 flex items-start gap-4 hover:-translate-y-1 hover:border-[#F7A300]/40 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-[#F7A300] rounded-full flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                 <MessageSquare className="text-white" size={20} fill="currentColor" />
               </div>
               <div>
                 <h4 className="font-bold text-gray-900 text-[15px] mb-1">Message Us</h4>
-                <p className="font-bold text-gray-900 text-sm mb-2">+91 9756580000</p>
+                <p className="font-bold text-gray-900 text-sm mb-2 group-hover:text-[#F7A300] transition-colors">+91 90585 71709</p>
                 <p className="text-[11px] text-gray-500 font-medium">Chat with us for quick assistance</p>
               </div>
-            </div>
+            </a>
 
             {/* Card 2 */}
-            <div className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
-              <div className="w-12 h-12 bg-[#F7A300] rounded-full flex items-center justify-center shrink-0">
+            <a href="mailto:Badrikedardevelopers@gmail.com" className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 flex items-start gap-4 hover:-translate-y-1 hover:border-[#F7A300]/40 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-[#F7A300] rounded-full flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                 <Mail className="text-white" size={20} fill="currentColor" />
               </div>
               <div>
                 <h4 className="font-bold text-gray-900 text-[15px] mb-1">Email Us</h4>
-                <p className="font-bold text-gray-900 text-sm mb-2">info@badrikedardevelopers.com</p>
+                <p className="font-bold text-gray-900 text-sm mb-2 break-all group-hover:text-[#F7A300] transition-colors">Badrikedardevelopers@gmail.com</p>
                 <p className="text-[11px] text-gray-500 font-medium">We reply within 24 hours</p>
               </div>
-            </div>
+            </a>
 
             {/* Card 3 */}
-            <div className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
-              <div className="w-12 h-12 bg-[#F7A300] rounded-full flex items-center justify-center shrink-0">
+            <a href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 flex items-start gap-4 hover:-translate-y-1 hover:border-[#F7A300]/40 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-[#F7A300] rounded-full flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                 <MapPin className="text-white" size={20} fill="currentColor" />
               </div>
               <div>
                 <h4 className="font-bold text-gray-900 text-[15px] mb-1">Visit Us</h4>
-                <p className="font-bold text-gray-900 text-sm mb-2">Dehradun, Uttarakhand, India</p>
+                <p className="font-bold text-gray-900 text-sm mb-2 group-hover:text-[#F7A300] transition-colors">Dehradun, Uttarakhand, India</p>
                 <p className="text-[11px] text-gray-500 font-medium">Get directions on the map</p>
               </div>
-            </div>
+            </a>
 
             {/* Card 4 */}
-            <div className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 flex items-start gap-4 hover:-translate-y-1 transition-transform duration-300">
-              <div className="w-12 h-12 bg-[#F7A300] rounded-full flex items-center justify-center shrink-0">
+            <a href="https://wa.me/919058571709" target="_blank" rel="noopener noreferrer" className="bg-white rounded-xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-100 flex items-start gap-4 hover:-translate-y-1 hover:border-[#F7A300]/40 transition-all duration-300 group">
+              <div className="w-12 h-12 bg-[#F7A300] rounded-full flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
                 <FaWhatsapp className="text-white" size={24} />
               </div>
               <div>
                 <h4 className="font-bold text-gray-900 text-[15px] mb-1">WhatsApp</h4>
-                <p className="font-bold text-gray-900 text-sm mb-2">+91 9756580000</p>
+                <p className="font-bold text-gray-900 text-sm mb-2 group-hover:text-[#F7A300] transition-colors">+91 90585 71709</p>
                 <p className="text-[11px] text-gray-500 font-medium">Chat with us on WhatsApp</p>
               </div>
-            </div>
+            </a>
 
           </div>
         </div>
@@ -192,7 +192,7 @@ export default function Contact() {
                 <div className="absolute top-6 left-6 bg-white p-4 rounded-lg shadow-lg max-w-[220px]">
                   <h4 className="font-bold text-gray-900 text-sm mb-1">Badri Kedar Developers</h4>
                   <p className="text-gray-500 text-[11px] mb-2 font-medium">Dehradun, Uttarakhand, India</p>
-                  <a href="#" className="text-[#F7A300] text-[11px] font-semibold hover:underline">View larger map</a>
+                  <a href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="text-[#F7A300] text-[11px] font-semibold hover:underline">View larger map</a>
                 </div>
               </div>
               
@@ -262,8 +262,8 @@ export default function Contact() {
             </div>
           </div>
           <div className="shrink-0">
-            <Link href="tel:+919756580000" className="bg-[#F7A300] text-black px-8 py-4 rounded font-bold flex items-center gap-2 hover:bg-[#e59800] transition-colors shadow-lg shadow-[#F7A300]/20">
-              <Phone size={18} fill="currentColor" /> Message Us: +91 9756580000
+            <Link href="tel:+919058571709" className="bg-[#F7A300] text-black px-8 py-4 rounded font-bold flex items-center gap-2 hover:bg-[#e59800] transition-colors shadow-lg shadow-[#F7A300]/20">
+              <Phone size={18} fill="currentColor" /> Message Us: +91 90585 71709
             </Link>
           </div>
         </div>
@@ -279,10 +279,10 @@ export default function Contact() {
               Premium land opportunities across Uttarakhand for a better tomorrow.
             </p>
             <div className="flex gap-3">
-              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaFacebookF size={13} /></Link>
-              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaInstagram size={13} /></Link>
-              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaYoutube size={13} /></Link>
-              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaLinkedinIn size={13} /></Link>
+              <Link href="https://www.facebook.com/share/1EnGjVx2PK/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaFacebookF size={13} /></Link>
+              <Link href="https://www.instagram.com/badrikedardevelopers?igsi=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaInstagram size={13} /></Link>
+              <Link href="https://youtube.com/@badrikedardevelopers?si=C-P664QQ8mtwgujs" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaYoutube size={13} /></Link>
+              <Link href="https://wa.me/919058571709" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaWhatsapp size={13} /></Link>
             </div>
           </div>
 
@@ -304,19 +304,19 @@ export default function Contact() {
             <ul className="space-y-3 mb-8 font-medium">
               <li className="flex items-center gap-3">
                 <Phone size={14} className="text-[#F7A300]" />
-                <span>+91 9756580000</span>
+                <a href="tel:+919058571709" className="hover:text-[#F7A300] transition-colors">+91 90585 71709</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={14} className="text-[#F7A300]" />
-                <span>info@badrikedardevelopers.com</span>
+                <a href="mailto:Badrikedardevelopers@gmail.com" className="hover:text-[#F7A300] transition-colors">Badrikedardevelopers@gmail.com</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={14} className="text-[#F7A300] shrink-0 mt-0.5" />
-                <span>Dehradun, Uttarakhand, India</span>
+                <a href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="hover:text-[#F7A300] transition-colors">Dehradun, Uttarakhand, India</a>
               </li>
             </ul>
             <h4 className="text-white font-bold mb-4 tracking-wider text-xs uppercase">OUR LOCATION</h4>
-            <div className="w-full h-24 bg-gray-800 rounded overflow-hidden relative border border-gray-700">
+            <a href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="block w-full h-24 bg-gray-800 rounded overflow-hidden relative border border-gray-700 group">
               <iframe
                 src="https://maps.google.com/maps?q=Dehradun,+Uttarakhand,+India&t=&z=11&ie=UTF8&iwloc=&output=embed"
                 width="100%"
@@ -325,9 +325,9 @@ export default function Contact() {
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full grayscale group-hover:grayscale-0 pointer-events-none transition-all duration-500"
               ></iframe>
-            </div>
+            </a>
           </div>
         </div>
         

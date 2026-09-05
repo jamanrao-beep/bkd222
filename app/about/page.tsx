@@ -248,7 +248,7 @@ export default function About() {
             <Link href="/contact" className="bg-[#F7A300] text-black px-6 py-3 rounded text-sm font-bold flex items-center gap-2 hover:bg-[#e59800] transition-colors">
               Enquire Now <ArrowRight size={16} strokeWidth={2.5} />
             </Link>
-            <Link href="tel:+919756580000" className="bg-transparent border border-white/30 text-white px-6 py-3 rounded text-sm font-bold flex items-center gap-2 hover:bg-white/10 transition-colors">
+            <Link href="tel:+919058571709" className="bg-transparent border border-white/30 text-white px-6 py-3 rounded text-sm font-bold flex items-center gap-2 hover:bg-white/10 transition-colors">
               <Phone size={16} fill="transparent" /> Contact Us
             </Link>
           </div>
@@ -265,10 +265,10 @@ export default function About() {
               Premium land opportunities across Uttarakhand for a better tomorrow.
             </p>
             <div className="flex gap-3">
-              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaFacebookF size={13} /></Link>
-              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaInstagram size={13} /></Link>
-              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaYoutube size={13} /></Link>
-              <Link href="#" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaLinkedinIn size={13} /></Link>
+              <Link href="https://www.facebook.com/share/1EnGjVx2PK/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaFacebookF size={13} /></Link>
+              <Link href="https://www.instagram.com/badrikedardevelopers?igsi=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaInstagram size={13} /></Link>
+              <Link href="https://youtube.com/@badrikedardevelopers?si=C-P664QQ8mtwgujs" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaYoutube size={13} /></Link>
+              <Link href="https://wa.me/919058571709" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaWhatsapp size={13} /></Link>
             </div>
           </div>
 
@@ -290,19 +290,19 @@ export default function About() {
             <ul className="space-y-3 mb-8 font-medium">
               <li className="flex items-center gap-3">
                 <Phone size={14} className="text-[#F7A300]" />
-                <span>+91 9756580000</span>
+                <a href="tel:+919058571709" className="hover:text-[#F7A300] transition-colors">+91 90585 71709</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={14} className="text-[#F7A300]" />
-                <span>info@badrikedardevelopers.com</span>
+                <a href="mailto:Badrikedardevelopers@gmail.com" className="hover:text-[#F7A300] transition-colors">Badrikedardevelopers@gmail.com</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={14} className="text-[#F7A300] shrink-0 mt-0.5" />
-                <span>Dehradun, Uttarakhand, India</span>
+                <a href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="hover:text-[#F7A300] transition-colors">Dehradun, Uttarakhand, India</a>
               </li>
             </ul>
             <h4 className="text-white font-bold mb-4 tracking-wider text-xs uppercase">OUR LOCATION</h4>
-            <div className="w-full h-24 bg-gray-800 rounded overflow-hidden relative border border-gray-700">
+            <a href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="block w-full h-24 bg-gray-800 rounded overflow-hidden relative border border-gray-700 group">
               <iframe
                 src="https://maps.google.com/maps?q=Dehradun,+Uttarakhand,+India&t=&z=11&ie=UTF8&iwloc=&output=embed"
                 width="100%"
@@ -311,9 +311,9 @@ export default function About() {
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+                className="w-full h-full grayscale group-hover:grayscale-0 pointer-events-none transition-all duration-500"
               ></iframe>
-            </div>
+            </a>
           </div>
         </div>
 

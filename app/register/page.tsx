@@ -28,25 +28,25 @@ export default function Register() {
         {/* Top Bar */}
         <div className="relative z-10 hidden md:flex justify-between items-center px-8 py-3 text-xs text-gray-300 border-b border-white/10">
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-2">
-              <MapPin size={14} className="text-brand-gold" />
+            <Link href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-brand-gold transition-colors">
+              <MapPin size={14} className="text-brand-gold shrink-0" />
               <span>Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Phone size={14} className="text-brand-gold" />
-              <span>+91 92580 02814</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Mail size={14} className="text-brand-gold" />
-              <span>info@badrikedardevelopers.com</span>
-            </div>
+            </Link>
+            <Link href="tel:+919058571709" className="flex items-center gap-2 hover:text-brand-gold transition-colors">
+              <Phone size={14} className="text-brand-gold shrink-0" />
+              <span>+91 90585 71709</span>
+            </Link>
+            <Link href="mailto:Badrikedardevelopers@gmail.com" className="flex items-center gap-2 hover:text-brand-gold transition-colors">
+              <Mail size={14} className="text-brand-gold shrink-0" />
+              <span>Badrikedardevelopers@gmail.com</span>
+            </Link>
           </div>
           <div className="flex items-center gap-4">
             <span className="font-semibold text-white">Follow Us:</span>
-            <Link href="https://www.facebook.com/badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
-            <Link href="https://www.instagram.com/badrikedardevelopers?igsh=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaInstagram size={14} /></Link>
-            <Link href="https://youtube.com/@badrikedardevelopers?si=Sgf_tHWd8wQ4JJnx" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaYoutube size={14} /></Link>
-            <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%2 Media0in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
+            <Link href="https://www.facebook.com/share/1EnGjVx2PK/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
+            <Link href="https://www.instagram.com/badrikedardevelopers?igsi=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaInstagram size={14} /></Link>
+            <Link href="https://youtube.com/@badrikedardevelopers?si=C-P664QQ8mtwgujs" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaYoutube size={14} /></Link>
+            <Link href="https://wa.me/919058571709" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
           </div>
         </div>
 
@@ -217,7 +217,7 @@ export default function Register() {
               </div>
 
               <div className="text-center text-sm text-gray-600">
-                Already have an account? <Link href='#' className="text-brand-gold font-bold hover:underline">Login Now</Link>
+                Already have an account? <Link href='/login' className="text-brand-gold font-bold hover:underline">Login Now</Link>
               </div>
             </form>
           </div>
@@ -284,7 +284,7 @@ export default function Register() {
         <div className="bg-[#0f1115] rounded-2xl p-6 md:p-8 flex flex-col lg:flex-row items-center gap-8 shadow-2xl relative overflow-hidden">
           <div className="relative w-full lg:w-[250px] h-[150px] rounded-xl overflow-hidden shrink-0">
             <Image 
-              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=600&q=80" 
+              src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=600&q=80" 
               alt="House" 
               fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
               className="object-cover"
@@ -296,10 +296,10 @@ export default function Register() {
             <p className="text-sm text-gray-400">Have questions? Our team is ready to assist you.</p>
           </div>
           <div className="flex flex-wrap items-center gap-4 shrink-0">
-            <Link href='#' className="flex items-center gap-2 border border-brand-gold text-brand-gold px-6 py-3 font-semibold rounded hover:bg-brand-gold hover:text-white transition-all text-sm">
+            <Link href="tel:+919058571709" className="flex items-center gap-2 border border-brand-gold text-brand-gold px-6 py-3 font-semibold rounded hover:bg-brand-gold hover:text-white transition-all text-sm">
               <Phone size={16} /> Call Us Now
             </Link>
-            <Link href="/contact" className="flex items-center gap-2 bg-brand-gold text-white px-6 py-3 font-semibold rounded hover:bg-brand-gold-hover transition-all text-sm shadow-lg shadow-brand-gold/20">
+            <Link href="https://wa.me/919058571709" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-brand-gold text-white px-6 py-3 font-semibold rounded hover:bg-brand-gold-hover transition-all text-sm shadow-lg shadow-brand-gold/20">
               <FaWhatsapp size={16} /> Chat on WhatsApp
             </Link>
           </div>
@@ -321,10 +321,10 @@ export default function Register() {
               Building more than just properties - we build trust, value, and lasting relationships. Your future, our commitment.
             </p>
             <div className="flex items-center gap-3">
-              <Link href="https://www.facebook.com/badrikedardevelopers" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
-              <Link href="https://www.instagram.com/badrikedardevelopers?igsh=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaInstagram size={14} /></Link>
-              <Link href="https://youtube.com/@badrikedardevelopers?si=Sgf_tHWd8wQ4JJnx" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaYoutube size={14} /></Link>
-              <Link href="https://wa.me/919058571709?text=Hi%2C%20can%20I%20get%20more%20information%20about%20your%20properties%2 Media0in%20Darjeeling%3F" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
+              <Link href="https://www.facebook.com/share/1EnGjVx2PK/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
+              <Link href="https://www.instagram.com/badrikedardevelopers?igsi=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaInstagram size={14} /></Link>
+              <Link href="https://youtube.com/@badrikedardevelopers?si=C-P664QQ8mtwgujs" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaYoutube size={14} /></Link>
+              <Link href="https://wa.me/919058571709" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaWhatsapp size={14} /></Link>
             </div>
           </div>
 
@@ -346,11 +346,17 @@ export default function Register() {
             <ul className="space-y-4">
               <li className="flex gap-3 text-sm text-gray-400">
                 <MapPin size={18} className="text-brand-gold shrink-0 mt-0.5" />
-                <span className="leading-relaxed">Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</span>
+                <Link href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors leading-relaxed">
+                  Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001
+                </Link>
+              </li>
+              <li className="flex gap-3 text-sm text-gray-400 items-center">
+                <Phone size={18} className="text-brand-gold shrink-0" />
+                <Link href="tel:+919058571709" className="hover:text-brand-gold transition-colors">+91 90585 71709</Link>
               </li>
               <li className="flex gap-3 text-sm text-gray-400 items-center">
                 <Mail size={18} className="text-brand-gold shrink-0" />
-                <span>info@badrikedardevelopers.com</span>
+                <Link href="mailto:Badrikedardevelopers@gmail.com" className="hover:text-brand-gold transition-colors">Badrikedardevelopers@gmail.com</Link>
               </li>
               <li className="flex gap-3 text-sm text-gray-400 items-center">
                 <Clock size={18} className="text-brand-gold shrink-0" />
