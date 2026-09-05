@@ -201,18 +201,18 @@ export default function Login() {
       {/* Footer */}
       <footer className="bg-[#0a0b0f] pt-20 pb-8 px-8 border-t border-white/5 text-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div>
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <Image 
               src="/BKD_Logo_V2.png" 
               alt="Badri Kedar Developers" 
               width={180} 
               height={70} 
-              className="object-contain mb-6"
+              className="object-contain mb-6 mx-auto md:mx-0"
              style={{ width: "auto", height: "auto" }} />
-            <p className="text-gray-400 text-sm leading-relaxed mb-6 pr-4">
+            <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm md:max-w-none">
               Building more than just properties - we build trust, value, and lasting relationships. Your future, our commitment.
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center justify-center md:justify-start gap-3">
               <Link href="https://www.facebook.com/share/1EnGjVx2PK/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaFacebookF size={14} /></Link>
               <Link href="https://www.instagram.com/badrikedardevelopers?igsi=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaInstagram size={14} /></Link>
               <Link href="https://youtube.com/@badrikedardevelopers?si=C-P664QQ8mtwgujs" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-brand-gold hover:border-brand-gold transition-colors"><FaYoutube size={14} /></Link>
@@ -220,12 +220,12 @@ export default function Login() {
             </div>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <h3 className="font-bold text-lg mb-6 text-brand-gold font-serif">Quick Links</h3>
             <ul className="space-y-3">
               {['Home', 'About Us', 'Projects', 'Blogs', 'Our Partners', 'Contact Us'].map((link) => (
                 <li key={link}>
-                  <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Projects' ? '/projects' : link === 'Blogs' ? '/blogs' : link === 'Contact Us' ? '/contact' : link === 'Our Partners' ? '/partners' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
+                  <Link href={link === 'Home' ? '/' : link === 'About Us' ? '/about' : link === 'Projects' ? '/projects' : link === 'Blogs' ? '/blogs' : link === 'Contact Us' ? '/contact' : link === 'Our Partners' ? '/partners' : '#'} className="text-gray-400 hover:text-brand-gold transition-colors text-sm flex items-center justify-center md:justify-start gap-2">
                     <ChevronRight size={12} className="text-brand-gold" /> {link}
                   </Link>
                 </li>
@@ -233,34 +233,34 @@ export default function Login() {
             </ul>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <h3 className="font-bold text-lg mb-6 text-brand-gold font-serif">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex gap-3 text-sm text-gray-400">
+            <ul className="space-y-4 flex flex-col items-center md:items-start">
+              <li className="flex gap-3 text-sm text-gray-400 items-center justify-center md:justify-start text-center md:text-left">
                 <MapPin size={18} className="text-brand-gold shrink-0 mt-0.5" />
                 <a href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="leading-relaxed hover:text-brand-gold transition-colors">Bhagirath Enclave, 52, Balbir Rd, Dalanwala, Dehradun, Uttarakhand 248001</a>
               </li>
-              <li className="flex gap-3 text-sm text-gray-400 items-center">
+              <li className="flex gap-3 text-sm text-gray-400 items-center justify-center md:justify-start">
                 <Mail size={18} className="text-brand-gold shrink-0" />
                 <a href="mailto:Badrikedardevelopers@gmail.com" className="hover:text-brand-gold transition-colors">Badrikedardevelopers@gmail.com</a>
               </li>
-              <li className="flex gap-3 text-sm text-gray-400 items-center">
+              <li className="flex gap-3 text-sm text-gray-400 items-center justify-center md:justify-start">
                 <Clock size={18} className="text-brand-gold shrink-0" />
                 <span>Mon - Sat: 10:00 AM - 7:00 PM</span>
               </li>
             </ul>
           </div>
 
-          <div>
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <h3 className="font-bold text-lg mb-6 text-brand-gold font-serif">Our Projects</h3>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-3 max-w-xs md:max-w-none">
               {[
                 "/funvalley_thumbnail.jpg",
                 "/ranipokhri_thumbnail.jpg",
                 "/thano_thumbnail.jpg",
                 "/new_prop_3.jpg"
               ].map((img, i) => (
-                <Link href={`/projects/${i+1}`} key={i} className="block relative h-20 rounded overflow-hidden group">
+                <Link href={`/projects/${i+1}`} key={i} className="block relative h-20 w-32 md:w-auto rounded overflow-hidden group">
                   <Image src={img} alt="Project" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-110 transition-transform" />
                 </Link>
               ))}

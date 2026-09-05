@@ -286,12 +286,12 @@ export default function Plot530() {
       <footer className="bg-[#0a0a0a] text-gray-400 pt-16 pb-8 px-6 text-[13px] relative border-t border-white/5">
         <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
           {/* Logo & About */}
-          <div>
-            <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={250} height={80} className="mb-6 h-20 md:h-24 w-auto object-contain" />
-            <p className="mb-6 leading-relaxed text-xs pr-4">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
+            <Image src="/BKD_Logo_V2.png" alt="Badri Kedar Developers" width={250} height={80} className="mb-6 h-20 md:h-24 w-auto object-contain mx-auto md:mx-0" />
+            <p className="mb-6 leading-relaxed text-xs max-w-sm md:max-w-none">
               Premium land opportunities across Uttarakhand for a better tomorrow.
             </p>
-            <div className="flex gap-3">
+            <div className="flex justify-center md:justify-start gap-3">
               <Link href="https://www.facebook.com/share/1EnGjVx2PK/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaFacebookF size={13} /></Link>
               <Link href="https://www.instagram.com/badrikedardevelopers?igsi=dHNsMnZoazh6N3Bj" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaInstagram size={13} /></Link>
               <Link href="https://youtube.com/@badrikedardevelopers?si=C-P664QQ8mtwgujs" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:text-[#F7A300] hover:border-[#F7A300] transition-colors"><FaYoutube size={13} /></Link>
@@ -300,7 +300,7 @@ export default function Plot530() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <h4 className="text-white font-bold mb-6 tracking-wider text-xs uppercase">QUICK LINKS</h4>
             <ul className="space-y-3 font-medium">
               <li><Link href="/" className="hover:text-[#F7A300] transition-colors">Home</Link></li>
@@ -312,24 +312,24 @@ export default function Plot530() {
           </div>
 
           {/* Contact & Location */}
-          <div>
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <h4 className="text-white font-bold mb-6 tracking-wider text-xs uppercase">CONTACT US</h4>
-            <ul className="space-y-3 mb-8 font-medium">
-              <li className="flex items-center gap-3">
+            <ul className="space-y-3 mb-8 font-medium flex flex-col items-center md:items-start">
+              <li className="flex items-center justify-center md:justify-start gap-3">
                 <Phone size={14} className="text-[#F7A300]" />
                 <a href="tel:+919058571709" className="hover:text-[#F7A300] transition-colors">+91 90585 71709</a>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center justify-center md:justify-start gap-3">
                 <Mail size={14} className="text-[#F7A300]" />
                 <a href="mailto:Badrikedardevelopers@gmail.com" className="hover:text-[#F7A300] transition-colors">Badrikedardevelopers@gmail.com</a>
               </li>
-              <li className="flex items-start gap-3">
+              <li className="flex items-start justify-center md:justify-start gap-3 text-center md:text-left">
                 <MapPin size={14} className="text-[#F7A300] shrink-0 mt-0.5" />
                 <a href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="hover:text-[#F7A300] transition-colors">Dehradun, Uttarakhand, India</a>
               </li>
             </ul>
             <h4 className="text-white font-bold mb-4 tracking-wider text-xs uppercase">OUR LOCATION</h4>
-            <a href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="block w-full h-24 bg-gray-800 rounded overflow-hidden relative border border-gray-700 group">
+            <a href="https://maps.app.goo.gl/fubbNgPdeS1dezBt6?g_st=ac" target="_blank" rel="noopener noreferrer" className="block w-full max-w-sm md:max-w-none h-24 bg-gray-800 rounded overflow-hidden relative border border-gray-700 group">
               <iframe
                 src="https://maps.google.com/maps?q=Dehradun,+Uttarakhand,+India&t=&z=11&ie=UTF8&iwloc=&output=embed"
                 width="100%"
@@ -349,7 +349,7 @@ export default function Plot530() {
         </div>
         
         {/* Scroll to top button */}
-        <button onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="absolute bottom-6 right-6 bg-[#F7A300] text-black p-2.5 rounded hover:bg-[#e59800] transition-colors shadow-lg">
+        <button onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="absolute bottom-24 right-6 bg-[#F7A300] text-black p-2.5 rounded hover:bg-[#e59800] transition-colors shadow-lg">
           <ArrowUp size={20} />
         </button>
       </footer>
