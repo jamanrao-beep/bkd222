@@ -12,8 +12,46 @@ export async function POST(req: Request) {
       );
     }
 
-    // Forward to Badrikedardevelopers@gmail.com via FormSubmit API
-    const response = await fetch("https://formsubmit.co/ajax/Badrikedardevelopers@gmail.com", {
+    const timestamp = new Date().toLocaleString("en-IN", {
+      timeZone: "Asia/Kolkata",
+      dateStyle: "medium",
+      timeStyle: "short",
+    });
+
+    const payload = {
+      Timestamp: timestamp,
+      Name: name,
+      Email: email || "Not provided",
+      Phone: phone || "Not provided",
+      "Inquiry Type": role || "General Inquiry",
+      Message: message,
+    };
+
+    // 1. Send to Google Sheet if Webhook URL is configured
+    const googleSheetWebhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+    let sheetPromise: Promise<any> = Promise.resolve();
+
+    if (googleSheetWebhookUrl) {
+      sheetPromise = fetch(googleSheetWebhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          timestamp,
+          name,
+          email: email || "",
+          phone: phone || "",
+          role: role || "General Inquiry",
+          message,
+        }),
+      }).catch((err) => {
+        console.error("Google Sheets webhook error:", err);
+      });
+    }
+
+    // 2. Forward to Badrikedardevelopers@gmail.com via FormSubmit API
+    const emailPromise = fetch("https://formsubmit.co/ajax/Badrikedardevelopers@gmail.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -21,23 +59,31 @@ export async function POST(req: Request) {
       },
       body: JSON.stringify({
         _subject: `New Inquiry from ${name} - Badri Kedar Developers Website`,
-        Name: name,
-        Email: email || "Not provided",
-        Phone: phone || "Not provided",
-        "Inquiry Type": role || "General Inquiry",
-        Message: message,
+        ...payload,
         _template: "table",
         _captcha: "false",
       }),
     });
 
-    const data = await response.json();
+    // Execute both in parallel
+    const [emailRes] = await Promise.all([emailPromise, sheetPromise]);
+    let emailData: any = {};
+    try {
+      if (emailRes && typeof emailRes.json === "function") {
+        emailData = await emailRes.json();
+      }
+    } catch {
+      // Ignored if json parsing fails
+    }
 
-    if (response.ok && data?.success !== "false") {
-      return NextResponse.json({ success: true, message: "Your message has been sent successfully!" });
+    if (emailRes && emailRes.ok && emailData?.success !== "false") {
+      return NextResponse.json({
+        success: true,
+        message: "Your message has been sent successfully and recorded!",
+      });
     } else {
       return NextResponse.json(
-        { error: data?.message || "Failed to deliver message" },
+        { error: emailData?.message || "Failed to deliver message" },
         { status: 500 }
       );
     }
@@ -49,3 +95,4 @@ export async function POST(req: Request) {
     );
   }
 }
+
