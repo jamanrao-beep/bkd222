@@ -28,7 +28,9 @@ export async function POST(req: Request) {
     };
 
     // 1. Send to Google Sheet if Webhook URL is configured
-    const googleSheetWebhookUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+    const googleSheetWebhookUrl =
+      process.env.GOOGLE_SHEETS_WEBHOOK_URL ||
+      "https://script.google.com/macros/s/AKfycbzdFAyGepad_mCwxHXVw3A_VzJH4BXsb15XjyFU19G1wAmas5Vdh6fLDaLRVU9zEy0/exec";
     let sheetPromise: Promise<any> = Promise.resolve();
 
     if (googleSheetWebhookUrl) {
@@ -37,6 +39,7 @@ export async function POST(req: Request) {
         headers: {
           "Content-Type": "application/json",
         },
+        redirect: "follow",
         body: JSON.stringify({
           timestamp,
           name,
@@ -44,6 +47,12 @@ export async function POST(req: Request) {
           phone: phone || "",
           role: role || "General Inquiry",
           message,
+          Timestamp: timestamp,
+          Name: name,
+          Email: email || "",
+          Phone: phone || "",
+          Role: role || "General Inquiry",
+          Message: message,
         }),
       }).catch((err) => {
         console.error("Google Sheets webhook error:", err);
